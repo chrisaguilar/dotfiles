@@ -1,0 +1,224 @@
+set $mod    Mod1
+set $win    Mod4
+set $up     k
+set $down   j
+set $left   h
+set $right  l
+
+# Colors
+# class                 BRD     BG      FG      IND     CHILD_BRD
+client.focused          #abb2bf #abb2bf #282c34 #61afef #abb2bf
+client.focused_inactive #abb2bf #abb2bf #282c34 #61afef #abb2bf
+client.unfocused        #abb2bf #abb2bf #282c34 #61afef #abb2bf
+client.urgent           #e06c75 #e06c75 #282c34 #61afef #abb2bf
+client.placeholder      #abb2bf #abb2bf #282c34 #61afef #abb2bf
+
+client.background       #abb2bf
+
+# General Config
+font pango:Fira Mono Medium, FontAwesome 11
+floating_modifier             $mod
+default_orientation           auto
+workspace_layout              default
+new_window                    pixel 1
+new_float                     pixel 1
+hide_edge_borders             smart
+focus_follows_mouse           yes
+mouse_warping                 output
+popup_during_fullscreen       smart
+force_focus_wrapping          yes
+workspace_auto_back_and_forth yes
+focus_on_window_activation    urgent
+
+# Terminal
+bindsym $mod+Return         exec termite
+bindsym $mod+Shift+Return   exec termite
+
+# Splitting
+bindsym $mod+Shift+v  split h
+bindsym $mod+v        split v
+bindsym $mod+t        split toggle
+
+# Layout Manipulation
+bindsym $mod+s            layout stacking
+bindsym $mod+w            layout tabbed
+bindsym $mod+e            layout toggle split
+bindsym $mod+f            fullscreen toggle
+bindsym $mod+Shift+space  floating toggle
+
+# Focusing
+bindsym $mod+$left    focus left
+bindsym $mod+$down    focus down
+bindsym $mod+$up      focus up
+bindsym $mod+$right   focus right
+bindsym $mod+space    focus mode_toggle
+bindsym $mod+a        focus parent
+bindsym $mod+Shift+a  focus child
+
+# Movement
+bindsym $mod+Shift+h  move left   20px
+bindsym $mod+Shift+j  move down   20px
+bindsym $mod+Shift+k  move up     20px
+bindsym $mod+Shift+l  move right  20px
+
+# Cycle Workspaces
+bindsym $mod+Tab        workspace next
+bindsym $mod+Shift+Tab  workspace prev
+
+# Kill Focused Window
+bindsym $mod+Shift+q kill
+
+# Launch rofi (a task runner)
+bindsym $mod+d exec --no-startup-id "rofi -show run"
+
+# Reload the i3 config file
+bindsym $mod+Shift+c reload
+
+# Restart i3 in place
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e i3-msg exit
+
+# Take a screenshot
+bindsym Print exec --no-startup-id scrot '%F_%I:%M:%S.png' -q 100 -e 'mv $f ~/Pictures/'
+
+# Scratchpad + Sticky Windows
+bindsym $mod+semicolon        scratchpad show
+bindsym $mod+Shift+semicolon  move scratchpad
+bindsym $mod+apostrophe       sticky toggle
+
+# cmus Controls
+bindsym $win+b        exec --no-startup-id cmus-remote --next
+bindsym $win+c        exec --no-startup-id cmus-remote --pause
+bindsym $win+h        exec --no-startup-id cmus-remote --seek -5
+bindsym $win+l        exec --no-startup-id cmus-remote --seek +5
+bindsym $win+Shift+r  exec --no-startup-id cmus-remote --repeat
+bindsym $win+s        exec --no-startup-id cmus-remote --shuffle
+bindsym $win+v        exec --no-startup-id cmus-remote --stop
+bindsym $win+x        exec --no-startup-id cmus-remote --play
+bindsym $win+z        exec --no-startup-id cmus-remote --prev
+
+# Volume Controls
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+10 i3blocks
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+10 i3blocks
+
+# bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down && pkill -RTMIN+10 i3blocks
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up   && pkill -RTMIN+10 i3blocks
+
+# Which windows should always float? (Find class names with xprop)
+for_window [class="Xfce4-taskmanager"] floating enable
+
+# Workspace Names
+set $w1  "1"
+set $w2  "2"
+set $w3  "3"
+set $w4  "4"
+set $w5  "5"
+set $w6  "6"
+set $w7  "7"
+set $w8  "8"
+set $w9  "9"
+set $w10 "10"
+
+# Switch to Workspace
+bindsym   $mod+1 workspace $w1
+bindsym   $mod+2 workspace $w2
+bindsym   $mod+3 workspace $w3
+bindsym   $mod+4 workspace $w4
+bindsym   $mod+5 workspace $w5
+bindsym   $mod+6 workspace $w6
+bindsym   $mod+7 workspace $w7
+bindsym   $mod+8 workspace $w8
+bindsym   $mod+9 workspace $w9
+bindsym   $mod+0 workspace $w10
+
+# Move Focused Window to Workspace
+bindsym   $mod+Shift+1 move container to workspace $w1
+bindsym   $mod+Shift+2 move container to workspace $w2
+bindsym   $mod+Shift+3 move container to workspace $w3
+bindsym   $mod+Shift+4 move container to workspace $w4
+bindsym   $mod+Shift+5 move container to workspace $w5
+bindsym   $mod+Shift+6 move container to workspace $w6
+bindsym   $mod+Shift+7 move container to workspace $w7
+bindsym   $mod+Shift+8 move container to workspace $w8
+bindsym   $mod+Shift+9 move container to workspace $w9
+bindsym   $mod+Shift+0 move container to workspace $w10
+
+# Mode for Moving Floating Windows
+bindsym $mod+m mode "floating layout" focus floating
+mode "floating layout" {
+  set $fl_cmd xdotool getactivewindow
+  # {tall,short,wide}
+  bindsym t exec --no-startup-id $fl_cmd windowsize 50% 100% windowmove x% 0%
+  bindsym s exec --no-startup-id $fl_cmd windowsize 50% 50%
+  bindsym w exec --no-startup-id $fl_cmd windowsize 100% 50% windowmove 0% 0%
+
+  # top {left,center,right}
+  bindsym y exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 0% 0%
+  bindsym u exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 25% 0%
+  bindsym i exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 50% 0%
+
+  # middle {left,center,right}
+  bindsym h exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 0% 25%
+  bindsym j exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 25% 25%
+  bindsym k exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 50% 25%
+
+  # bottom {left,center,right}
+  bindsym n exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 0% 50%
+  bindsym m exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 25% 50%
+  bindsym comma exec --no-startup-id $fl_cmd windowsize 50% 50% windowmove 50% 50%
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# Mode for Resizing Windows
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym h resize grow   left 10px
+    bindsym j resize shrink up   10px
+    bindsym k resize grow   up   10px
+    bindsym l resize shrink left 10px
+
+    bindsym Shift+h resize shrink right 10px
+    bindsym Shift+j resize grow   down  10px
+    bindsym Shift+k resize shrink down  10px
+    bindsym Shift+l resize grow   right 10px
+    
+#   bindsym h resize grow   left 5px or 5ppt
+#   bindsym j resize shrink up   5px or 5ppt
+#   bindsym k resize grow   up   5px or 5ppt
+#   bindsym l resize shrink left 5px or 5ppt
+
+#   bindsym Shift+h resize shrink right 5px or 5ppt
+#   bindsym Shift+j resize grow   down  5px or 5ppt
+#   bindsym Shift+k resize shrink down  5px or 5ppt
+#   bindsym Shift+l resize grow   right 5px or 5ppt
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# i3Bar Configuration
+bindsym $mod+Shift+m bar mode toggle
+bar {
+    status_command i3blocks
+    colors {
+        background #282c34
+        statusline #c8ccd4
+        separator #545862
+
+        # CLASS             BRD     BG      FG
+        focused_workspace   #61afef #61afef #282c34
+        active_workspace    #282c34 #282c34 #c8ccd4
+        inactive_workspace  #282c34 #282c34 #c8ccd4
+        urgent_workspace    #e06c75 #e06c75 #282c34
+        binding_mode        #282c34 #282c34 #e06c75
+    }
+}
+
+
+exec --no-startup-id while : ; do feh --bg-fill --randomize --no-fehbg $HOME/Pictures/wallpaper/* && sleep 60s ; done & 

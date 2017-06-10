@@ -1,0 +1,58 @@
+" Regular Vim Config
+let &runtimepath.=',$HOME/.config/vim/'
+let base16colorspace=256
+colorscheme base16-onedark
+set nocompatible                            " Disable vi compatibility mode
+set showmode                                " Show mode at bottom left of screen
+set iskeyword=@,48-57,_,128-167,224-235     " Specifies which characters make up a word
+set matchpairs=(:),{:},[:],":",':',`:`,<:>  " Specifies pairs of characters to match with %
+set ruler                                   " Shows the current position at the bottom right of the screen
+set number                                  " Show line numbers
+set relativenumber                          " Shows line numbers relative to the cursor
+set scrolloff=2                             " Keep this many lines visible when moving the cursor near the top/bottom
+set ignorecase                              " Ignore case when searching
+set hlsearch                                " Highlights matches when searching
+set incsearch                               " Automatically searches as you type
+set wrapscan                                " Wraps to top or bottom when searching
+set backspace=indent,eol,start              " Makes backspace act right
+set autoindent                              " When hitting <Enter> uses previous indentation level
+set history=100                             " Keep more patterns in history
+syntax enable                               " Enables syntax highlighting
+filetype plugin indent on                   " Enables filetype detection for various editing enhancements
+set nowrap                                  " Disables text wrapping
+set sidescroll=1                            " Adds context of 10 characters when scrolling past end of line
+set sidescrolloff=10
+set breakindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set shiftround
+set expandtab
+set smartindent
+set endofline
+set fixendofline
+set fileformat=unix
+set noswapfile
+set showmatch
+set viminfo+=n$HOME/.config/vim/viminfo
+set hidden
+set mouse=a
+
+
+" set colorcolumn=80
+" highlight ColorColumn cterm=NONE ctermbg=237
+
+set cursorline
+highlight CursorLine cterm=NONE ctermbg=NONE
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" Reload vimrc
+augroup myvimrchooks
+    au!
+    autocmd bufwritepost $MYVIMRC source $MYVIMRC
+augroup END
+

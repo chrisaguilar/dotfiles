@@ -1,0 +1,42 @@
+command=$HOME/.config/i3blocks/$BLOCK_NAME
+markup=pango
+separator_block_width=15
+
+#[mediaplayer]
+#label=&#xf001;
+#interval=1
+
+# [weather]
+# label=&#xf0c2;
+# interval=3600
+
+[volume]
+label=&#xf028;
+interval=once
+signal=10
+
+[disk]
+command=df -h /dev/sda2 | tail -n 1 | awk '{print $4}'
+label=&#xf0a0;
+interval=360
+
+[memory]
+command=free -h | grep Mem | awk '{print $3}'
+label=&#xf233;
+interval=5
+
+[cpu]
+label=&#xf0e4;
+command=mpstat 2 1 | grep Average | awk '{printf "%.2f%", 100-$12}'
+interval=repeat
+min_width=&#xf0e4; 100.00%
+
+[temp]
+command=echo `sensors -u it8620-isa-0228 | grep temp1_input | awk '{printf "%d", $2}'`°C
+label=&#xf2c7;
+interval=60
+
+[time]
+command=date '+%a %b %d, %Y - %r'
+interval=1
+

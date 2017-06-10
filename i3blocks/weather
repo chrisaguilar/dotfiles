@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+const api_key = 'cb254703b9d67fbf04cae66e496e1aaa';
+const [ lat, lon ] = [ '33.60', '-84.37' ];
+const URL = `https://api.darksky.net/forecast/${api_key}/${lat},${lon}`;
+
+(function w() {
+  require('https').get(URL, res => {
+    const data = [];
+    res
+      .on('data', d => data.push(d))
+      .on('end', () => {
+        const weather = JSON.parse(data.join(''));
+        const t = parseInt(weather.currently.temperature, 10);
+        const c = weather.currently.summary;
+        console.log(`${t}°F, ${c}`);
+      });
+  }).on('error', e => w());
+})();

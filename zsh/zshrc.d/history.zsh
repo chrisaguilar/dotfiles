@@ -1,0 +1,5 @@
+# History setup
+
+HISTFILE=$ZDOTDIR/zsh_history
+HISTSIZE=30000
+SAVEHIST=25000

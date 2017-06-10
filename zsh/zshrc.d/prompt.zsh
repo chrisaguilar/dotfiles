@@ -1,0 +1,5 @@
+PROMPT=$'\n %B%F{cyan}%~%f %F{%(?.green.red)}➜%f%b '
+#PROMPT=$'\n %B%F{cyan}%~%f %F{%(?.green.red)}➜%f%b '
+#PROMPT=$'\n %B%F{cyan}%d%f\n %F{%(?.green.red)}λ ➜%f%b '
+#PROMPT=$'\n %B%F{%(?.green.red)}λ ➜%f%b '
+RPROMPT='${vcs_info_msg_0_}'

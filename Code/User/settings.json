@@ -1,0 +1,44 @@
+{
+    "editor.cursorBlinking": "solid",
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.fontWeight": "900",
+    "editor.minimap.enabled": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.mouseWheelZoom": true,
+    "editor.overviewRulerBorder": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        80
+    ],
+    "explorer.openEditors.visible": 0,
+    "extensions.autoUpdate": true,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "keyboard.dispatch": "keyCode",
+    "markdown.preview.scrollPreviewWithEditorSelection": false,
+    "vsicons.presets.angular": true,
+    "vsicons.presets.jsOfficial": true,
+    "vsicons.presets.jsonOfficial": true,
+    "vsicons.presets.tsOfficial": true,
+    "vsicons.projectDetection.autoReload": false,
+    "vsicons.projectDetection.disableDetect": true,
+    /*"workbench.colorCustomizations": {
+        "tab.activeBackground": "#282c34",
+        "activityBar.background": "#282c34",
+        "editorGroup.background": "#282c34"
+    },*/
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "vscode-icons",
+    "emmet.excludeLanguages": [],
+    "git.confirmSync": false,
+    "workbench.welcome.enabled": true,
+    "workbench.sideBar.location": "left",
+    "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+    "git.enableSmartCommit": true
+}
