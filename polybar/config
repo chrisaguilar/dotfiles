@@ -1,0 +1,205 @@
+[colors]
+    aqua = #00BCD4
+    black = #212121
+    blue = #2196F3
+    gray = #424242
+    green = #4CAF50
+    indigo = #3F51B5
+    orange = #FF9800
+    red = #b71c1c
+    violet = #673AB7
+    white = #BDBDBD
+    yellow = #FFEB3B
+
+[bar/main]
+    monitor = DVI-D-0
+    monitor-strict = false
+    override-redirect = false
+    bottom = true
+    fixed-center = false
+    width = 100%
+    height = 25
+    offset-x = 0
+    offset-y = 0
+    background = ${colors.black}
+    foreground = ${colors.white}
+    radius = 0.0
+    line-size = 2
+
+    border-size =
+    border-color =
+
+    padding = 1
+    module-margin = 1 ; {left,right}
+
+    font-0 = "FiraMono:size=10;1"
+    font-1 = "FontAwesome:size=10;1"
+    font-2 = "Noto Sans Mono CJK JP:size=10;1"
+    font-3 = "Noto Sans Mono CJK KR:size=10;1"
+    font-4 = "Noto Sans Mono CJK SC:size=10;1"
+    font-5 = "Noto Sans Mono CJK TC:size=10;1"
+
+    modules-left = i3 title
+    modules-center =
+    modules-right = cmus volume cpu memory temperature weather date
+
+    separator =
+
+    dim-value = 1.0
+    wm-name =
+
+    locale = en_US.UTF-8
+
+    tray-position =
+    tray-detached = false
+    tray-maxsize = 16
+    tray-transparent = false
+    tray-background = ${root.background}
+    tray-offset-x = 0
+    tray-offset-y = 0
+    tray-padding = 0
+    tray-scale = 1.0
+
+    ; wm-restack = i3
+    enable-ipc = true
+    click-left =
+    click-middle =
+    click-right =
+    scroll-up = i3wm-wsnext
+    scroll-down = i3wm-wsprev
+    double-click-left =
+    double-click-middle =
+    double-click-right =
+
+[global/wm]
+    margin-bottom = 0
+    margin-top = 0
+
+[settings]
+    ; throttle-output = 5
+    ; throttle-output-for = 10
+
+    ; throttle-input-for = 30
+
+    ; screenchange-reload = false
+
+    ; compositing-background = over
+    ; compositing-foreground = over
+    ; compositing-overline = over
+    ; compositing-underline = over
+    ; compositing-border = over
+
+    ; format-foreground =
+    ; format-background =
+    ; format-underline =
+    ; format-overline =
+    ; format-spacing =
+    ; format-padding =
+    ; format-margin =
+    ; format-offset =
+
+[module/cmus]
+    type = custom/script
+
+    exec = $HOME/.config/polybar/cmus.sh
+    exec-if = pgrep -x cmus
+    interval = 1
+
+    format-prefix = " "
+    format-underline = ${colors.violet}
+
+    click-left = cmus-remote --pause
+    click-right = cmus-remote --stop
+
+[module/cpu]
+    type = internal/cpu
+    interval = 2
+    format = <label>
+    format-prefix = " "
+    label = %percentage:3%%
+    format-underline = ${colors.red}
+
+[module/date]
+    type = internal/date
+    interval = 1
+    date = %a %b %d, %Y
+    time = %r
+    format = <label>
+    label = %date% - %time%
+    format-underline = ${colors.indigo}
+
+[module/i3]
+    type = internal/i3
+    pin-workspaces = false
+    strip-wsnumbers = true
+    index-sort = true
+    enable-click = true
+    enable-scroll = true
+    wrapping-scroll = false
+    reverse-scroll = true
+    fuzzy-match = true
+
+    format = <label-state> <label-mode>
+
+    label-mode = %mode%
+    label-mode-padding = 2
+    label-mode-background = ${colors.red}
+
+    label-focused = %name%
+    label-focused-foreground = ${colors.white}
+    label-focused-background = ${colors.gray}
+    label-focused-underline = ${colors.blue}
+    label-focused-padding = 1
+
+    label-unfocused = %name%
+    label-unfocused-padding = 1
+
+    label-visible = %name%
+    label-visible-underline = ${colors.blue}
+    label-visible-padding = 1
+
+    label-urgent = %name%
+    label-urgent-foreground = ${colors.black}
+    label-urgent-background = ${colors.red}
+    label-urgent-padding = 1
+
+[module/memory]
+    type = custom/script
+    exec = free -h | grep Mem | awk '{print $3}'
+    interval = 3
+    format-prefix = " "
+    format-underline = ${colors.green}
+
+[module/temperature]
+    type = custom/script
+    exec = echo `sensors -u it8620-isa-0228 | grep temp1_input | awk '{printf "%d", $2}'`°C
+    interval = 60
+    format-prefix = " "
+    format-underline = ${colors.orange}
+
+[module/title]
+    type = internal/xwindow
+    format-underline = ${colors.blue}
+    label = %title%
+    label-maxlen = 40
+
+[module/volume]
+    type = internal/volume
+
+    master-mixer = Master
+
+    format-volume = <label-volume>
+    format-volume-underline = ${colors.yellow}
+    label-volume =  %percentage%%
+
+    format-muted-prefix = " "
+    format-muted-underline = ${colors.yellow}
+    label-muted = muted
+
+[module/weather]
+    type = custom/script
+    interval = 900
+    format = <label>
+    format-prefix = " "
+    format-underline = ${colors.aqua}
+    exec = $HOME/.config/polybar/weather.py
