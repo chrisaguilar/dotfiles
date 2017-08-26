@@ -1,29 +1,22 @@
-export LIBVA_DRIVER_NAME="radeonsi"
-export VDPAU_DRIVER="radeonsi"
-
+export EDITOR=`which vim`
+export GNUPGHOME=$HOME/.config/gnupg
+export BROWSER=$([ -n "$DISPLAY" ] && which google-chrome-stable || which elinks)
+export ICEAUTHORITY=$HOME/.cache/ICEauthority
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
-
-export EDITOR=`which vim`
-export MAILCHECK=0
-export PAGER=`which less`
-export VISUAL=`which vim`
-
-# export GNUPGHOME=$HOME/.config/gnupg
-export ICEAUTHORITY=$HOME/.cache/ICEauthority
 export LESSHISTFILE=$HOME/.cache/less/less_history
 export LESSKEY=$HOME/.cache/less/key
-export XAUTHORITY=$HOME/.cache/Xauthority
-
+export LIBVA_DRIVER_NAME="radeonsi"
+export MAILCHECK=0
+export PAGER=`which less`
+export PATH="`npm config get prefix`/bin:$PATH"
+export PYLINTHOME="$HOME/.cache/pylint.d"
 export RANGER_LOAD_DEFAULT_RC=false
+export VDPAU_DRIVER="radeonsi"
 export VIMDOTDIR=$HOME/.config/vim
 export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
-
-if [ -n "$DISPLAY" ]; then
-    export BROWSER=`which google-chrome-stable`
-else
-    export BROWSER=`which elinks`
-fi
+export VISUAL=`which vim`
+export XAUTHORITY=$HOME/.cache/Xauthority
 
 # TTY Color Scheme
 #if [ "$TERM" = "linux" ]; then
