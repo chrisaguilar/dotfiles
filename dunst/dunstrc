@@ -1,0 +1,60 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "0x10-5-30"
+    indicate_hidden = true
+    shrink = true
+    transparency = 20
+    notification_height = 0
+    separator_height = 1
+    padding = 8
+    horizontal_padding = 8
+    frame_width = 0
+    frame_color = "#383838"
+    separator_color = "#424242"
+    sort = true
+    idle_threshold = 120
+    font = "Fira Mono 10"
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = center
+    show_age_threshold = 60
+    word_wrap = true
+    ignore_newline = false
+    stack_duplicates = true
+    hide_duplicates_count = false
+    show_indicators = true
+    icon_position = off
+    max_icon_size = 0
+    icon_path = ""
+    sticky_history = yes
+    history_length = 20
+    dmenu = "/usr/bin/rofi"
+    browser = "/usr/bin/firefox-nightly"
+    always_run_script = true
+    title = "Dunst"
+    class = "Dunst"
+    startup_notification = false
+    force_xinerama = false
+
+[shortcuts]
+    close = mod4+space
+    close_all = mod4+shift+space
+    history = mod4+grave
+    context = mod4+shift+period
+
+[urgency_low]
+    background = "#212121"
+    foreground = "#9E9E9E"
+    timeout = 5
+
+[urgency_normal]
+    background = "#212121"
+    foreground = "#9E9E9E"
+    timeout = 20
+
+[urgency_critical]
+    background = "#212121"
+    foreground = "#ff1744"
+    timeout = 0
