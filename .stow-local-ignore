@@ -1,2 +1,4 @@
-_install
 _home
+_install
+.git
+.gitignore
