@@ -2,6 +2,7 @@
 alias c='printf "\033c"'
 alias clear='c'
 alias e='exit'
+alias uefisetup='sudo systemctl reboot --firmware-setup'
 
 alias diff='diff --color=auto'
 alias grep='grep --color=auto'
@@ -15,9 +16,4 @@ alias lgg='l -Gg'
 
 alias tree='tree --dirsfirst'
 
-alias npmexec='PATH=`npm bin`:$PATH'
-alias tm='tmux'
 alias sqlite='sqlite3'
-
-# NPM Aliases (for executing various npm scripts from the command line)
-alias tsc='npmexec tsc'

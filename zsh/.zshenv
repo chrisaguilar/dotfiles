@@ -1,29 +1,29 @@
-#!/usr/bin/env bash
-
-export VDPAU_DRIVER="radeonsi"
 export LIBVA_DRIVER_NAME="radeonsi"
-export PATH=$HOME/.local/bin:$PATH
-export LANG=en_US.UTF-8
-export EDITOR=`which vim`
-export VISUAL=`which vim`
-export PAGER=`which less`
+export VDPAU_DRIVER="radeonsi"
 
-export GNUPGHOME=$HOME/.config/gnupg
+export LANG="en_US.UTF-8"
+export LC_COLLATE="C"
+
+export EDITOR=`which vim`
+export MAILCHECK=0
+export PAGER=`which less`
+export VISUAL=`which vim`
+
+# export GNUPGHOME=$HOME/.config/gnupg
 export ICEAUTHORITY=$HOME/.cache/ICEauthority
 export LESSHISTFILE=$HOME/.cache/less/less_history
 export LESSKEY=$HOME/.cache/less/key
-export MAILCHECK=0
-export RANGER_LOAD_DEFAULT_RC=false
-export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
-export VIMDOTDIR=$HOME/.config/vim
 export XAUTHORITY=$HOME/.cache/Xauthority
 
+export RANGER_LOAD_DEFAULT_RC=false
+export VIMDOTDIR=$HOME/.config/vim
+export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
+
 if [ -n "$DISPLAY" ]; then
-    export BROWSER=`which google-chrome-beta`
+    export BROWSER=`which google-chrome-stable`
 else
     export BROWSER=`which elinks`
 fi
-
 
 # TTY Color Scheme
 #if [ "$TERM" = "linux" ]; then

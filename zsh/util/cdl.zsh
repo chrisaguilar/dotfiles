@@ -1,3 +1,0 @@
-function cdl() {
-  cd $@ && ls
-}
