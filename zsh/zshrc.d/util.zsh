@@ -67,6 +67,10 @@ function open() {
     xdg-open "$@" &>/dev/null &!
 }
 
+function opt_deps() {
+    expac "%n: %o" "$@" | sort
+}
+
 function reflect() {
     sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 25 -a 6 -p http -p https
 }
@@ -76,5 +80,5 @@ function remove_metadata() {
 }
 
 function wdihi() {
-    expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn | less
+    expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
 }
