@@ -47,7 +47,7 @@ sed -i.bak -r -e's/CFLAGS=.*$/CFLAGS="-march=native -O2 -pipe -fstack-protector-
 sed -i -r -e's/CXXFLAGS=.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
 sed -i -r -e's/# ?MAKEFLAGS=.*$/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
 sed -i -r -e's/# ?BUILDDIR/BUILDDIR/' /etc/makepkg.conf
-sed -i -r -e"s/# ?PKGEXT=.*$/PKGEXT='.pkg.tar'/" /etc/makepkg.conf
+sed -i -r -e"s/PKGEXT=.*$/PKGEXT='.pkg.tar'/" /etc/makepkg.conf
 
 # Change $ZDOTDIR to $HOME/.config/zsh
 mkdir -p /etc/zsh
