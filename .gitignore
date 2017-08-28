@@ -1,3 +1,5 @@
 zsh_history
 credentials
 viminfo
+Code/*
+!Code/User/settings.json
