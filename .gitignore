@@ -3,3 +3,5 @@ credentials
 viminfo
 Code/*
 !Code/User/settings.json
+cmus/*
+!cmus/colors.theme
