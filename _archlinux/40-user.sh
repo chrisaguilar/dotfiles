@@ -4,8 +4,8 @@
 gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53
 git clone https://aur.archlinux.org/cower.git
 git clone https://aur.archlinux.org/pacaur.git
-cd cower && makepkg -sri
-cd ../pacaur && makepkg -sri
+cd cower && makepkg -sci
+cd ../pacaur && makepkg -sci
 cd ..
 rm -rf cower pacaur
 
@@ -21,10 +21,14 @@ sudo ln -s /etc/fonts/conf.avail/10-{hintint-slight,sub-pixel-rgb}.conf /etc/fon
 sudo ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 sudo ln -s /etc/fonts/conf.avail/66-noto-{mono,sans,serif}.conf /etc/fonts/conf.d/
 
+sudo sed -i.bak -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
+
 # Remove monochromatic Noto Emoji fonts
 sudo updatedb
 sudo rm /usr/share/fonts/noto/NotoEmoji-regular.ttf
 sudo fc-cache -fv
+
+sudo sensors-detect --auto
 
 # Window manager setup
 pacaur -S --noconfirm --needed \

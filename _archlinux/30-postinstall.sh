@@ -40,8 +40,6 @@ Include = /etc/pacman.d/mirrorlist
 #Include = /etc/pacman.d/mirrorlist
 EOF
 
-sed -i.bak -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
-
 # Make compilation better
 sed -i.bak -r -e's/CFLAGS=.*$/CFLAGS="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"/' /etc/makepkg.conf
 sed -i -r -e's/CXXFLAGS=.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
@@ -111,7 +109,5 @@ cat << EOF > /etc/systemd/system/getty@tty1.service.d/override.conf
 ExecStart=
 ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM
 EOF
-
-sensors detect
 
 reboot
