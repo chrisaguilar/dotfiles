@@ -9,10 +9,8 @@ alias grep='grep --color=auto'
 alias mkdir='mkdir -p'
 alias rm='rm -rf'
 
-alias ls='ls --color=auto -AFhL --group-directories-first'
-alias l='ls -l'
-alias ll='ls -1'
-alias lgg='l -Gg'
+alias ls='ls --color=auto -AFhl --group-directories-first'
+alias l='ls'
 
 alias tree='tree --dirsfirst'
 
