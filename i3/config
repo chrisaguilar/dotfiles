@@ -108,6 +108,7 @@ for_window [class="Xfce4-taskmanager"] floating enable
 for_window [class="Xfce4-panel"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Tk"] floating enable
+for_window [class="Google Play Music Desktop Player" title="Settings"] floating enable
 
 # Workspace Names
 set $w1  "1"
@@ -229,6 +230,6 @@ exec --no-startup-id setxkbmap -option "caps:escape"
 exec --no-startup-id dunst
 
 # exec --no-startup-id while : ; do feh --bg-fill --randomize --no-fehbg $HOME/Pictures/wallpaper/* && sleep 60s ; done &
-exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/Pictures/wallpaper/0074.jpg
+exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
