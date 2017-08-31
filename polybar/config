@@ -41,7 +41,7 @@
 
     modules-left = i3 title
     modules-center =
-    modules-right = cmus volume cpu memory temperature weather date
+    modules-right = volume cpu memory temperature weather date
 
     separator =
 
@@ -97,19 +97,6 @@
 ; format-padding =
 ; format-margin =
 ; format-offset =
-
-[module/cmus]
-    type = custom/script
-
-    exec = $HOME/.config/polybar/cmus.sh
-    exec-if = pgrep -x cmus
-    interval = 1
-
-    format-prefix = " "
-    format-underline = ${colors.violet}
-
-    click-left = cmus-remote --pause
-    click-right = cmus-remote --stop
 
 [module/cpu]
     type = internal/cpu
@@ -181,7 +168,7 @@
     type = internal/xwindow
     format-underline = ${colors.blue}
     label = %title%
-    label-maxlen = 40
+    label-maxlen = 50
 
 [module/volume]
     type = internal/volume
