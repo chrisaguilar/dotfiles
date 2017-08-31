@@ -1,6 +1,5 @@
 export EDITOR=`which vim`
 # export GNUPGHOME=$HOME/.config/gnupg
-export BROWSER=$([ -n "$DISPLAY" ] && which google-chrome-stable || which elinks)
 export ICEAUTHORITY=$HOME/.cache/ICEauthority
 export LANG="en_US.UTF-8"
 export LC_COLLATE="C"
