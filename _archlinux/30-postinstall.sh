@@ -87,7 +87,8 @@ mkinitcpio -p linux
 
 cp /usr/lib/systemd/system/systemd-fsck{@,-root}.service /etc/systemd/system/
 
-echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/system/systemd-fsck{@,-root}.service
+echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/system/systemd-fsck@.service
+echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/system/systemd-fsck-root.service
 
 # Autologin for user chris
 mkdir -p /etc/systemd/system/getty@tty1.service.d
