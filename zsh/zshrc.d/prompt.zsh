@@ -20,7 +20,7 @@ precmd() {
 
     user_info="[%n@%m]"
     current_dir="%F{cyan}%1~%f"
-    state="%F{%(?.green.red)}➜%f "
+    state="%F{%(?.green.red)}➜%f"
 
     PROMPT=$'\n${user_info} %B${current_dir}${vcs_info_msg_0_:-" "}${state}%b '
 
