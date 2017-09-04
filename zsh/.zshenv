@@ -1,20 +1,20 @@
-export EDITOR=`which vim`
+export EDITOR=/usr/bin/vim
 # export GNUPGHOME=$HOME/.config/gnupg
 export ICEAUTHORITY=$HOME/.cache/ICEauthority
-export LANG="en_US.UTF-8"
-export LC_COLLATE="C"
+export LANG=en_US.UTF-8
+export LC_COLLATE=C
 export LESSHISTFILE=$HOME/.cache/less/less_history
 export LESSKEY=$HOME/.cache/less/key
-export LIBVA_DRIVER_NAME="radeonsi"
+export LIBVA_DRIVER_NAME=radeonsi
 export MAILCHECK=0
-export PAGER=`which less`
-export PATH="`npm config get prefix`/bin:$PATH"
-export PYLINTHOME="$HOME/.cache/pylint.d"
-export RANGER_LOAD_DEFAULT_RC=false
-export VDPAU_DRIVER="radeonsi"
+export PAGER=/usr/bin/less
+export PATH=$HOME/.npm/global/bin:$PATH
+export PYLINTHOME=$HOME/.cache/pylint.d
+# export RANGER_LOAD_DEFAULT_RC=false
+export VDPAU_DRIVER=radeonsi
 export VIMDOTDIR=$HOME/.config/vim
-export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
-export VISUAL=`which vim`
+export VIMINIT='let $MYVIMRC=$HOME/.config/vim/vimrc | source $MYVIMRC'
+export VISUAL=/usr/bin/vim
 export XAUTHORITY=$HOME/.cache/Xauthority
 
 # TTY Color Scheme
