@@ -34,6 +34,7 @@ pacaur -S --noconfirm --needed \
     libvdpau-va-gl  \
     mesa-vdpau \
     mlocate \
+    mpv \
     nodejs \
     noto-fonts \
     noto-fonts-cjk \
@@ -91,11 +92,12 @@ pacaur -S --noconfirm --needed --asdeps \
     i3ipc-glib-git \
     imagemagick \
     jsoncpp \
+    libdvdcss \
     python-gobject \
     python-xdg \
     xdg-utils \
     xorg-xprop \
-    xorg-xwininfo
+    xorg-xwininfo \
 
 ###
 
