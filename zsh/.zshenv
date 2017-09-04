@@ -13,7 +13,7 @@ export PYLINTHOME=$HOME/.cache/pylint.d
 # export RANGER_LOAD_DEFAULT_RC=false
 export VDPAU_DRIVER=radeonsi
 export VIMDOTDIR=$HOME/.config/vim
-export VIMINIT='let $MYVIMRC=$HOME/.config/vim/vimrc | source $MYVIMRC'
+export VIMINIT='let $MYVIMRC="$HOME/.config/vim/vimrc" | source $MYVIMRC'
 export VISUAL=/usr/bin/vim
 export XAUTHORITY=$HOME/.cache/Xauthority
 
