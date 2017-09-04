@@ -109,6 +109,7 @@ for_window [class="Xfce4-panel"] floating enable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Tk"] floating enable
 for_window [class="Google Play Music Desktop Player" title="Settings"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # Workspace Names
 set $w1  "1"
