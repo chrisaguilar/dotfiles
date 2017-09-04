@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Finish systemd-resolved setup
 ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
@@ -66,23 +68,11 @@ EndSection
 EOF
 
 # Faster pacman downloads
-pacman -Syu --noconfirm reflector
+pacman -Syu --noconfirm --needed reflector
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 25 -a 6 -p http -p https
 
 # The basics
-pacman -Syu --noconfirm --needed git vim mlocate pkgstats stow tree zsh zsh-syntax-highlighting
-
-# Required for graphics
-pacman -Syu --noconfirm --needed \
-    xorg-server \
-    xorg-xinit \
-    xf86-video-amdgpu \
-    libvdpau-va-gl  \
-    libva-mesa-driver \
-    libva-vdpau-driver \
-    mesa-vdpau \
-    vulkan-radeon \
-    vulkan-icd-loader \
+pacman -Syu --noconfirm --needed git stow vim zsh
 
 # Add user chris and set password
 useradd -m -G wheel -s /usr/bin/zsh chris

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 if [[ -z "$1" ]]; then
     echo "Please provide root partition as the first argument (e.g. sda2)"
     exit

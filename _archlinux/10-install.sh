@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Install the base system
 pacstrap /mnt base base-devel
 

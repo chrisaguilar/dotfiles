@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Set the keymap to us
 loadkeys us
 
