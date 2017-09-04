@@ -8,7 +8,7 @@ set iskeyword=@,48-57,_,128-167,224-235     " Specifies which characters make up
 set matchpairs=(:),{:},[:],":",':',`:`,<:>  " Specifies pairs of characters to match with %
 set ruler                                   " Shows the current position at the bottom right of the screen
 set number                                  " Show line numbers
-set relativenumber                          " Shows line numbers relative to the cursor
+" set relativenumber                          " Shows line numbers relative to the cursor
 set scrolloff=2                             " Keep this many lines visible when moving the cursor near the top/bottom
 set ignorecase                              " Ignore case when searching
 set hlsearch                                " Highlights matches when searching
