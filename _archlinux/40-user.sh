@@ -3,8 +3,8 @@
 set -e
 
 # Install dotfiles
-chmod +x ./_install/dots.sh
-./_install/dots.sh
+chmod +x ./dots.sh
+./dots.sh
 
 # Pacaur setup
 mkdir aur_setup
