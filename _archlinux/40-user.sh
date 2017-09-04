@@ -142,5 +142,6 @@ sudo -u postgres createuser --interactive
 # Some misc things
 sudo updatedb
 sudo sensors-detect --auto
+sudo systemctl enable sshd.service pkgstats.timer fstrim.timer
 
 reboot

@@ -81,9 +81,6 @@ passwd chris
 # Edit sudoers file
 visudo
 
-# Enable periodic trim for SSD
-systemctl enable fstrim.timer
-
 # Silence fsck messages
 sed -i.bak -r -e's/HOOKS=.*$/HOOKS="base udev autodetect modconf block filesystems keyboard"/' /etc/mkinitcpio.conf
 mkinitcpio -p linux
