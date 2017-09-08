@@ -28,8 +28,10 @@ bindkey -e                                                  # Emacs mode
 bindkey '\ew' kill-region                                   # [Esc-w] - Kill from the cursor to the mark
 bindkey -s '\el' 'ls\n'                                     # [Esc-l] - run command: ls
 bindkey '^r' history-incremental-search-backward            # [Ctrl-r] - Search backward for string.
-bindkey "${terminfo[kpp]}" up-line-or-history               # [PageUp] - Up a line of history
-bindkey "${terminfo[knp]}"   down-line-or-history             # [PageDown] - Down a line of history
+bindkey '^[[1;5A' up-line-or-history
+bindkey '^[[1;5B' down-line-or-history
+#bindkey "${terminfo[kpp]}" up-line-or-history              # [PageUp] - Up a line of history
+#bindkey "${terminfo[knp]}"   down-line-or-history          # [PageDown] - Down a line of history
 bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search    # start typing + [Up-Arrow] - fuzzy find history forward
 bindkey "${terminfo[kcud1]}" down-line-or-beginning-search  # start typing + [Down-Arrow] - fuzzy find history backward
 bindkey "${terminfo[khome]}" beginning-of-line              # [Home] - Go to beginning of line
