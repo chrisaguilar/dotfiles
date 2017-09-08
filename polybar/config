@@ -50,7 +50,7 @@
 
     locale = en_US.UTF-8
 
-    tray-position =
+    tray-position = right
     tray-detached = false
     tray-maxsize = 16
     tray-transparent = false
@@ -75,28 +75,28 @@
     margin-bottom = 0
     margin-top = 0
 
-; [settings]
-; throttle-output = 5
-; throttle-output-for = 10
+[settings]
+    screenchange-reload = true
+    ; throttle-output = 5
+    ; throttle-output-for = 10
 
-; throttle-input-for = 30
+    ; throttle-input-for = 30
 
-; screenchange-reload = false
 
-; compositing-background = over
-; compositing-foreground = over
-; compositing-overline = over
-; compositing-underline = over
-; compositing-border = over
+    ; compositing-background = over
+    ; compositing-foreground = over
+    ; compositing-overline = over
+    ; compositing-underline = over
+    ; compositing-border = over
 
-; format-foreground =
-; format-background =
-; format-underline =
-; format-overline =
-; format-spacing =
-; format-padding =
-; format-margin =
-; format-offset =
+    ; format-foreground =
+    ; format-background =
+    ; format-underline =
+    ; format-overline =
+    ; format-spacing =
+    ; format-padding =
+    ; format-margin =
+    ; format-offset =
 
 [module/cpu]
     type = internal/cpu
