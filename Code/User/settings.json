@@ -26,7 +26,6 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "keyboard.dispatch": "keyCode",
-    "python.linting.enabledWithoutWorkspace": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "vsicons.presets.jsOfficial": true,
@@ -34,6 +33,10 @@
     "vsicons.projectDetection.disableDetect": true,
     "window.menuBarVisibility": "hidden",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "tslint.autoFixOnSave": true,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.jsxBracketSameLine": true,
+    "workbench.colorTheme": "One Dark Pro"
 }
