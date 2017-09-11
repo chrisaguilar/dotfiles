@@ -20,8 +20,8 @@ font                            pango:Fira Mono Medium, FontAwesome 11
 floating_modifier               $mod
 default_orientation             auto
 workspace_layout                default
-new_window                      pixel 1
-new_float                       pixel 1
+new_window                      pixel 2
+new_float                       pixel 2
 hide_edge_borders               smart
 focus_follows_mouse             yes
 mouse_warping                   output
@@ -77,7 +77,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # Exit i3
-bindsym $mod+Shift+e i3-msg exit
+bindsym $mod+Shift+e exit
 
 # Take a screenshot
 bindsym Print exec --no-startup-id scrot '%F_%I:%M:%S.png' -q 100 -e 'mv $f ~/Pictures/screenshots'
