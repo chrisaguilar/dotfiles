@@ -38,5 +38,7 @@
     "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
     "prettier.jsxBracketSameLine": true,
-    "workbench.colorTheme": "One Dark Pro"
+    "workbench.colorTheme": "One Dark Pro",
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true
 }
