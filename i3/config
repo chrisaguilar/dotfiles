@@ -228,7 +228,7 @@ exec --no-startup-id redshift-gtk
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
 exec --no-startup-id setxkbmap -option "caps:escape"
-exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec --no-startup-id dunst
 
 # exec --no-startup-id while : ; do feh --bg-fill --randomize --no-fehbg $HOME/Pictures/wallpaper/* && sleep 60s ; done &
 exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/wallpaper.jpg
