@@ -12,6 +12,7 @@ zstyle ':completion:*' menu select=2
 zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion:*' rehash true
+zstyle ':completion:*:complete:(cd|pushd):*' tag-order 'local-directories path-directories directory-stack' '*'
 
 # Verbose completion results
 zstyle ':completion:*' verbose true
