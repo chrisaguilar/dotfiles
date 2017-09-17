@@ -12,7 +12,7 @@
     yellow = #FFEB3B
 
 [bar/main]
-    monitor = DVI-D-0
+    monitor =
     monitor-strict = false
     override-redirect = false
     bottom = true
