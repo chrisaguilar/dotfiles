@@ -5,16 +5,6 @@ set $down   j
 set $left   h
 set $right  l
 
-# Colors
-# class                 BRD     BG      FG      IND     CHILD_BRD
-# client.focused          #abb2bf #abb2bf #282c34 #61afef #abb2bf
-# client.focused_inactive #abb2bf #abb2bf #282c34 #61afef #abb2bf
-# client.unfocused        #abb2bf #abb2bf #282c34 #61afef #abb2bf
-# client.urgent           #e06c75 #e06c75 #282c34 #61afef #abb2bf
-# client.placeholder      #abb2bf #abb2bf #282c34 #61afef #abb2bf
-
-# client.background       #abb2bf
-
 # General Config
 font                            pango:Fira Mono Medium, FontAwesome 11
 floating_modifier               $mod
@@ -80,23 +70,12 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # Take a screenshot
-bindsym Print exec --no-startup-id scrot '%F_%I:%M:%S.png' -q 100 -e 'mv $f ~/Pictures/screenshots'
+bindsym Print exec --no-startup-id scrot '%F_%I:%M:%S.png' -q 100 -e 'mv $f ~/screenshots'
 
 # Scratchpad + Sticky Windows
 bindsym $mod+semicolon        scratchpad show
 bindsym $mod+Shift+semicolon  move scratchpad
 bindsym $mod+apostrophe       sticky toggle
-
-# cmus Controls
-bindsym $win+b        exec --no-startup-id cmus-remote --next
-bindsym $win+c        exec --no-startup-id cmus-remote --pause
-bindsym $win+h        exec --no-startup-id cmus-remote --seek -5
-bindsym $win+l        exec --no-startup-id cmus-remote --seek +5
-bindsym $win+Shift+r  exec --no-startup-id cmus-remote --repeat
-bindsym $win+s        exec --no-startup-id cmus-remote --shuffle
-bindsym $win+v        exec --no-startup-id cmus-remote --stop
-bindsym $win+x        exec --no-startup-id cmus-remote --play
-bindsym $win+z        exec --no-startup-id cmus-remote --prev
 
 # Volume Controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id polybar-msg action volup
@@ -189,38 +168,10 @@ mode "resize" {
     bindsym Shift+k resize shrink down  10px
     bindsym Shift+l resize grow   right 10px
 
-#   bindsym h resize grow   left 5px or 5ppt
-#   bindsym j resize shrink up   5px or 5ppt
-#   bindsym k resize grow   up   5px or 5ppt
-#   bindsym l resize shrink left 5px or 5ppt
-
-#   bindsym Shift+h resize shrink right 5px or 5ppt
-#   bindsym Shift+j resize grow   down  5px or 5ppt
-#   bindsym Shift+k resize shrink down  5px or 5ppt
-#   bindsym Shift+l resize grow   right 5px or 5ppt
-
     # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
-# i3Bar Configuration
-# bindsym $mod+Shift+m bar mode toggle
-# bar {
-#     status_command i3blocks
-#     colors {
-#         background #282c34
-#         statusline #c8ccd4
-#         separator #545862
-#
-#         # CLASS             BRD     BG      FG
-#         focused_workspace   #61afef #61afef #282c34
-#         active_workspace    #282c34 #282c34 #c8ccd4
-#         inactive_workspace  #282c34 #282c34 #c8ccd4
-#         urgent_workspace    #e06c75 #e06c75 #282c34
-#         binding_mode        #282c34 #282c34 #e06c75
-#     }
-# }
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
@@ -230,7 +181,6 @@ exec --no-startup-id numlockx on
 exec --no-startup-id setxkbmap -option "caps:escape"
 exec --no-startup-id dunst
 
-# exec --no-startup-id while : ; do feh --bg-fill --randomize --no-fehbg $HOME/Pictures/wallpaper/* && sleep 60s ; done &
 exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/wallpaper.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
