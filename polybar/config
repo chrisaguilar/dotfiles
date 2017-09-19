@@ -50,7 +50,7 @@
 
     locale = en_US.UTF-8
 
-    tray-position =
+    tray-position = right
     tray-detached = false
     tray-maxsize = 16
     tray-transparent = false
