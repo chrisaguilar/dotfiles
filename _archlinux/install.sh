@@ -9,7 +9,7 @@ arch_chroot() {
 echo "Please make sure you've partitioned and mounted all drives before continuing."
 read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...\n\n'
 
-read -p "Root Partition: " BOOT_MOUNTPOINT
+read -p "Root Partition (e.g. sda2): " BOOT_MOUNTPOINT
 
 pacman -Sy
 
@@ -41,7 +41,6 @@ arch_chroot "ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime"
 arch_chroot "sed -i '/#NTP=/d' /etc/systemd/timesyncd.conf"
 arch_chroot "sed -i 's/#Fallback//' /etc/systemd/timesyncd.conf"
 arch_chroot "echo \"FallbackNTP=0.pool.ntp.org 1.pool.ntp.org 0.fr.pool.ntp.org\" >> /etc/systemd/timesyncd.conf"
-arch_chroot "timedatectl set-ntp true "
 
 # Hardware Clock
 arch_chroot "hwclock --systohc --utc"
