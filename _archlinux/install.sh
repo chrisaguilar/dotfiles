@@ -79,7 +79,7 @@ cat << EOF > /mnt/boot/loader/entries/arch.conf
 title    Arch Linux
 linux    /vmlinuz-linux
 initrd   /initramfs-linux.img
-options  root=PARTUUID=$root_partition rw quiet loglevel=3 udev.log-priority=3
+options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3
 EOF
 
 # Root Password
