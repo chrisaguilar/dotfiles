@@ -1,7 +1,12 @@
 zsh_history
 credentials
 viminfo
+
 Code/*
+!Code/User/
+Code/User/*
 !Code/User/settings.json
+!Code/User/snippets
+
 cmus/*
 !cmus/colors.theme
