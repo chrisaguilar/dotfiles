@@ -183,7 +183,9 @@ pacman -S --noconfirm --needed gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavuc
 yes | pacman -S --needed termite
 
 echo "${BGreen}Network Manager${Reset}"
-pacman -S --noconfirm --needed network-manager-applet
+pacman -S --noconfirm --needed dnsmasq openresolv dhclient \
+                               network-manager-applet nm-connection-editor \
+                               gnome-keyring
 
 
 echo "${BGreen}Install Development Apps${Reset}"
@@ -196,8 +198,6 @@ pacman -S --noconfirm --needed calibre texlive-most libreoffice-fresh
 
 echo "${BGreen}Install System Apps${Reset}"
 pacman -S --noconfirm --needed htop docker
-newgrp docker
-gpasswd -a chris docker
 
 
 echo "${BGreen}Install Graphics Apps${Reset}"
@@ -225,13 +225,13 @@ chown -R postgres:postgres /var/lib/postgres
 echo "Enter your new postgres account password:"
 passwd postgres
 su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
-systemctl enable postgresql
 
 
 echo "${BGreen}Install Fonts${Reset}"
-pacman -S --noconfirm --needed --asdeps cairo fontconfig freetype2
+pacman -S --noconfirm --needed cairo fontconfig freetype2
 pacman -S --noconfirm --needed ttf-dejavu ttf-liberation ttf-bitstream-vera \
                                noto-fonts{,-{cjk,emoji}} otf-fira-mono
+
 
 echo "${BGreen}Font Configuration${Reset}"
 sudo ln -sf /etc/fonts/conf.avail/10-{hintint-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
@@ -240,24 +240,10 @@ sudo ln -sf /etc/fonts/conf.avail/66-noto-{mono,sans,serif}.conf /etc/fonts/conf
 
 sudo sed -i -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
 
+
 echo "${BGreen}Remove Monochromatic Emojis${Reset}"
 sudo rm /usr/share/fonts/noto/NotoEmoji-Regular.ttf
 sudo fc-cache -fv
-
-
-echo "${BGreen}Install AUR Packages${Reset}"
-usr "pacaur -S --noconfirm --needed \
-    polybar-git i3ipc-glib-git \
-    numix-circle-icon-theme-git \
-    xfce-theme-greybird visual-studio-code \
-    google-chrome skypeforlinux-bin \
-    plex-media-server otf-fira-code \
-    ttf-font-awesome"
-
-
-echo "${BGreen}Clean Orphans${Reset}"
-pacman -Rus --noconfirm `pacman -Qtdq`
-pacman-optimize
 
 
 echo "${BGreen}Silence fsck Messages${Reset}"
@@ -283,6 +269,18 @@ updatedb
 systemctl enable pkgstats.timer fstrim.timer
 sensors-detect --auto
 timedatectl set-ntp true
+
+
+echo "${BGreen}Install AUR Packages${Reset}"
+usr "pacaur -S --noconfirm --needed \
+    polybar-git i3ipc-glib-git numix-icon-theme-git numix-circle-icon-theme-git \
+    xfce-theme-greybird visual-studio-code google-chrome skypeforlinux-bin \
+    plex-media-server otf-fira-code ttf-font-awesome"
+
+
+echo "${BGreen}Clean Orphans${Reset}"
+pacman -Rus --noconfirm `pacman -Qtdq`
+pacman-optimize
 
 
 echo "${BGreen}Finish${Reset}"

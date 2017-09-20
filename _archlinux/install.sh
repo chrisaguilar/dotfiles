@@ -25,11 +25,12 @@ echo "${BGreen}Sync the Clock${Reset}"
 timedatectl set-ntp true
 
 echo "${BGreen}Get the Fastest Mirrors${Reset}"
-pacman -Sy --noconfirm reflector
+pacman -S --noconfirm reflector
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
+pacman -Sy
 
 echo "${BGreen}Install the Base System${Reset}"
-pacstrap /mnt base base-devel git stow vim zsh reflector
+pacstrap /mnt base base-devel git stow vim zsh reflector networkmanager
 
 echo "${BGreen}Generate Fstab${Reset}"
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -63,7 +64,6 @@ echo "chris" >> /mnt/etc/hostname
 sed -i.bak -r -e "s/# End of file/127.0.1.1\tchris.localdomain\tchris/" /mnt/etc/hosts
 
 echo "${BGreen}Enable Networking${Reset}"
-arch_chroot "pacman -Sy --noconfirm networkmanager dnsmasq openresolv dhclient nm-connection-editor gnome-keyring"
 arch_chroot "systemctl enable NetworkManager"
 
 echo "${BGreen}Initramfs${Reset}"
