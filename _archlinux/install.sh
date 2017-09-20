@@ -11,9 +11,14 @@ arch_chroot() {
     arch-chroot /mnt /bin/bash -c "${1}"
 }
 
+package_install() {
+    pacman -S --noconfirm --needed ${1} >> /tmp/installation.log 2>&1
+}
+
 title() {
     echo "${BGreen}${1}${Reset}"
 }
+
 
 echo "Please make sure you've partitioned and mounted all drives before continuing."
 read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...'
@@ -34,7 +39,7 @@ timedatectl set-ntp true
 
 
 title "Get the Fastest Mirrors"
-pacman -S --noconfirm reflector
+package_install "reflector"
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
 pacman -Sy
 
