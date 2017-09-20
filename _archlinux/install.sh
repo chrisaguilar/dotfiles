@@ -24,7 +24,7 @@ pacman -Sy --noconfirm reflector
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
 
 # Install Base System
-pacstrap /mnt base base-devel
+pacstrap /mnt base base-devel git stow vim zsh reflector
 
 # Generate Fstab
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -58,8 +58,7 @@ echo "chris" >> /mnt/etc/hostname
 sed -i.bak -r -e "s/# End of file/127.0.1.1\tchris.localdomain\tchris/" /mnt/etc/hosts
 
 # Network
-arch_chroot "pacman -Sy --noconfirm networkmanager"
-arch_chroot "pacman -Sy --noconfirm --asdeps dnsmasq openresolv dhclient"
+arch_chroot "pacman -Sy --noconfirm networkmanager dnsmasq openresolv dhclient nm-connection-editor gnome-keyring"
 arch_chroot "systemctl enable NetworkManager"
 
 # Initramfs
