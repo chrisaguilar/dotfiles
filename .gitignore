@@ -9,6 +9,8 @@ Code/User/*
 !Code/User/settings.json
 !Code/User/snippets
 
+configstore/*
+
 credentials
 
 menus/*
