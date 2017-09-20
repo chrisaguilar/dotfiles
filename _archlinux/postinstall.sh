@@ -12,7 +12,7 @@ usr() {
 }
 
 package_install() {
-    package_install "${1}"
+    pacman -S --noconfirm --needed ${1}
 }
 
 cat << EOF > /etc/pacman.conf
@@ -112,6 +112,7 @@ usr "git clone https://aur.archlinux.org/cower.git /home/chris/aur_setup/cower"
 usr "git clone https://aur.archlinux.org/pacaur.git /home/chris/aur_setup/pacaur"
 usr "cd /home/chris/aur_setup/cower && makepkg -sci"
 usr "cd /home/chris/aur_setup/pacaur && makepkg -sci"
+usr "rm -rf /home/chris/aur_setup"
 
 
 echo "${BGreen}Basic Setup${Reset}"
@@ -234,7 +235,7 @@ su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
 echo "${BGreen}Install Fonts${Reset}"
 package_install "cairo fontconfig freetype2"
 package_install "ttf-dejavu ttf-liberation ttf-bitstream-vera \
-                noto-fonts{,-{cjk,emoji}} otf-fira-mono"
+                noto-fonts noto-fonts-cjk noto-fonts-emoji otf-fira-mono"
 
 
 echo "${BGreen}Font Configuration${Reset}"
@@ -284,6 +285,7 @@ usr "pacaur -S --noconfirm --needed \
 
 echo "${BGreen}Clean Orphans${Reset}"
 pacman -Rus --noconfirm `pacman -Qtdq`
+usr "yes | pacaur -Scc"
 pacman-optimize
 
 

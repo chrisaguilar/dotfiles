@@ -90,5 +90,7 @@ echo "${BGreen}Set the Root Password${Reset}"
 arch_chroot "passwd"
 
 echo "${BGreen}Finish${Reset}"
+sync
+swapoff -a
 umount -R /mnt
 reboot
