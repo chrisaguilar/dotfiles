@@ -7,14 +7,20 @@ Reset=$(tput sgr0)
 Green=$(tput setaf 2)
 BGreen=${Bold}${Green}
 
-usr() {
-    su - chris -c "${1}"
-}
-
 package_install() {
     pacman -S --noconfirm --needed ${1}
 }
 
+title() {
+    echo "${BGreen}${1}${Reset}"
+}
+
+usr() {
+    su - chris -c "${1}"
+}
+
+
+title "Configure Pacman"
 cat << EOF > /etc/pacman.conf
 [options]
 HoldPkg      = pacman glibc
@@ -50,7 +56,7 @@ Include = /etc/pacman.d/mirrorlist
 EOF
 
 
-echo "${BGreen}Initialize the Pacman Keyring${Reset}"
+title "Initialize the Pacman Keyring"
 package_install "haveged"
 haveged -w 1024
 pacman-key --init
@@ -59,15 +65,15 @@ pkill haveged
 pacman -R --noconfirm haveged
 
 
-echo "${BGreen}Get the Fastest Mirrors${Reset}"
+title "Get the Fastest Mirrors"
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
 
 
-echo "${BGreen}System Update${Reset}"
+title "System Update"
 pacman -Sy
 
 
-echo "${BGreen}Configure Sudo${Reset}"
+title "Configure Sudo"
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//' /etc/sudoers
 echo "" >> /etc/sudoers
 echo 'Defaults !requiretty, !tty_tickets, !umask' >> /etc/sudoers
@@ -81,13 +87,13 @@ echo 'Defaults passprompt="[sudo] password for %u: "' >> /etc/sudoers
 echo 'Defaults lecture=never' >> /etc/sudoers
 
 
-echo "${BGreen}Install ZSH${Reset}"
+title "Install ZSH"
 package_install "zsh zsh-syntax-highlighting"
 mkdir -p /etc/zsh
 echo 'export ZDOTDIR=$HOME/.config/zsh' > /etc/zsh/zshenv
 
 
-echo "${BGreen}User Setup${Reset}"
+title "User Setup"
 useradd -m -G wheel -s /usr/bin/zsh chris
 passwd chris
 
@@ -97,7 +103,7 @@ usr "chmod +x /home/chris/dotfiles/dots.sh"
 usr "cd /home/chris/dotfiles && ./dots.sh"
 
 
-echo "${BGreen}Makepkg Setup${Reset}"
+title "Makepkg Setup"
 sed -i -r -e's/CFLAGS=.*$/CFLAGS="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"/' /etc/makepkg.conf
 sed -i -r -e's/CXXFLAGS=.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
 sed -i -r -e's/# ?MAKEFLAGS=.*$/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
@@ -105,7 +111,7 @@ sed -i -r -e's/# ?BUILDDIR/BUILDDIR/' /etc/makepkg.conf
 sed -i -r -e"s/PKGEXT=.*$/PKGEXT='.pkg.tar'/" /etc/makepkg.conf
 
 
-echo "${BGreen}AUR Helper${Reset}"
+title "AUR Helper"
 usr "mkdir -p /home/chris/aur_setup"
 usr "gpg --recv-keys --keyserver hkp://pgp.mit.edu 1EB2638FF56C0C53"
 usr "git clone https://aur.archlinux.org/cower.git /home/chris/aur_setup/cower"
@@ -115,7 +121,7 @@ usr "cd /home/chris/aur_setup/pacaur && makepkg -sci"
 usr "rm -rf /home/chris/aur_setup"
 
 
-echo "${BGreen}Basic Setup${Reset}"
+title "Basic Setup"
 package_install "bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree"
 package_install "zip unzip unrar p7zip lzop cpio"
 package_install "avahi nss-mdns"
@@ -125,7 +131,7 @@ package_install "ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autof
 systemctl enable avahi-daemon
 
 
-echo "${BGreen}Install SSH${Reset}"
+title "Install SSH"
 package_install "openssh"
 systemctl enable sshd
 sed -i '/Port 22/s/^#//' /etc/ssh/sshd_config
@@ -160,17 +166,17 @@ sed -i '/the setting of/s/^/#/' /etc/ssh/sshd_config
 sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/sshd_config
 
 
-echo "${BGreen}Install Graphics Drivers${Reset}"
+title "Install Graphics Drivers"
 package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
                 libva-mesa-driver libva-vdpau-driver"
 
 
-echo "${BGreen}Install Xorg${Reset}"
+title "Install Xorg"
 package_install "xorg-server xorg-xinit xorg-xkill xorg-xinput \
                 xf86-input-libinput mesa"
 
 
-echo "${BGreen}CUPS${Reset}"
+title "CUPS"
 package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
                 foomatic-db-engine foomatic-db-nonfree foomatic-db-ppds \
                 foomatic-db-nonfree-ppds hplip splix cups-pdf \
@@ -178,7 +184,7 @@ package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
 systemctl enable org.cups.cupsd
 
 
-echo "${BGreen}Desktop Environment${Reset}"
+title "Desktop Environment"
 package_install "xfce4 xfce4-goodies i3"
 package_install "gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
                 system-config-printer gtk3-print-backends zathura \
@@ -188,42 +194,42 @@ package_install "gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
                 xorg-xwininfo"
 yes | pacman -S --needed termite
 
-echo "${BGreen}Network Manager${Reset}"
+title "Network Manager"
 package_install "dnsmasq openresolv dhclient network-manager-applet \
                 nm-connection-editor gnome-keyring"
 
 
-echo "${BGreen}Install Development Apps${Reset}"
+title "Install Development Apps"
 package_install "nodejs npm python-pip"
 
 
-echo "${BGreen}Install Office Apps${Reset}"
+title "Install Office Apps"
 package_install "calibre texlive-most libreoffice-fresh"
 
 
-echo "${BGreen}Install System Apps${Reset}"
+title "Install System Apps"
 package_install "htop docker"
 
 
-echo "${BGreen}Install Graphics Apps${Reset}"
+title "Install Graphics Apps"
 package_install "feh"
 
 
-echo "${BGreen}Install Internet Apps${Reset}"
+title "Install Internet Apps"
 package_install "chromium firefox youtube-dl transmission-gtk wget"
 
 
-echo "${BGreen}Install Audio Apps${Reset}"
+title "Install Audio Apps"
 package_install "gst-plugins-base gst-plugins-base-libs gst-plugins-good \
                 gst-plugins-bad gst-plugins-ugly gst-libav"
 
 
-echo "${BGreen}Install Video Apps${Reset}"
+title "Install Video Apps"
 package_install "mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
                 ffmpegthumbnailer ffmpegthumbs"
 
 
-echo "${BGreen}Install PostgreSQL${Reset}"
+title "Install PostgreSQL"
 package_install "postgresql"
 mkdir -p /var/lib/postgres
 chown -R postgres:postgres /var/lib/postgres
@@ -232,13 +238,13 @@ passwd postgres
 su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
 
 
-echo "${BGreen}Install Fonts${Reset}"
+title "Install Fonts"
 package_install "cairo fontconfig freetype2"
 package_install "ttf-dejavu ttf-liberation ttf-bitstream-vera \
                 noto-fonts noto-fonts-cjk noto-fonts-emoji otf-fira-mono"
 
 
-echo "${BGreen}Font Configuration${Reset}"
+title "Font Configuration"
 sudo ln -sf /etc/fonts/conf.avail/10-{hintint-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/66-noto-{mono,sans,serif}.conf /etc/fonts/conf.d/
@@ -246,12 +252,12 @@ sudo ln -sf /etc/fonts/conf.avail/66-noto-{mono,sans,serif}.conf /etc/fonts/conf
 sudo sed -i -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
 
 
-echo "${BGreen}Remove Monochromatic Emojis${Reset}"
+title "Remove Monochromatic Emojis"
 sudo rm /usr/share/fonts/noto/NotoEmoji-Regular.ttf
 sudo fc-cache -fv
 
 
-echo "${BGreen}Silence fsck Messages${Reset}"
+title "Silence fsck Messages"
 sed -i -r -e's/HOOKS=.*$/HOOKS="base udev autodetect modconf block filesystems keyboard"/' /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
@@ -261,14 +267,14 @@ echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/sys
 echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/system/systemd-fsck-root.service
 
 
-echo "${BGreen}Setup Automatic Login to Virtual Console${Reset}"
+title "Setup Automatic Login to Virtual Console"
 mkdir -p /etc/systemd/system/getty@tty1.service.d
 echo '[Service]' >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo 'ExecStart=' >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo 'ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM' >> /etc/systemd/system/getty@tty1.service.d/override.conf
 
 
-echo "${BGreen}Miscellaneous Stuff${Reset}"
+title "Miscellaneous Stuff"
 echo "blacklist sp5100_tco" > /etc/modprobe.d/blacklist.conf
 updatedb
 systemctl enable pkgstats.timer fstrim.timer
@@ -276,18 +282,18 @@ sensors-detect --auto
 timedatectl set-ntp true
 
 
-echo "${BGreen}Install AUR Packages${Reset}"
+title "Install AUR Packages"
 usr "pacaur -S --noconfirm --needed \
     polybar-git i3ipc-glib-git numix-icon-theme-git numix-circle-icon-theme-git \
     xfce-theme-greybird visual-studio-code google-chrome skypeforlinux-bin \
     plex-media-server otf-fira-code ttf-font-awesome"
 
 
-echo "${BGreen}Clean Orphans${Reset}"
+title "Clean Orphans"
 pacman -Rus --noconfirm `pacman -Qtdq`
 usr "yes | pacaur -Scc"
 pacman-optimize
 
 
-echo "${BGreen}Finish${Reset}"
+title "Finish"
 reboot

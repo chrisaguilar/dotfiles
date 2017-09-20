@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+
+extensions="
 EditorConfig.EditorConfig
 donjayamanne.githistory
 donjayamanne.python
@@ -6,3 +9,8 @@ esbenp.prettier-vscode
 joelday.docthis
 robertohuertasm.vscode-icons
 zhuangtongfa.Material-theme
+"
+
+for extension in ${extensions}; do
+    code --install-extension "${extension}"
+done
