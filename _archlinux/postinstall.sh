@@ -8,7 +8,7 @@ Green=$(tput setaf 2)
 BGreen=${Bold}${Green}
 
 package_install() {
-    pacman -S --noconfirm --needed ${1}
+    pacman -S --noconfirm --needed ${1} >> /tmp/installation.log 2>&1
 }
 
 title() {
