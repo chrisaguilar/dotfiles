@@ -1,13 +1,13 @@
 chromium/*
 
+cmus/*
+!cmus/colors.theme
+
 Code/*
 !Code/User/
 Code/User/*
 !Code/User/settings.json
 !Code/User/snippets
-
-cmus/*
-!cmus/colors.theme
 
 credentials
 
