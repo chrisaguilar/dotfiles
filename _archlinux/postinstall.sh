@@ -11,6 +11,10 @@ usr() {
     su - chris -c "${1}"
 }
 
+package_install() {
+    package_install "${1}"
+}
+
 cat << EOF > /etc/pacman.conf
 [options]
 HoldPkg      = pacman glibc
@@ -47,7 +51,7 @@ EOF
 
 
 echo "${BGreen}Initialize the Pacman Keyring${Reset}"
-pacman -S --noconfirm --needed haveged
+package_install "haveged"
 haveged -w 1024
 pacman-key --init
 pacman-key --populate archlinux
@@ -78,7 +82,7 @@ echo 'Defaults lecture=never' >> /etc/sudoers
 
 
 echo "${BGreen}Install ZSH${Reset}"
-pacman -S --noconfirm --needed zsh zsh-syntax-highlighting
+package_install "zsh zsh-syntax-highlighting"
 mkdir -p /etc/zsh
 echo 'export ZDOTDIR=$HOME/.config/zsh' > /etc/zsh/zshenv
 
@@ -111,17 +115,17 @@ usr "cd /home/chris/aur_setup/pacaur && makepkg -sci"
 
 
 echo "${BGreen}Basic Setup${Reset}"
-pacman -S --noconfirm --needed bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree
-pacman -S --noconfirm --needed zip unzip unrar p7zip lzop cpio
-pacman -S --noconfirm --needed avahi nss-mdns
-pacman -S --noconfirm --needed alsa-utils alsa-plugins
-pacman -S --noconfirm --needed pulseaudio pulseaudio-alsa
-pacman -S --noconfirm --needed ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autofs mtpfs
+package_install "bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree"
+package_install "zip unzip unrar p7zip lzop cpio"
+package_install "avahi nss-mdns"
+package_install "alsa-utils alsa-plugins"
+package_install "pulseaudio pulseaudio-alsa"
+package_install "ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autofs mtpfs"
 systemctl enable avahi-daemon
 
 
 echo "${BGreen}Install SSH${Reset}"
-pacman -S --noconfirm --needed openssh
+package_install "openssh"
 systemctl enable sshd
 sed -i '/Port 22/s/^#//' /etc/ssh/sshd_config
 sed -i '/Protocol 2/s/^#//' /etc/ssh/sshd_config
@@ -156,70 +160,70 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 echo "${BGreen}Install Graphics Drivers${Reset}"
-pacman -S --noconfirm --needed xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
-                      libva-mesa-driver libva-vdpau-driver
+package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
+                libva-mesa-driver libva-vdpau-driver"
 
 
 echo "${BGreen}Install Xorg${Reset}"
-pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xkill xorg-xinput xf86-input-libinput mesa
+package_install "xorg-server xorg-xinit xorg-xkill xorg-xinput \
+                xf86-input-libinput mesa"
 
 
 echo "${BGreen}CUPS${Reset}"
-pacman -S --noconfirm --needed cups cups-filters ghostscript gsfonts gutenprint \
-                      foomatic-db foomatic-db-engine foomatic-db-nonfree \
-                      foomatic-db-ppds foomatic-db-nonfree-ppds hplip splix \
-                      cups-pdf foomatic-db-gutenprint-ppds
+package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
+                foomatic-db-engine foomatic-db-nonfree foomatic-db-ppds \
+                foomatic-db-nonfree-ppds hplip splix cups-pdf \
+                foomatic-db-gutenprint-ppds"
 systemctl enable org.cups.cupsd
 
 
 echo "${BGreen}Desktop Environment${Reset}"
-pacman -S --noconfirm --needed xfce4 xfce4-goodies i3
-pacman -S --noconfirm --needed gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
-                      system-config-printer gtk3-print-backends zathura \
-                      zathura-pdf-mupdf zathura-djvu maim xdotool compton curl \
-                      numlockx polkit-gnome redshift rofi geoip \
-                      geoip-database-extra jsoncpp python-gobject python-xdg \
-                      xdg-utils xorg-xprop xorg-xwininfo
+package_install "xfce4 xfce4-goodies i3"
+package_install "gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
+                system-config-printer gtk3-print-backends zathura \
+                zathura-pdf-mupdf zathura-djvu maim xdotool compton curl \
+                numlockx polkit-gnome redshift rofi geoip geoip-database-extra \
+                jsoncpp python-gobject python-xdg xdg-utils xorg-xprop \
+                xorg-xwininfo"
 yes | pacman -S --needed termite
 
 echo "${BGreen}Network Manager${Reset}"
-pacman -S --noconfirm --needed dnsmasq openresolv dhclient \
-                               network-manager-applet nm-connection-editor \
-                               gnome-keyring
+package_install "dnsmasq openresolv dhclient network-manager-applet \
+                nm-connection-editor gnome-keyring"
 
 
 echo "${BGreen}Install Development Apps${Reset}"
-pacman -S --noconfirm --needed nodejs npm python-pip
+package_install "nodejs npm python-pip"
 
 
 echo "${BGreen}Install Office Apps${Reset}"
-pacman -S --noconfirm --needed calibre texlive-most libreoffice-fresh
+package_install "calibre texlive-most libreoffice-fresh"
 
 
 echo "${BGreen}Install System Apps${Reset}"
-pacman -S --noconfirm --needed htop docker
+package_install "htop docker"
 
 
 echo "${BGreen}Install Graphics Apps${Reset}"
-pacman -S --noconfirm feh
+package_install "feh"
 
 
 echo "${BGreen}Install Internet Apps${Reset}"
-pacman -S --noconfirm --needed chromium firefox youtube-dl transmission-gtk wget
+package_install "chromium firefox youtube-dl transmission-gtk wget"
 
 
 echo "${BGreen}Install Audio Apps${Reset}"
-pacman -S --noconfirm --needed gst-plugins-base gst-plugins-base-libs gst-plugins-good \
-                      gst-plugins-bad gst-plugins-ugly gst-libav
+package_install "gst-plugins-base gst-plugins-base-libs gst-plugins-good \
+                gst-plugins-bad gst-plugins-ugly gst-libav"
 
 
 echo "${BGreen}Install Video Apps${Reset}"
-pacman -S --noconfirm --needed mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
-                      ffmpegthumbnailer ffmpegthumbs
+package_install "mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
+                ffmpegthumbnailer ffmpegthumbs"
 
 
 echo "${BGreen}Install PostgreSQL${Reset}"
-pacman -S --noconfirm --needed postgresql
+package_install "postgresql"
 mkdir -p /var/lib/postgres
 chown -R postgres:postgres /var/lib/postgres
 echo "Enter your new postgres account password:"
@@ -228,9 +232,9 @@ su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
 
 
 echo "${BGreen}Install Fonts${Reset}"
-pacman -S --noconfirm --needed cairo fontconfig freetype2
-pacman -S --noconfirm --needed ttf-dejavu ttf-liberation ttf-bitstream-vera \
-                               noto-fonts{,-{cjk,emoji}} otf-fira-mono
+package_install "cairo fontconfig freetype2"
+package_install "ttf-dejavu ttf-liberation ttf-bitstream-vera \
+                noto-fonts{,-{cjk,emoji}} otf-fira-mono"
 
 
 echo "${BGreen}Font Configuration${Reset}"
