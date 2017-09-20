@@ -1,8 +1,8 @@
 #!/bin/bash
 
-mkdir -p "$HOME/.config"
+# mkdir -p "$HOME/.config"
 
-stow -v -R -t "$HOME/.config" .
+# stow -v -R -t "$HOME/.config" .
 
 cd _home
 

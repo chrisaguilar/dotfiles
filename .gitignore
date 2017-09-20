@@ -1,6 +1,4 @@
-zsh_history
-credentials
-viminfo
+chromium/*
 
 Code/*
 !Code/User/
@@ -10,3 +8,17 @@ Code/User/*
 
 cmus/*
 !cmus/colors.theme
+
+credentials
+
+menus/*
+
+pulse/*
+
+Thunar/*
+
+viminfo
+
+xfce4/*
+
+zsh_history

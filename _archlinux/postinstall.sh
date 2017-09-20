@@ -97,10 +97,11 @@ title "User Setup"
 useradd -m -G wheel -s /usr/bin/zsh chris
 passwd chris
 
-usr "git clone https://github.com/chrisaguilar/dotfiles.git /home/chris/dotfiles"
-usr "mkdir -p /home/chris/.config"
-usr "chmod +x /home/chris/dotfiles/dots.sh"
-usr "cd /home/chris/dotfiles && ./dots.sh"
+usr "git clone https://github.com/chrisaguilar/dotfiles.git /home/chris/.config"
+usr "chmod +x /home/chris/.config/dots.sh"
+usr "cd /home/chris/.config && ./dots.sh"
+usr "mkdir -p /home/chris/screenshots"
+usr "rm -rf /home/chris/.bash*"
 
 
 title "Makepkg Setup"
