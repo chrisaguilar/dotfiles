@@ -70,7 +70,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # Take a screenshot
-bindsym Print exec --no-startup-id maim -s -m 1 $HOME/screenshots/$(date +%s).png
+bindsym Print exec --no-startup-id $HOME/.config/bin/screenshot
 
 # Scratchpad + Sticky Windows
 bindsym $mod+semicolon        scratchpad show
