@@ -47,7 +47,7 @@ EOF
 
 
 echo "${BGreen}Initialize the Pacman Keyring${Reset}"
-pacman -Sq --noconfirm --needed haveged
+pacman -S --noconfirm --needed haveged
 haveged -w 1024
 pacman-key --init
 pacman-key --populate archlinux
@@ -56,7 +56,6 @@ pacman -R --noconfirm haveged
 
 
 echo "${BGreen}Get the Fastest Mirrors${Reset}"
-pacman -Sy --noconfirm reflector
 reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
 
 
@@ -79,7 +78,7 @@ echo 'Defaults lecture=never' >> /etc/sudoers
 
 
 echo "${BGreen}Install ZSH${Reset}"
-pacman -Sq --noconfirm --needed zsh zsh-syntax-highlighting
+pacman -S --noconfirm --needed zsh zsh-syntax-highlighting
 mkdir -p /etc/zsh
 echo 'export ZDOTDIR=$HOME/.config/zsh' > /etc/zsh/zshenv
 
@@ -112,17 +111,17 @@ usr "cd /home/chris/aur_setup/pacaur && makepkg -sci"
 
 
 echo "${BGreen}Basic Setup${Reset}"
-pacman -Sq --noconfirm --needed bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree
-pacman -Sq --noconfirm --needed zip unzip unrar p7zip lzop cpio
-pacman -Sq --noconfirm --needed avahi nss-mdns
-pacman -Sq --noconfirm --needed alsa-utils alsa-plugins
-pacman -Sq --noconfirm --needed pulseaudio pulseaudio-alsa
-pacman -Sq --noconfirm --needed ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autofs mtpfs
+pacman -S --noconfirm --needed bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree
+pacman -S --noconfirm --needed zip unzip unrar p7zip lzop cpio
+pacman -S --noconfirm --needed avahi nss-mdns
+pacman -S --noconfirm --needed alsa-utils alsa-plugins
+pacman -S --noconfirm --needed pulseaudio pulseaudio-alsa
+pacman -S --noconfirm --needed ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autofs mtpfs
 systemctl enable avahi-daemon
 
 
 echo "${BGreen}Install SSH${Reset}"
-pacman -Sq --noconfirm --needed openssh
+pacman -S --noconfirm --needed openssh
 systemctl enable sshd
 sed -i '/Port 22/s/^#//' /etc/ssh/sshd_config
 sed -i '/Protocol 2/s/^#//' /etc/ssh/sshd_config
@@ -157,16 +156,16 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 echo "${BGreen}Install Graphics Drivers${Reset}"
-pacman -Sq --noconfirm --needed xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
+pacman -S --noconfirm --needed xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
                       libva-mesa-driver libva-vdpau-driver
 
 
 echo "${BGreen}Install Xorg${Reset}"
-pacman -Sq --noconfirm --needed xorg-server xorg-xinit xorg-xkill xorg-xinput xf86-input-libinput mesa
+pacman -S --noconfirm --needed xorg-server xorg-xinit xorg-xkill xorg-xinput xf86-input-libinput mesa
 
 
 echo "${BGreen}CUPS${Reset}"
-pacman -Sq --noconfirm --needed cups cups-filters ghostscript gsfonts gutenprint \
+pacman -S --noconfirm --needed cups cups-filters ghostscript gsfonts gutenprint \
                       foomatic-db foomatic-db-engine foomatic-db-nonfree \
                       foomatic-db-ppds foomatic-db-nonfree-ppds hplip splix \
                       cups-pdf foomatic-db-gutenprint-ppds
@@ -174,56 +173,53 @@ systemctl enable org.cups.cupsd
 
 
 echo "${BGreen}Desktop Environment${Reset}"
-pacman -Sq --noconfirm --needed xfce4 xfce4-goodies i3
-pacman -Sq --noconfirm --needed gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
+pacman -S --noconfirm --needed xfce4 xfce4-goodies i3
+pacman -S --noconfirm --needed gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
                       system-config-printer gtk3-print-backends zathura \
                       zathura-pdf-mupdf zathura-djvu scrot xdotool compton curl \
                       numlockx polkit-gnome redshift rofi geoip \
                       geoip-database-extra jsoncpp python-gobject python-xdg \
                       xdg-utils xorg-xprop xorg-xwininfo
-usr "pacaur -Sq --noconfirm --needed polybar-git i3ipc-glib-git numix-circle-icon-theme-git xfce-theme-greybird"
-yes | pacman -Sq --needed termite
+yes | pacman -S --needed termite
 
 echo "${BGreen}Network Manager${Reset}"
-pacman -Sq --noconfirm --needed network-manager-applet
+pacman -S --noconfirm --needed network-manager-applet
 
 
 echo "${BGreen}Install Development Apps${Reset}"
-pacman -Sq --noconfirm --needed nodejs npm python-pip
-usr "pacaur -Sq --noconfirm --needed visual-studio-code"
+pacman -S --noconfirm --needed nodejs npm python-pip
 
 
 echo "${BGreen}Install Office Apps${Reset}"
-pacman -Sq --noconfirm --needed calibre texlive-most libreoffice-fresh
+pacman -S --noconfirm --needed calibre texlive-most libreoffice-fresh
 
 
 echo "${BGreen}Install System Apps${Reset}"
-pacman -Sq --noconfirm --needed htop docker
+pacman -S --noconfirm --needed htop docker
 newgrp docker
 gpasswd -a chris docker
 
 
 echo "${BGreen}Install Graphics Apps${Reset}"
-pacman -Sq --noconfirm feh
+pacman -S --noconfirm feh
 
 
 echo "${BGreen}Install Internet Apps${Reset}"
-pacman -Sq --noconfirm --needed chromium firefox youtube-dl transmission-gtk wget
-usr "pacaur -Sq --noconfirm --needed google-chrome skypeforlinux-bin plex-media-server"
+pacman -S --noconfirm --needed chromium firefox youtube-dl transmission-gtk wget
 
 
 echo "${BGreen}Install Audio Apps${Reset}"
-pacman -Sq --noconfirm --needed gst-plugins-base gst-plugins-base-libs gst-plugins-good \
+pacman -S --noconfirm --needed gst-plugins-base gst-plugins-base-libs gst-plugins-good \
                       gst-plugins-bad gst-plugins-ugly gst-libav
 
 
 echo "${BGreen}Install Video Apps${Reset}"
-pacman -Sq --noconfirm --needed mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
+pacman -S --noconfirm --needed mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
                       ffmpegthumbnailer ffmpegthumbs
 
 
 echo "${BGreen}Install PostgreSQL${Reset}"
-pacman -Sq --noconfirm --needed postgresql
+pacman -S --noconfirm --needed postgresql
 mkdir -p /var/lib/postgres
 chown -R postgres:postgres /var/lib/postgres
 echo "Enter your new postgres account password:"
@@ -233,10 +229,9 @@ systemctl enable postgresql
 
 
 echo "${BGreen}Install Fonts${Reset}"
-pacman -Sq --noconfirm --needed --asdeps cairo fontconfig freetype2
-pacman -Sq --noconfirm --needed ttf-dejavu ttf-liberation ttf-bitstream-vera \
+pacman -S --noconfirm --needed --asdeps cairo fontconfig freetype2
+pacman -S --noconfirm --needed ttf-dejavu ttf-liberation ttf-bitstream-vera \
                                noto-fonts{,-{cjk,emoji}} otf-fira-mono
-usr "pacaur -Sq --noconfirm --needed otf-fira-code ttf-font-awesome"
 
 echo "${BGreen}Font Configuration${Reset}"
 sudo ln -sf /etc/fonts/conf.avail/10-{hintint-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
@@ -248,6 +243,16 @@ sudo sed -i -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
 echo "${BGreen}Remove Monochromatic Emojis${Reset}"
 sudo rm /usr/share/fonts/noto/NotoEmoji-Regular.ttf
 sudo fc-cache -fv
+
+
+echo "${BGreen}Install AUR Packages${Reset}"
+usr "pacaur -S --noconfirm --needed \
+    polybar-git i3ipc-glib-git \
+    numix-circle-icon-theme-git \
+    xfce-theme-greybird visual-studio-code \
+    google-chrome skypeforlinux-bin \
+    plex-media-server otf-fira-code \
+    ttf-font-awesome"
 
 
 echo "${BGreen}Clean Orphans${Reset}"
@@ -270,6 +275,7 @@ mkdir -p /etc/systemd/system/getty@tty1.service.d
 echo '[Service]' >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo 'ExecStart=' >> /etc/systemd/system/getty@tty1.service.d/override.conf
 echo 'ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM' >> /etc/systemd/system/getty@tty1.service.d/override.conf
+
 
 echo "${BGreen}Miscellaneous Stuff${Reset}"
 echo "blacklist sp5100_tco" > /etc/modprobe.d/blacklist.conf
