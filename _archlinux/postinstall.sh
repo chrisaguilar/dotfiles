@@ -270,9 +270,11 @@ echo -e "StandardOutput=null\nStandardError=journal+console" >> /etc/systemd/sys
 
 title "Setup Automatic Login to Virtual Console"
 mkdir -p /etc/systemd/system/getty@tty1.service.d
-echo '[Service]' >> /etc/systemd/system/getty@tty1.service.d/override.conf
-echo 'ExecStart=' >> /etc/systemd/system/getty@tty1.service.d/override.conf
-echo 'ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM' >> /etc/systemd/system/getty@tty1.service.d/override.conf
+cat << "EOF" > /etc/systemd/system/getty@tty1.service.d/override.conf
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM
+EOF
 
 
 title "Miscellaneous Stuff"
