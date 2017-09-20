@@ -176,7 +176,7 @@ echo "${BGreen}Desktop Environment${Reset}"
 pacman -S --noconfirm --needed xfce4 xfce4-goodies i3
 pacman -S --noconfirm --needed gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
                       system-config-printer gtk3-print-backends zathura \
-                      zathura-pdf-mupdf zathura-djvu scrot xdotool compton curl \
+                      zathura-pdf-mupdf zathura-djvu maim xdotool compton curl \
                       numlockx polkit-gnome redshift rofi geoip \
                       geoip-database-extra jsoncpp python-gobject python-xdg \
                       xdg-utils xorg-xprop xorg-xwininfo
