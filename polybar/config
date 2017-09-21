@@ -60,7 +60,7 @@
     tray-padding = 0
     tray-scale = 1.0
 
-    wm-restack = i3
+    ; wm-restack = i3
     enable-ipc = true
     scroll-up = i3wm-wsnext
     scroll-down = i3wm-wsprev
