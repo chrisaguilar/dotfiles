@@ -8,3 +8,7 @@ for file in $ZDOTDIR/zshrc.d/*.zsh; do . $file; done
 
 # Syntax Highlighting
 . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestions
+. /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
