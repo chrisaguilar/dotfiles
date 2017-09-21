@@ -13,6 +13,8 @@ configstore/*
 
 credentials
 
+dconf/*
+
 menus/*
 
 pulse/*
