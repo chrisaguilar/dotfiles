@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 function activate() {
     VIRTUAL_ENV_DISABLE_PROMPT='1' source ./env/bin/activate
 }
@@ -73,6 +75,10 @@ function opt_deps() {
 
 function reflect() {
     sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
+}
+
+function rge() {
+    pacaur -Rus $(pacaur -Qqg $1 | egrep -v "$(echo ${${@:2}[@]}|tr " " "|")")
 }
 
 function remove_metadata() {
