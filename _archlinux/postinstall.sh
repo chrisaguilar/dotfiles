@@ -237,6 +237,11 @@ chown -R postgres:postgres /var/lib/postgres
 echo "Enter your new postgres account password:"
 passwd postgres
 su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
+systemctl enable postgresql
+
+title "Install MongoDB"
+package_install "mongodb mongodb-tools"
+systemctl enable mongodb
 
 
 title "Install Fonts"
