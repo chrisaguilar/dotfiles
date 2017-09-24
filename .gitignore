@@ -1,4 +1,4 @@
-google-chrome/*
+autostart/*
 
 chromium/*
 
@@ -17,6 +17,8 @@ credentials
 
 dconf/*
 
+google-chrome/*
+
 menus/*
 
 pulse/*
@@ -26,5 +28,7 @@ Thunar/*
 viminfo
 
 xfce4/*
+
+.zcompdump
 
 zsh_history
