@@ -180,12 +180,19 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 title "Install Graphics Drivers"
-package_install "xf86-video-amdgpu mesa-libgl mesa-vdpau libvdpau-va-gl \
-                libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
-                vulkan-radeon"
-
-mkdir -p /etc/X11/xorg.conf.d
-cat << EOF > /etc/X11/xorg.conf.d/20-amdgpu.conf
+if [[ "$1" == "vbox" ]]; then
+    package_install "virtualbox-guest-modules-arch virtualbox-guest-utils mesa-libgl"
+    echo -e "vboxguest\nvboxsf\nvboxvideo" >> "/etc/modules-load.d/virtualbox-guest.conf"
+    groupadd vboxsf
+    gpasswd -a chris vboxsf
+    systemctl disable ntpd
+    systemctl enable vboxservice
+else
+    package_install "xf86-video-amdgpu mesa-libgl mesa-vdpau libvdpau-va-gl \
+                    libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
+                    vulkan-radeon"
+    mkdir -p /etc/X11/xorg.conf.d
+    cat << EOF > /etc/X11/xorg.conf.d/20-amdgpu.conf
 Section "Device"
     Identifier "AMD"
     Driver "amdgpu"
@@ -193,6 +200,8 @@ Section "Device"
     Option "TearFree" "true"
 EndSection
 EOF
+fi
+
 
 
 title "Install Xorg"
