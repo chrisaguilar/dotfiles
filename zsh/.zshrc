@@ -12,3 +12,4 @@ for file in $ZDOTDIR/zshrc.d/*.zsh; do . $file; done
 # Autosuggestions
 . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+fpath=(/usr/share/zsh/functions/Completion /usr/share/bash-completion/bash_completion $fpath)

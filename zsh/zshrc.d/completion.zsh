@@ -1,6 +1,7 @@
 # Initialization
-autoload -Uz compinit
+autoload -Uz compinit bashcompinit
 compinit -d "$ZSH_CACHE/zcompdump"
+bashcompinit -d "$ZSH_CACHE/bashcompdump"
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSH_CACHE
 
