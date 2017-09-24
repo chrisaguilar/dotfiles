@@ -5,10 +5,24 @@ set -e
 Bold=$(tput bold)
 Reset=$(tput sgr0)
 Green=$(tput setaf 2)
+Yellow=$(tput setaf 3)
 BGreen=${Bold}${Green}
+BYellow=${Bold}${Green}
 
 package_install() {
-    pacman -S --noconfirm --needed ${1} >> /tmp/installation.log 2>&1
+    read -a pkgs <<< "${1}"
+    for pkg in ${pkgs[@]}; do
+        echo "${BYellow}Installing ${pkg}${Reset}"
+        yes | pacman -S --needed ${pkg} >> /tmp/installation.log 2>&1
+    done
+}
+
+package_remove() {
+    read -a pkgs <<< "${1}"
+    for pkg in ${pkgs[@]}; do
+        echo "${BYellow}Uninstalling ${pkg}${Reset}"
+        yes | pacman -Rus ${pkg} >> /tmp/installation.log 2>&1
+    done
 }
 
 title() {
@@ -62,11 +76,11 @@ haveged -w 1024
 pacman-key --init
 pacman-key --populate archlinux
 pkill haveged
-pacman -R --noconfirm haveged
+package_remove "haveged"
 
 
 title "Get the Fastest Mirrors"
-reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
+reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
 
 
 title "System Update"
@@ -88,7 +102,7 @@ echo 'Defaults lecture=never' >> /etc/sudoers
 
 
 title "Install ZSH"
-package_install "zsh zsh-syntax-highlighting"
+package_install "bash-completion zsh zsh-doc zsh-completions zsh-syntax-highlighting"
 mkdir -p /etc/zsh
 echo 'export ZDOTDIR=$HOME/.config/zsh' > /etc/zsh/zshenv
 
@@ -105,11 +119,11 @@ usr "rm -rf /home/chris/.bash*"
 
 
 title "Makepkg Setup"
-sed -i -r -e's/CFLAGS=.*$/CFLAGS="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"/' /etc/makepkg.conf
-sed -i -r -e's/CXXFLAGS=.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
-sed -i -r -e's/# ?MAKEFLAGS=.*$/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
-sed -i -r -e's/# ?BUILDDIR/BUILDDIR/' /etc/makepkg.conf
-sed -i -r -e"s/PKGEXT=.*$/PKGEXT='.pkg.tar'/" /etc/makepkg.conf
+sed -i -r -e 's/CFLAGS=.*$/CFLAGS="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"/' /etc/makepkg.conf
+sed -i -r -e 's/CXXFLAGS=.*$/CXXFLAGS="${CFLAGS}"/' /etc/makepkg.conf
+sed -i -r -e 's/# ?MAKEFLAGS=.*$/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
+sed -i -r -e 's/# ?BUILDDIR/BUILDDIR/' /etc/makepkg.conf
+sed -i -r -e "s/PKGEXT=.*$/PKGEXT='.pkg.tar'/" /etc/makepkg.conf
 
 
 title "AUR Helper"
@@ -123,18 +137,16 @@ usr "rm -rf /home/chris/aur_setup"
 
 
 title "Basic Setup"
-package_install "bc rsync mlocate bash-completion pkgstats arch-wiki-lite tree"
+package_install "bc rsync mlocate pkgstats arch-wiki-lite tree"
 package_install "zip unzip unrar p7zip lzop cpio"
 package_install "avahi nss-mdns"
 package_install "alsa-utils alsa-plugins"
 package_install "pulseaudio pulseaudio-alsa"
 package_install "ntfs-3g dosfstools exfat-utils f2fs-tools fuse fuse-exfat autofs mtpfs"
-systemctl enable avahi-daemon
 
 
 title "Install SSH"
 package_install "openssh"
-systemctl enable sshd
 sed -i '/Port 22/s/^#//' /etc/ssh/sshd_config
 sed -i '/Protocol 2/s/^#//' /etc/ssh/sshd_config
 sed -i '/HostKey \/etc\/ssh\/ssh_host_rsa_key/s/^#//' /etc/ssh/sshd_config
@@ -168,8 +180,19 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 title "Install Graphics Drivers"
-package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
-                libva-mesa-driver libva-vdpau-driver"
+package_install "xf86-video-amdgpu mesa-libgl mesa-vdpau libvdpau-va-gl \
+                libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
+                vulkan-radeon"
+
+mkdir -p /etc/X11/xorg.conf.d
+cat << EOF > /etc/X11/xorg.conf.d/20-amdgpu.conf
+Section "Device"
+    Identifier "AMD"
+    Driver "amdgpu"
+    Option "DRI" "3"
+    Option "TearFree" "true"
+EndSection
+EOF
 
 
 title "Install Xorg"
@@ -177,23 +200,21 @@ package_install "xorg-server xorg-xinit xorg-xkill xorg-xinput \
                 xf86-input-libinput mesa"
 
 
-title "CUPS"
-package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
-                foomatic-db-engine foomatic-db-nonfree foomatic-db-ppds \
-                foomatic-db-nonfree-ppds hplip splix cups-pdf \
-                foomatic-db-gutenprint-ppds"
-systemctl enable org.cups.cupsd
+# title "CUPS"
+# package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
+#                 foomatic-db-engine foomatic-db-nonfree foomatic-db-ppds \
+#                 foomatic-db-nonfree-ppds hplip splix cups-pdf \
+#                 foomatic-db-gutenprint-ppds"
 
 
 title "Desktop Environment"
-package_install "xfce4 xfce4-goodies i3"
-package_install "gvfs gvfs-mtp gvfs-google xdg-user-dirs-gtk pavucontrol \
+package_install "xfce4-notifyd xfce4-taskmanager i3-wm i3lock"
+package_install "gvfs gvfs-mtp xdg-user-dirs-gtk pavucontrol \
                 system-config-printer gtk3-print-backends zathura \
                 zathura-pdf-mupdf zathura-djvu maim xdotool compton curl \
                 numlockx polkit-gnome redshift rofi geoip geoip-database-extra \
-                jsoncpp python-gobject python-xdg xdg-utils xorg-xprop \
+                jsoncpp python-gobject python-xdg termite xdg-utils xorg-xprop \
                 xorg-xwininfo"
-yes | pacman -S --needed termite
 
 title "Network Manager"
 package_install "dnsmasq openresolv dhclient network-manager-applet \
@@ -201,11 +222,12 @@ package_install "dnsmasq openresolv dhclient network-manager-applet \
 
 
 title "Install Development Apps"
-package_install "nodejs npm python-pip"
+package_install "nodejs npm python python-pip"
 
 
 title "Install Office Apps"
-package_install "calibre texlive-most libreoffice-fresh"
+package_install "calibre"
+# texlive-most libreoffice-fresh
 
 
 title "Install System Apps"
@@ -217,7 +239,8 @@ package_install "feh"
 
 
 title "Install Internet Apps"
-package_install "chromium firefox youtube-dl transmission-gtk wget"
+package_install "youtube-dl transmission-gtk wget"
+# chromium firefox
 
 
 title "Install Audio Apps"
@@ -232,30 +255,29 @@ package_install "mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
 
 title "Install PostgreSQL"
 package_install "postgresql"
-mkdir -p /var/lib/postgres
-chown -R postgres:postgres /var/lib/postgres
-echo "Enter your new postgres account password:"
+systemctl start postgresql.service
 passwd postgres
-su - postgres -c "initdb --locale $LANG -D /var/lib/postgres/data"
-systemctl enable postgresql
+su - postgres -c "initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'"
+su - postgres -c "createuser --interactive"
+
 
 title "Install MongoDB"
 package_install "mongodb mongodb-tools"
-systemctl enable mongodb
 
 
 title "Install Fonts"
 package_install "cairo fontconfig freetype2"
 package_install "ttf-dejavu ttf-liberation ttf-bitstream-vera \
-                noto-fonts noto-fonts-cjk noto-fonts-emoji otf-fira-mono"
+                noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
+                otf-fira-mono"
 
 
 title "Font Configuration"
-sudo ln -sf /etc/fonts/conf.avail/10-{hintint-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
+sudo ln -sf /etc/fonts/conf.avail/10-{hinting-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
 sudo ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
-sudo ln -sf /etc/fonts/conf.avail/66-noto-{mono,sans,serif}.conf /etc/fonts/conf.d/
+sudo ln -sf /etc/fonts/conf.avail/66-noto-{emoji,mono,sans,serif}.conf /etc/fonts/conf.d/
 
-sudo sed -i -r -e's/# ?export/export/' /etc/profile.d/freetype2.sh
+sudo sed -i -r -e 's/# ?export/export/' /etc/profile.d/freetype2.sh
 
 
 title "Remove Monochromatic Emojis"
@@ -264,7 +286,7 @@ sudo fc-cache -fv
 
 
 title "Silence fsck Messages"
-sed -i -r -e's/HOOKS=.*$/HOOKS="base udev autodetect modconf block filesystems keyboard"/' /etc/mkinitcpio.conf
+sed -i -r -e 's/HOOKS=.*$/HOOKS="base udev autodetect modconf block filesystems keyboard"/' /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 cp /usr/lib/systemd/system/systemd-fsck{@,-root}.service /etc/systemd/system/
@@ -282,12 +304,27 @@ ExecStart=-/usr/bin/agetty --autologin chris --noclear %I $TERM
 EOF
 
 
-title "Miscellaneous Stuff"
-echo "blacklist sp5100_tco" > /etc/modprobe.d/blacklist.conf
+title "Blacklist Modules"
+echo -e "blacklist sp5100_tco\nblacklist radeon" > /etc/modprobe.d/blacklist.conf
+
+
+title "Update the mlocate Database"
 updatedb
-systemctl enable pkgstats.timer fstrim.timer
-sensors-detect --auto
+
+
+title "Detect Sensors"
+sensors-detect --auto >> /tmp/installation.log 2>&1
+
+
+title "Enable Network Time Synchronization"
 timedatectl set-ntp true
+
+
+title "Enable System Services"
+systemctl enable \
+    pkgstats.timer fstrim.timer avahi-daemon.service sshd.service \
+    docker.service postgresql.service mongodb.service
+# org.cups.cupsd.service
 
 
 title "Install AUR Packages"
@@ -298,7 +335,7 @@ usr "pacaur -S --noconfirm --needed \
 
 
 title "Clean Orphans"
-pacman -Rus --noconfirm `pacman -Qtdq`
+package_remove "$(pacman -Qtdq)"
 usr "yes | pacaur -Scc"
 pacman-optimize
 
