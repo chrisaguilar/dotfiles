@@ -4,30 +4,52 @@ set -e
 
 Bold=$(tput bold)
 Reset=$(tput sgr0)
+Red=$(tput setaf 1)
 Green=$(tput setaf 2)
+Yellow=$(tput setaf 3)
+BRed=${Bold}${Red}
 BGreen=${Bold}${Green}
+BYellow=${Bold}${Green}
 
-arch_chroot() {
-    arch-chroot /mnt /bin/bash -c "${1}"
-}
+LOG=/var/log/installation.log
 
 package_install() {
-    pacman -S --noconfirm --needed ${1} >> /tmp/installation.log 2>&1
+    read -a pkgs <<< "${1}"
+    for pkg in ${pkgs[@]}; do
+        echo "${BYellow}Installing ${pkg}${Reset}"
+        if [[ "${2}" == "stubborn" ]]; then
+            yes | pacman -S --needed ${pkg} >> "${LOG}" 2>&1
+        else
+            pacman -S --noconfirm --needed ${pkg} >> "${LOG}" 2>&1
+        fi
+    done
+}
+
+package_remove() {
+    read -a pkgs <<< "${1}"
+    for pkg in ${pkgs[@]}; do
+        echo "${BYellow}Uninstalling ${pkg}${Reset}"
+        pacman -Rus --noconfirm ${pkg} >> "${LOG}" 2>&1
+    done
 }
 
 title() {
     echo "${BGreen}${1}${Reset}"
 }
 
+arch_chroot() {
+    arch-chroot /mnt /bin/bash -c "${1}"
+}
 
-echo "Please make sure you've partitioned and mounted all drives before continuing."
-read -n1 -rsp $'Press any key to continue or Ctrl+C to exit...'
+
+echo "${BRed}Please make sure you've partitioned and mounted all drives before continuing.${Reset}"
+
 
 read -p "Root Partition (e.g. sda2): " BOOT_MOUNTPOINT
 
 
 title "Sync with Servers"
-pacman -Sy
+pacman -Sy >> "${LOG}" 2>&1
 
 
 title "Set the Keymap"
@@ -40,8 +62,8 @@ timedatectl set-ntp true
 
 title "Get the Fastest Mirrors"
 package_install "reflector"
-reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
-pacman -Sy
+reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
+pacman -Sy >> "${LOG}" 2>&1
 
 
 title "Install the Base System"
@@ -108,7 +130,7 @@ cat << EOF > /mnt/boot/loader/entries/arch.conf
 title    Arch Linux
 linux    /vmlinuz-linux
 initrd   /initramfs-linux.img
-options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3 radeon.si_support=0 radeon.cik_support=0 amdgpu.si_support=1 amdgpu.cik_support=1
+options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3
 EOF
 
 

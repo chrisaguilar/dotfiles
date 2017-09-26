@@ -17,6 +17,8 @@ credentials
 
 dconf/*
 
+Google Play Music Desktop Player/*
+
 google-chrome/*
 
 menus/*
@@ -24,6 +26,8 @@ menus/*
 pulse/*
 
 spotify/*
+
+texstudio/*
 
 Thunar/*
 
