@@ -9,7 +9,7 @@ Green=$(tput setaf 2)
 Yellow=$(tput setaf 3)
 BRed=${Bold}${Red}
 BGreen=${Bold}${Green}
-BYellow=${Bold}${Green}
+BYellow=${Bold}${Yellow}
 
 LOG=/var/log/installation.log
 
@@ -109,7 +109,7 @@ sed -i.bak -r -e "s/# End of file/127.0.1.1\tchris.localdomain\tchris/" /mnt/etc
 
 
 title "Enable Networking"
-arch_chroot "systemctl enable NetworkManager"
+arch_chroot "systemctl enable NetworkManager >> ${LOG} 2>&1"
 
 
 title "Initramfs"
@@ -139,6 +139,7 @@ arch_chroot "passwd"
 
 
 title "Finish"
+cp -R /root/dotfiles /mnt/root
 sync
 swapoff -a
 umount -R /mnt

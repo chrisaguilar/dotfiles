@@ -9,9 +9,17 @@ Green=$(tput setaf 2)
 Yellow=$(tput setaf 3)
 BRed=${Bold}${Red}
 BGreen=${Bold}${Green}
-BYellow=${Bold}${Green}
+BYellow=${Bold}${Yellow}
 
 LOG=/var/log/installation.log
+
+enable_services() {
+    read -a services <<< "${1}"
+    for service in ${services[@]}; do
+        echo "${BYellow}Enabling ${service}${Reset}"
+        systemctl enable --now ${service} >> "${LOG}" 2>&1
+    done
+}
 
 package_install() {
     read -a pkgs <<< "${1}"
@@ -148,9 +156,9 @@ title "Graphics Drivers"
 if [[ "$1" == "vbox" ]]; then
     package_install "virtualbox-guest-modules-arch virtualbox-guest-utils mesa-libgl"
     echo -e "vboxguest\nvboxsf\nvboxvideo" >> "/etc/modules-load.d/virtualbox-guest.conf"
-    ggroupadd vboxsf >> "${LOG}" 2>&1
+    [ $(getent group somegroupname) ] || groupadd vboxsf >> "${LOG}" 2>&1
     gpasswd -a chris vboxsf >> "${LOG}" 2>&1
-    systemctl enable vboxservice
+    enable_services "vboxservice.service"
 else
     package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
                     libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
@@ -266,8 +274,9 @@ sed -i '/TCPKeepAlive/s/^#//' /etc/ssh/sshd_config
 sed -i '/the setting of/s/^/#/' /etc/ssh/sshd_config
 sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/sshd_config
 
+
 # title "CUPS Setup"
-# systemctl enable org.cups.cupsd.service
+# enable_services "org.cups.cupsd.service"
 
 
 # title "LaTeX Setup"
@@ -276,20 +285,20 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 title "Docker Setup"
-ggroupadd docker >>"${LOG}" 2>&1 &
-gpasswd -a chris docker >>"${LOG}" 2>&1 &
-systemctl enable docker.service
+[ $(getent group docker) ] || groupadd docker >> "${LOG}" 2>&1
+gpasswd -a chris docker >> "${LOG}" 2>&1
+enable_services "docker.service"
 
 
 title "PostgreSQL Setup"
 passwd postgres
-su - postgres -c "initdb --locale $LANG -E UTF8 -D '/var/lib/postgres/data'"
-systemctl enable --now postgresql.service
+su - postgres -c "initdb --locale ${LANG} -E UTF8 -D '/var/lib/postgres/data'"
+enable_services "postgresql.service"
 su - postgres -c "createuser --interactive"
 
 
 title "MongoDB Setup"
-systemctl enable mongodb.service
+enable_services "mongodb.service"
 
 
 title "Font Setup"
@@ -300,7 +309,7 @@ ln -sf /etc/fonts/conf.avail/66-noto-{emoji,mono,sans,serif}.conf /etc/fonts/con
 sed -i -r -e 's/# ?export/export/' /etc/profile.d/freetype2.sh
 
 rm /usr/share/fonts/noto/NotoEmoji-Regular.ttf
-fc-cache -fv
+fc-cache -f
 
 
 title "Silence fsck Messages"
@@ -339,13 +348,13 @@ timedatectl set-ntp true
 
 
 title "Enable System Services"
-systemctl enable pkgstats.timer fstrim.timer avahi-daemon.service sshd.service
+enable_services "pkgstats.timer fstrim.timer avahi-daemon.service sshd.service"
 
 
 title "Clean Orphans"
 package_remove "$(pacman -Qtdq)"
-usr "yes | pacaur -Scc"
-pacman-optimize
+usr "yes | pacaur -Scc >> ${LOG} 2>&1"
+pacman-optimize >> "${LOG}" 2>&1
 
 
 title "Finish"
