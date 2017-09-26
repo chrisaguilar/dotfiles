@@ -13,6 +13,11 @@ BYellow=${Bold}${Yellow}
 
 LOG=/var/log/installation.log
 
+add_to_group() {
+    [ $(getent group ${1}) ] || groupadd ${1} >> "${LOG}" 2>&1
+    gpasswd -a chris ${1} >> "${LOG}" 2>&1
+}
+
 enable_services() {
     read -a services <<< "${1}"
     for service in ${services[@]}; do
@@ -155,10 +160,10 @@ usr "rm -rf /home/chris/aur_setup"
 title "Graphics Drivers"
 if [[ "$1" == "vbox" ]]; then
     package_install "virtualbox-guest-modules-arch virtualbox-guest-utils mesa-libgl"
-    echo -e "vboxguest\nvboxsf\nvboxvideo" >> "/etc/modules-load.d/virtualbox-guest.conf"
-    [ $(getent group somegroupname) ] || groupadd vboxsf >> "${LOG}" 2>&1
-    gpasswd -a chris vboxsf >> "${LOG}" 2>&1
+       add_to_group "vboxsf"
     enable_services "vboxservice.service"
+
+    echo -e "vboxguest\nvboxsf\nvboxvideo" >> "/etc/modules-load.d/virtualbox-guest.conf"
 else
     package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
                     libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
@@ -285,8 +290,7 @@ sed -i '/RhostsRSAAuthentication and HostbasedAuthentication/s/^/#/' /etc/ssh/ss
 
 
 title "Docker Setup"
-[ $(getent group docker) ] || groupadd docker >> "${LOG}" 2>&1
-gpasswd -a chris docker >> "${LOG}" 2>&1
+add_to_group "docker"
 enable_services "docker.service"
 
 
