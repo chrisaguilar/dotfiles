@@ -361,4 +361,5 @@ pacman-optimize >> "${LOG}" 2>&1
 
 
 title "Finish"
+rm -rf "${LOG}"
 reboot
