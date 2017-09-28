@@ -218,7 +218,7 @@ package_install "docker htop"
 package_install "feh"
 
           title "Internet"
-package_install "youtube-dl transmission-gtk wget"
+package_install "chromium pepper-flash transmission-gtk wget youtube-dl"
 
           title "Audio"
 package_install "gst-libav gst-plugins-bad gst-plugins-base \
@@ -240,7 +240,7 @@ package_install "cairo fontconfig freetype2 noto-fonts noto-fonts-cjk \
                  ttf-liberation"
 
           title "AUR Packages"
-            usr "pacaur -S --noconfirm --needed google-chrome gpmdp \
+            usr "pacaur -S --noconfirm --needed chromium-widevine gpmdp \
                  i3ipc-glib-git numix-circle-icon-theme-git \
                  numix-icon-theme-git otf-fira-code plex-media-server \
                  polybar-git skypeforlinux-bin ttf-font-awesome \
