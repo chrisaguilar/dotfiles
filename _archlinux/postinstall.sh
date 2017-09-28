@@ -135,7 +135,6 @@ passwd chris
 usr "git clone https://github.com/chrisaguilar/dotfiles.git /home/chris/.config"
 usr "chmod +x /home/chris/.config/dots.sh"
 usr "cd /home/chris/.config && ./dots.sh"
-usr "mkdir -p /home/chris/screenshots"
 usr "rm -rf /home/chris/.bash*"
 
 
@@ -159,60 +158,61 @@ usr "rm -rf /home/chris/aur_setup"
 
 title "Graphics Drivers"
 if [[ "$1" == "vbox" ]]; then
-    package_install "virtualbox-guest-modules-arch virtualbox-guest-utils mesa-libgl"
+    package_install "mesa-libgl virtualbox-guest-modules-arch virtualbox-guest-utils"
        add_to_group "vboxsf"
     enable_services "vboxservice.service"
 
     echo -e "vboxguest\nvboxsf\nvboxvideo" >> "/etc/modules-load.d/virtualbox-guest.conf"
 else
-    package_install "xf86-video-ati mesa-libgl mesa-vdpau libvdpau-va-gl \
+    package_install "xf86-video-ati mesa mesa-libgl mesa-vdpau libvdpau-va-gl \
                     libva-mesa-driver libva-vdpau-driver vulkan-icd-loader \
                     vulkan-radeon"
 fi
 
 
           title "Essentials"
-package_install "bc rsync mlocate pkgstats arch-wiki-lite tree zip unzip unrar \
-                 p7zip lzop cpio avahi nss-mdns alsa-utils alsa-plugins \
-                 pulseaudio pulseaudio-alsa ntfs-3g dosfstools exfat-utils \
-                 f2fs-tools fuse fuse-exfat autofs mtpfs openssh"
+package_install "alsa-plugins alsa-utils autofs avahi bc cpio dosfstools \
+                 exfat-utils f2fs-tools fuse fuse-exfat lzop mlocate mtpfs \
+                 nss-mdns ntfs-3g openssh p7zip pkgstats pulseaudio \
+                 pulseaudio-alsa rsync tree unrar unzip zip"
 
           title "Xorg"
-package_install "xorg-server xorg-xinit xorg-xkill xorg-xinput \
-                 xf86-input-libinput mesa"
+package_install "xorg-server xorg-xinit"
 
           title "Desktop Environment"
-package_install "xfce4-notifyd xfce4-taskmanager i3-wm i3lock gvfs gvfs-mtp \
-                 xdg-user-dirs-gtk pavucontrol system-config-printer \
-                 gtk3-print-backends zathura zathura-pdf-mupdf zathura-djvu \
-                 maim xdotool compton curl numlockx polkit-gnome redshift rofi \
-                 geoip geoip-database-extra jsoncpp python-gobject python-xdg \
-                 xdg-utils xorg-xprop xorg-xwininfo"
+package_install "compton curl geoip geoip-database-extra i3-wm i3lock jsoncpp \
+                 maim numlockx pavucontrol polkit-gnome python-gobject \
+                 python-xdg xdg-utils redshift rofi xdg-user-dirs xdotool \
+                 xfce4-notifyd xfce4-taskmanager xorg-xprop xorg-xwininfo"
 
           title "Termite"
 package_install "termite" "stubborn"
 
 #           title "CUPS"
-# package_install "cups cups-filters ghostscript gsfonts gutenprint foomatic-db \
-#                  foomatic-db-engine foomatic-db-nonfree foomatic-db-ppds \
-#                  foomatic-db-nonfree-ppds hplip splix cups-pdf \
-#                  foomatic-db-gutenprint-ppds"
+# package_install "cups cups-filters cups-pdf foomatic-db foomatic-db-engine \
+#                  foomatic-db-gutenprint-ppds foomatic-db-nonfree \
+#                  foomatic-db-nonfree-ppds foomatic-db-ppds ghostscript gsfonts \
+#                  gtk3-print-backends gutenprint hplip splix \
+#                  system-config-printer"
 
           title "Network"
-package_install "dnsmasq openresolv dhclient network-manager-applet \
-                 nm-connection-editor gnome-keyring"
+package_install "dhclient dnsmasq gnome-keyring network-manager-applet \
+                 nm-connection-editor openresolv"
 
           title "Development"
 package_install "nodejs npm python python-pip"
 
-          title "Office"
-package_install "calibre libreoffice-fresh"
+          title "Books"
+package_install "calibre zathura zathura-pdf-mupdf zathura-djvu"
+
+#           title "Office"
+# package_install "libreoffice-fresh"
 
 #           title "LaTeX"
-# package_install "texlive-most texlive-lang texlive-langextra biber texstudio"
+# package_install "biber texlive-lang texlive-langextra texlive-most texstudio"
 
           title "System"
-package_install "htop docker"
+package_install "docker htop"
 
           title "Graphics"
 package_install "feh"
@@ -221,12 +221,12 @@ package_install "feh"
 package_install "youtube-dl transmission-gtk wget"
 
           title "Audio"
-package_install "gst-plugins-base gst-plugins-base-libs gst-plugins-good \
-                 gst-plugins-bad gst-plugins-ugly gst-libav"
+package_install "gst-libav gst-plugins-bad gst-plugins-base \
+                 gst-plugins-base-libs gst-plugins-good gst-plugins-ugly"
 
           title "Video"
-package_install "mpv libdvdnav libdvdcss cdrdao cdrtools ffmpeg ffmpeg2.8 \
-                 ffmpegthumbnailer ffmpegthumbs"
+package_install "cdrdao cdrtools ffmpeg ffmpeg2.8 ffmpegthumbnailer \
+                 ffmpegthumbs libdvdcss libdvdnav mpv"
 
           title "PostgreSQL"
 package_install "postgresql"
@@ -235,16 +235,16 @@ package_install "postgresql"
 package_install "mongodb mongodb-tools"
 
           title "Fonts"
-package_install "cairo fontconfig freetype2 ttf-dejavu ttf-liberation \
-                 noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra \
-                 otf-fira-mono"
+package_install "cairo fontconfig freetype2 noto-fonts noto-fonts-cjk \
+                 noto-fonts-emoji noto-fonts-extra otf-fira-mono ttf-dejavu \
+                 ttf-liberation"
 
           title "AUR Packages"
-            usr "pacaur -S --noconfirm --needed polybar-git i3ipc-glib-git \
-                 numix-icon-theme-git numix-circle-icon-theme-git \
-                 visual-studio-code google-chrome skypeforlinux-bin
-                 plex-media-server otf-fira-code ttf-font-awesome \
-                 zsh-autosuggestions gpmdp"
+            usr "pacaur -S --noconfirm --needed google-chrome gpmdp \
+                 i3ipc-glib-git numix-circle-icon-theme-git \
+                 numix-icon-theme-git otf-fira-code plex-media-server \
+                 polybar-git skypeforlinux-bin ttf-font-awesome \
+                 visual-studio-code zsh-autosuggestions"
 
 
 title "SSH Setup"
