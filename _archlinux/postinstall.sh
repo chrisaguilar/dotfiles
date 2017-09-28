@@ -308,11 +308,10 @@ enable_services "mongodb.service"
 title "Font Setup"
 ln -sf /etc/fonts/conf.avail/10-{hinting-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
 ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
-ln -sf /etc/fonts/conf.avail/66-noto-{emoji,mono,sans,serif}.conf /etc/fonts/conf.d/
+ln -sf /etc/fonts/conf.avail/66-noto-{color-emoji,mono,sans,serif}.conf /etc/fonts/conf.d/
 
 sed -i -r -e 's/# ?export/export/' /etc/profile.d/freetype2.sh
 
-rm /usr/share/fonts/noto/NotoEmoji-Regular.ttf
 fc-cache -f
 
 
