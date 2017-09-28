@@ -356,7 +356,7 @@ enable_services "pkgstats.timer fstrim.timer avahi-daemon.service sshd.service"
 
 title "Clean Orphans"
 package_remove "$(pacman -Qtdq)"
-usr "yes | pacaur -Scc >> ${LOG} 2>&1"
+usr "yes | pacaur -Scc >> /dev/null 2>&1"
 pacman-optimize >> "${LOG}" 2>&1
 
 
