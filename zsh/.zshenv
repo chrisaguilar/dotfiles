@@ -3,7 +3,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
 export EDITOR=/usr/bin/vim
-export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
+#export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
 export LANG=en_US.UTF-8
