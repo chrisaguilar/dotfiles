@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+[ ! -d "${HOME}/screenshots" ] && mkdir -p "${HOME}/screenshots"
+
 f="${HOME}/screenshots/$(date +%s).png"
 maim -s -m 1 "${f}"
 notify-send "Saved screenshot to ${f}"
