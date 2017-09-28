@@ -242,9 +242,9 @@ package_install "cairo fontconfig freetype2 ttf-dejavu ttf-liberation \
           title "AUR Packages"
             usr "pacaur -S --noconfirm --needed polybar-git i3ipc-glib-git \
                  numix-icon-theme-git numix-circle-icon-theme-git \
-                 xfce-theme-greybird visual-studio-code google-chrome \
-                 skypeforlinux-bin plex-media-server otf-fira-code \
-                 ttf-font-awesome zsh-autosuggestions gpmdp"
+                 visual-studio-code google-chrome skypeforlinux-bin
+                 plex-media-server otf-fira-code ttf-font-awesome \
+                 zsh-autosuggestions gpmdp"
 
 
 title "SSH Setup"
