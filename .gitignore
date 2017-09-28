@@ -17,11 +17,17 @@ credentials
 
 dconf/*
 
+gnupg/*
+
 Google Play Music Desktop Player/*
 
 google-chrome/*
 
+htop/*
+
 menus/*
+
+pavucontrol.ini
 
 pulse/*
 
