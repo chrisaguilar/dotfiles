@@ -1,5 +1,6 @@
 export EDITOR=/usr/bin/vim
 # export GNUPGHOME=$HOME/.config/gnupg
+export GTK2_RC_FILES=$HOME/.config/gtk-2.0/gtkrc
 export ICEAUTHORITY=$HOME/.cache/ICEauthority
 export LANG=en_US.UTF-8
 export LC_COLLATE=C
