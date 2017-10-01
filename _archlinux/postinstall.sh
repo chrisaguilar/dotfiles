@@ -180,10 +180,11 @@ package_install "alsa-plugins alsa-utils autofs avahi bc cpio dosfstools \
 package_install "xorg-server xorg-xinit"
 
           title "Desktop Environment"
-package_install "compton curl geoip geoip-database-extra i3-wm i3lock jsoncpp \
-                 maim numlockx pavucontrol polkit-gnome python-gobject \
-                 python-xdg xdg-utils redshift rofi xdg-user-dirs xdotool \
-                 xfce4-notifyd xfce4-taskmanager xorg-xprop xorg-xwininfo"
+package_install "compton curl geoip geoip-database-extra gnome-themes-standard \
+                 i3-wm i3lock jsoncpp maim numlockx pavucontrol polkit-gnome \
+                 python-gobject python-xdg xdg-utils redshift rofi \
+                 xdg-user-dirs xdotool xfce4-notifyd xfce4-taskmanager \
+                 xorg-xprop xorg-xwininfo"
 
           title "Termite"
 package_install "termite" "stubborn"
@@ -236,8 +237,7 @@ package_install "mongodb mongodb-tools"
 
           title "Fonts"
 package_install "cairo fontconfig freetype2 noto-fonts noto-fonts-cjk \
-                 noto-fonts-emoji noto-fonts-extra otf-fira-mono ttf-dejavu \
-                 ttf-liberation"
+                 noto-fonts-emoji noto-fonts-extra otf-fira-mono ttf-liberation"
 
           title "AUR Packages"
             usr "pacaur -S --noconfirm --needed chromium-widevine gpmdp \
