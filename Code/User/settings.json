@@ -41,5 +41,6 @@
     "window.menuBarVisibility": "hidden",
     "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "[markdown]": {"editor.wordWrap": "off","editor.quickSuggestions": false}
 }
