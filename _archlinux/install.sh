@@ -100,7 +100,7 @@ arch_chroot "locale-gen"
 
 
 title "Set the Keymap"
-echo "KEYMAP=us" > /mnt/etc/vconsole.conf
+echo -e "FONT=sun12x22\nKEYMAP=us" > /mnt/etc/vconsole.conf
 
 
 title "Set the Hostname"
