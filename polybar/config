@@ -20,7 +20,7 @@
     offset-y = 0%
     background = ${colors.black}
     foreground = ${colors.white}
-    
+
     underline-size = 2
 
     spacing = 0
@@ -143,6 +143,6 @@
     format = <label>
     format-prefix = " "
     format-underline = ${colors.aqua}
-    exec = $HOME/.config/polybar/weather.py
+    exec = $HOME/.config/polybar/weather.js
 
 ; vim:ft=dosini
