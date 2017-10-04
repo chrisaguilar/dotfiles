@@ -1,5 +1,6 @@
 #!/bin/python
 
+import time
 import urllib.request, json
 
 def main():
@@ -21,6 +22,7 @@ def main():
         # print("%s, %i°%s" % (info, temp, unit_key))
         print("%i°%s" % (temp, unit_key))
     except:
+        time.sleep(1)
         main()
 
 main()
