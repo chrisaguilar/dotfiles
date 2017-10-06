@@ -39,7 +39,7 @@
     modules-center =
     modules-right = volume cpu memory temperature weather date
 
-    tray-position = right
+    tray-position =
     tray-detached = false
     tray-transparent = false
     tray-background = ${root.background}
