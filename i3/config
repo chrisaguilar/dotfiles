@@ -82,6 +82,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id polybar-msg action volup
 bindsym XF86AudioLowerVolume exec --no-startup-id polybar-msg action voldown
 bindsym XF86AudioMute        exec --no-startup-id polybar-msg action volmute
 
+# Reshift Toggle
+bindsym Scroll_Lock exec --no-startup-id pkill -USR1 '^redshift$'
+
 # Which windows should always float? (Find class names with xprop)
 for_window [class="Xfce4-taskmanager"] floating enable
 for_window [class="Xfce4-panel"] floating enable
