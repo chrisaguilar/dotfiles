@@ -74,7 +74,7 @@ function opt_deps() {
 }
 
 function reflect() {
-    sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -a 6 -p https -c US
+    sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -l 20 -p https -c US
 }
 
 function rge() {
