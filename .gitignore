@@ -29,6 +29,8 @@ libreoffice/*
 
 menus/*
 
+mimeapps.list
+
 npmrc
 
 pavucontrol.ini
