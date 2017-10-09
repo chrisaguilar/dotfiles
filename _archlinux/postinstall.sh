@@ -244,7 +244,7 @@ package_install "cairo fontconfig freetype2 noto-fonts noto-fonts-cjk \
                  i3ipc-glib-git numix-circle-icon-theme-git \
                  numix-icon-theme-git otf-fira-code plex-media-server \
                  polybar-git skypeforlinux-bin ttf-font-awesome \
-                 visual-studio-code zsh-autosuggestions"
+                 visual-studio-code xfce-theme-greybird zsh-autosuggestions"
 
 
 title "SSH Setup"
