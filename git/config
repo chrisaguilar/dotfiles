@@ -1,8 +1,6 @@
 [user]
 	name = Christopher Aguilar
 	email = christopher.m.aguilar@gmail.com
-[credential]
-	helper = store
 [core]
   editor      = vim
   autocrlf    = input

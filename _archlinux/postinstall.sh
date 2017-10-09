@@ -183,7 +183,7 @@ package_install "xorg-server xorg-xinit"
 package_install "compton curl geoip geoip-database-extra gnome-themes-standard \
                  i3-wm i3lock jsoncpp maim numlockx pavucontrol polkit-gnome \
                  python-gobject python-xdg xdg-utils redshift rofi \
-                 xdg-user-dirs xdotool xfce4-notifyd xfce4-taskmanager \
+                 xdotool xfce4-notifyd xfce4-taskmanager \
                  xorg-xprop xorg-xwininfo"
 
           title "Termite"
