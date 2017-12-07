@@ -21,7 +21,7 @@ precmd() {
     pyvenv_info
 
     info="[%n@%m:%B%F{cyan}%3~%f%b]"
-    state="%B%F{%(?.green.red)}➜%f%b"
+    state="%B%F{%(?.green.red)}$%f%b"
 
     PROMPT=$'\n${info}${vcs_info_msg_0_:-" "}${state} '
 
