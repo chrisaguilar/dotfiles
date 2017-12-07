@@ -78,9 +78,12 @@ bindsym $mod+Shift+semicolon  move scratchpad
 bindsym $mod+apostrophe       sticky toggle
 
 # Volume Controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id polybar-msg action volup
-bindsym XF86AudioLowerVolume exec --no-startup-id polybar-msg action voldown
-bindsym XF86AudioMute        exec --no-startup-id polybar-msg action volmute
+#bindsym XF86AudioRaiseVolume exec --no-startup-id polybar-msg action volup
+#bindsym XF86AudioLowerVolume exec --no-startup-id polybar-msg action voldown
+#bindsym XF86AudioMute        exec --no-startup-id polybar-msg action volmute
+bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 10 && pkill -RTMIN+10 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 && pkill -RTMIN+10 i3blocks
+
 
 # Reshift Toggle
 bindsym Scroll_Lock exec --no-startup-id pkill -USR1 '^redshift$'
@@ -176,14 +179,19 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+bar {
+    status_command i3blocks    
+}
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
-exec --no-startup-id redshift
+# exec --no-startup-id redshift
 exec --no-startup-id compton
-exec --no-startup-id numlockx on
-exec --no-startup-id setxkbmap -option "caps:escape" -option "compose:rwin"
+exec --no-startup-id setxkbmap -option "caps:escape"
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+exec --no-startup-id blueman-manager
 
 exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/wallpaper.jpg
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
