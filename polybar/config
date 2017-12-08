@@ -1,18 +1,27 @@
 [colors]
-    aqua = #00BCD4
+    aqua = #03A9F4
     black = #212121
     blue = #2196F3
-    gray = #424242
+    bluegray = #607D8B
+    brown = #795548
+    forest = #009688
+    gold = #FFC107
+    gray = #9E9E9E
     green = #4CAF50
     indigo = #3F51B5
+    lime = #8BC34A
+    mustard = #CDDC39
     orange = #FF9800
-    red = #b71c1c
-    violet = #673AB7
+    pink = #E91E63
+    purple = #673AB7
+    red = #FF5722
+    salmon = #f44336
+    teal = #00BCD4
+    violet = #9C27B0
     white = #BDBDBD
     yellow = #FFEB3B
 
 [bar/main]
-    override-redirect = false
     bottom = true
     width = 100%
     height = 25
@@ -37,13 +46,9 @@
 
     modules-left = i3 title
     modules-center =
-    modules-right = volume cpu memory temperature weather date
+    modules-right = volume backlight battery cpu memory temperature weather date
 
-    tray-position =
-    tray-detached = false
-    tray-transparent = false
-    tray-background = ${root.background}
-    tray-padding = 2
+    tray-position = right
 
     ; wm-restack = i3
     enable-ipc = true
@@ -57,13 +62,61 @@
 [settings]
     screenchange-reload = true
 
+[module/backlight]
+    type = internal/backlight
+    card = intel_backlight
+    format = <label>
+    format-prefix = " "
+    format-underline = ${colors.aqua}
+
+[module/battery]
+    type = internal/battery
+    poll-interval = 5
+    time-format = %H:%M
+
+    format-charging = <animation-charging> <label-charging>
+    format-charging-underline = ${colors.blue}
+    label-charging = %percentage%% - %time%
+
+    format-discharging = <ramp-capacity> <label-discharging>
+    format-discharging-underline = ${colors.blue}
+    label-discharging = %percentage%% - %time%
+
+    format-full = <label-full>
+    format-full-underline = ${colors.blue}
+    label-full = %percentage%% - Fully Charged!
+
+    ramp-capacity-0 = 
+    ramp-capacity-1 = 
+    ramp-capacity-2 = 
+    ramp-capacity-3 = 
+    ramp-capacity-4 = 
+
+    animation-charging-0 = 
+    animation-charging-1 = 
+    animation-charging-2 = 
+    animation-charging-3 = 
+    animation-charging-4 = 
+
+    animation-charging-framerate = 750
+
+
 [module/cpu]
     type = internal/cpu
     interval = 2
     format = <label>
     format-prefix = " "
     label = %percentage:3%%
-    format-underline = ${colors.red}
+    format-underline = ${colors.bluegray}
+
+    ramp-load-0 = ▁
+    ramp-load-1 = ▂
+    ramp-load-2 = ▃
+    ramp-load-3 = ▄
+    ramp-load-4 = ▅
+    ramp-load-5 = ▆
+    ramp-load-6 = ▇
+    ramp-load-7 = █
 
 [module/date]
     type = internal/date
@@ -71,8 +124,8 @@
     date = %a %b %d, %Y
     time = %r
     format = <label>
+    format-underline = ${colors.brown}
     label = %date% - %time%
-    format-underline = ${colors.indigo}
 
 [module/i3]
     type = internal/i3
@@ -90,18 +143,19 @@
     label-mode = %mode%
     label-mode-padding = 2
     label-mode-background = ${colors.red}
+    label-mode-foreground = ${colors.black}
 
     label-focused = %name%
     label-focused-foreground = ${colors.white}
-    label-focused-background = ${colors.gray}
-    label-focused-underline = ${colors.blue}
+    ; label-focused-background = ${colors.gray}
+    label-focused-underline = ${colors.forest}
     label-focused-padding = 1
 
     label-unfocused = %name%
     label-unfocused-padding = 1
 
     label-visible = %name%
-    label-visible-underline = ${colors.blue}
+    label-visible-underline = ${colors.forest}
     label-visible-padding = 1
 
     label-urgent = %name%
@@ -114,18 +168,18 @@
     exec = free -h | grep Mem | awk '{print $3}'
     interval = 3
     format-prefix = " "
-    format-underline = ${colors.green}
+    format-underline = ${colors.gold}
 
 [module/temperature]
     type = custom/script
-    exec = echo `sensors -u it8620-isa-0228 | grep temp1_input | awk '{printf "%d", $2}'`°C
+    exec = echo `sensors -u coretemp-isa-0000 | grep temp1_input | awk '{printf "%d", $2}'`°C
     interval = 60
     format-prefix = " "
-    format-underline = ${colors.orange}
+    format-underline = ${colors.green}
 
 [module/title]
     type = internal/xwindow
-    format-underline = ${colors.blue}
+    format-underline = ${colors.indigo}
     label = %title%
     label-maxlen = 50
 
@@ -134,20 +188,23 @@
 
     master-mixer = Master
 
-    format-volume = <label-volume>
-    format-volume-underline = ${colors.yellow}
-    label-volume =  %percentage%%
+    format-volume = <ramp-volume> <label-volume>
+    format-volume-underline = ${colors.lime}
+    label-volume = %percentage%%
 
-    format-muted-prefix = " "
-    format-muted-underline = ${colors.yellow}
-    label-muted = muted
+    format-muted-underline = ${colors.lime}
+    label-muted =  muted
+
+    ramp-volume-0 = 
+    ramp-volume-1 = 
+    ramp-volume-2 = 
 
 [module/weather]
     type = custom/script
     interval = 900
     format = <label>
     format-prefix = " "
-    format-underline = ${colors.aqua}
+    format-underline = ${colors.mustard}
     exec = $HOME/.config/polybar/weather.js
 
 ; vim:ft=dosini
