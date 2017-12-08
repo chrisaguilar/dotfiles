@@ -1,26 +1,22 @@
 #!/bin/python
 
+import json
 import time
-import urllib.request, json
+
+from urllib.request import urlopen
 
 def main():
+    api_key = 'cb254703b9d67fbf04cae66e496e1aaa'
+    lat = '33.60'
+    lon = '-84.37'
+    api_url = f'https://api.darksky.net/forecast/{api_key}/{lat},{lon}'
+
     try:
-        city = "30297"
-        api_key = "ba345b9219e4508665da076f3599e816"
-        units = "Imperial"
-        unit_key = "F"
+        weather = json.loads(urlopen(api_url).read())['currently']
+        temperature = int(weather['temperature'])
+        summary = weather['summary'].lower()
+        print(f'{temperature}°F, {summary}')
 
-        weather = eval(
-            str(
-                urllib.request.urlopen(
-                    "http://api.openweathermap.org/data/2.5/weather?q={}&APPID={}&units={}".
-                    format(city, api_key, units)).read())[2:-1])
-
-        info = weather["weather"][0]["description"].capitalize()
-        temp = int(float(weather["main"]["temp"]))
-
-        # print("%s, %i°%s" % (info, temp, unit_key))
-        print("%i°%s" % (temp, unit_key))
     except:
         time.sleep(1)
         main()
