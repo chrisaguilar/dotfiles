@@ -1,7 +1,3 @@
-autostart/*
-
-chromium/*
-
 cmus/*
 !cmus/colors.theme
 
@@ -11,49 +7,34 @@ Code/User/*
 !Code/User/settings.json
 !Code/User/snippets
 
-configstore/*
-
-credentials
-
-dconf/*
-
-gnupg/*
-
-Google Play Music Desktop Player/*
-
-google-chrome/*
-
-gtkfilechooser.ini
-
-htop/*
-
-libreoffice/*
-
-menus/*
-
-mimeapps.list
-
-npmrc
-
-pavucontrol.ini
-
-pulse/*
-
-spotify/*
-
-texstudio/*
-
-Thunar/*
-
-user-dirs*
-
-viminfo
-
-xfce4/*
+autostart/
+calibre/
+chromium/
+configstore/
+dconf/
+gnupg/
+Google Play Music Desktop Player/
+google-chrome/
+guvcview2/
+htop/
+libreoffice/
+menus/
+pulse/
+skypeforlinux/
+Slack/
+spotify/
+texstudio/
+Thunar/
+Trolltech.conf
+Unknown Organization/
+xfce4/
 
 .zcompdump
-
+credentials
+gtkfilechooser.ini
+mimeapps.list
+npmrc
+pavucontrol.ini
+user-dirs*
+viminfo
 zsh_history
-Slack/
-Trolltech.conf
-guvcview2/
