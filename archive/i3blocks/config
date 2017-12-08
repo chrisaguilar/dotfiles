@@ -43,10 +43,10 @@ interval=once
 signal=10
 
 
-[battery]
-command=acpi -b | grep 'Battery 0' | sed 's/, /,/g' | awk -F ',' '{printf "%s %s", $2, $3}'
-label=&#xf240;
-interval=60
+#[battery]
+#command=acpi -b | grep 'Battery 0' | sed 's/, /,/g' | awk -F ',' '{printf "%s %s", $2, $3}'
+#label=&#xf240;
+#interval=60
 
 [time]
 command=date '+%a %b %d, %Y - %r'
