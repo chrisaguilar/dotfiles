@@ -22,6 +22,8 @@
     yellow = #FFEB3B
 
 [bar/main]
+    monitor = ${env:MONITOR}
+
     bottom = true
     width = 100%
     height = 25
@@ -32,7 +34,6 @@
 
     underline-size = 2
 
-    spacing = 0
     padding = 1
     module-margin = 1
 
@@ -46,11 +47,11 @@
 
     modules-left = i3 title
     modules-center =
-    modules-right = volume backlight battery cpu memory temperature weather date
+    modules-right = volume backlight battery cpu memory temperature date
 
     tray-position = right
 
-    ; wm-restack = i3
+    wm-name = i3
     enable-ipc = true
     scroll-up = i3wm-wsnext
     scroll-down = i3wm-wsprev
@@ -63,11 +64,13 @@
     screenchange-reload = true
 
 [module/backlight]
-    type = internal/backlight
-    card = intel_backlight
+    type = internal/xbacklight
+    enable-scroll = true
+
     format = <label>
-    format-prefix = " "
     format-underline = ${colors.aqua}
+
+    label =  %percentage%%
 
 [module/battery]
     type = internal/battery
@@ -75,15 +78,15 @@
     time-format = %H:%M
 
     format-charging = <animation-charging> <label-charging>
-    format-charging-underline = ${colors.blue}
+    format-charging-underline = ${colors.teal}
     label-charging = %percentage%% - %time%
 
     format-discharging = <ramp-capacity> <label-discharging>
-    format-discharging-underline = ${colors.blue}
+    format-discharging-underline = ${colors.teal}
     label-discharging = %percentage%% - %time%
 
     format-full = <label-full>
-    format-full-underline = ${colors.blue}
+    format-full-underline = ${colors.teal}
     label-full = %percentage%% - Fully Charged!
 
     ramp-capacity-0 = 
@@ -105,8 +108,7 @@
     type = internal/cpu
     interval = 2
     format = <label>
-    format-prefix = " "
-    label = %percentage:3%%
+    label =  %percentage:3%%
     format-underline = ${colors.bluegray}
 
     ramp-load-0 = ▁
@@ -123,7 +125,6 @@
     interval = 1
     date = %a %b %d, %Y
     time = %r
-    format = <label>
     format-underline = ${colors.brown}
     label = %date% - %time%
 
@@ -164,18 +165,25 @@
     label-urgent-padding = 1
 
 [module/memory]
-    type = custom/script
-    exec = free -h | grep Mem | awk '{print $3}'
+    type = internal/memory
     interval = 3
-    format-prefix = " "
+    label =  %gb_used%
     format-underline = ${colors.gold}
 
 [module/temperature]
-    type = custom/script
-    exec = echo `sensors -u coretemp-isa-0000 | grep temp1_input | awk '{printf "%d", $2}'`°C
-    interval = 60
-    format-prefix = " "
+    type = internal/temperature
+    interval = 10
+    hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+    warn-temperature = 80
+
+    format = <label>
     format-underline = ${colors.green}
+    label =  %temperature-c%
+
+    format-warn = <label-warn>
+    format-warn-underline = ${colors.red}
+    label-warn =  %temperature-c%
+    label-warn-foreground = ${colors.red}
 
 [module/title]
     type = internal/xwindow
@@ -201,10 +209,11 @@
 
 [module/weather]
     type = custom/script
+    exec = $HOME/.config/polybar/weather.py
     interval = 900
+
     format = <label>
-    format-prefix = " "
+    format-prefix = ' '
     format-underline = ${colors.mustard}
-    exec = $HOME/.config/polybar/weather.js
 
 ; vim:ft=dosini
