@@ -7,7 +7,7 @@
     "editor.dragAndDrop": false,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
-    "editor.fontSize": 14,
+    "editor.fontSize": 16,
     "editor.fontWeight": "500",
     "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
@@ -42,5 +42,12 @@
     "window.zoomLevel": 0,
     "workbench.colorTheme": "One Dark Pro",
     "workbench.iconTheme": "vscode-icons",
-    "[markdown]": {"editor.wordWrap": "off","editor.quickSuggestions": false}
+    "[markdown]": {
+        "editor.wordWrap": "off",
+        "editor.quickSuggestions": false
+    },
+    "prettier.printWidth": 120,
+    "explorer.confirmDragAndDrop": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "explorer.confirmDelete": false
 }
