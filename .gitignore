@@ -35,6 +35,8 @@ gtkfilechooser.ini
 mimeapps.list
 npmrc
 pavucontrol.ini
+QtProject.conf
 user-dirs*
 viminfo
+zoomus.conf
 zsh_history
