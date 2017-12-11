@@ -9,7 +9,7 @@ rofi.threads:           0
 ! Theming
 rofi.bw:                2
 rofi.eh:                1
-rofi.font:              Fira Mono Medium 11
+rofi.font:              Fira Mono Medium 12
 rofi.hide-scrollbar:    true
 rofi.line-margin:       0
 rofi.matching:          normal
