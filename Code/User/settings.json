@@ -49,5 +49,15 @@
     "prettier.printWidth": 120,
     "explorer.confirmDragAndDrop": false,
     "java.errors.incompleteClasspath.severity": "ignore",
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    }
 }
