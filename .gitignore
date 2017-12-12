@@ -32,7 +32,6 @@ xfce4/
 .zcompdump
 credentials
 gtkfilechooser.ini
-mimeapps.list
 npmrc
 pavucontrol.ini
 QtProject.conf
