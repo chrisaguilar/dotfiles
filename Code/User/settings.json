@@ -59,5 +59,11 @@
         "suppressNoRepositoryWarning": false,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
-    }
+    },
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.statusBarColorControl": true,
+    "vim.foldfix": true,
+    "vim.cmdLineInitialColon": true,
+    "vim.disableExtension": false
 }
