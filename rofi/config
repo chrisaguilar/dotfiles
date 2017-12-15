@@ -1,6 +1,6 @@
 ! General
 rofi.case-sensitive:    false
-rofi.cycle:             true
+rofi.cycle:             false
 rofi.modi:              window,drun,run,ssh
 rofi.scroll-method:     0
 rofi.show-match:        true

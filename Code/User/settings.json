@@ -65,5 +65,7 @@
     "vim.statusBarColorControl": true,
     "vim.foldfix": true,
     "vim.cmdLineInitialColon": true,
-    "vim.disableExtension": false
+    "vim.disableExtension": false,
+    "workbench.panel.location": "bottom",
+    "git.defaultCloneDirectory": "$HOME/code"
 }
