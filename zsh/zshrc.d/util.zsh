@@ -88,3 +88,7 @@ function remove_metadata() {
 function wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
 }
+
+function dlpl() {
+    youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
+}
