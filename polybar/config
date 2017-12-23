@@ -47,7 +47,7 @@
 
     modules-left = i3 title
     modules-center =
-    modules-right = volume backlight battery cpu memory temperature date
+    modules-right = volume backlight battery cpu memory temperature weather date
 
     tray-position = right
 
@@ -212,8 +212,7 @@
     exec = $HOME/.config/polybar/weather.py
     interval = 900
 
-    format = <label>
-    format-prefix = ' '
+    format =  <label>
     format-underline = ${colors.mustard}
 
 ; vim:ft=dosini
