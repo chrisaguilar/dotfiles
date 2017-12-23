@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 [ ! -d "${HOME}/screenshots" ] && mkdir -p "${HOME}/screenshots"
 
 f="${HOME}/screenshots/$(date +%s).png"
