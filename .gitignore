@@ -7,13 +7,19 @@ Code/User/*
 !Code/User/settings.json
 !Code/User/snippets
 
+Gitter/
+Google Play Music Desktop Player/
+Slack/
+Thunar/
+Trolltech.conf
+Unknown Organization/
 autostart/
 calibre/
 chromium/
 configstore/
 dconf/
+easytag/
 gnupg/
-Google Play Music Desktop Player/
 google-chrome/
 guvcview2/
 htop/
@@ -22,12 +28,8 @@ menus/
 pulse/
 ranger/
 skypeforlinux/
-Slack/
 spotify/
 texstudio/
-Thunar/
-Trolltech.conf
-Unknown Organization/
 xfce4/
 
 .zcompdump
