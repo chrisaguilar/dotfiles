@@ -49,7 +49,7 @@
     modules-center =
     modules-right = volume backlight battery cpu memory temperature weather date
 
-    tray-position = right
+    ; tray-position = 
 
     wm-name = i3
     enable-ipc = true
