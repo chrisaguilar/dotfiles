@@ -15,6 +15,7 @@ Thunar/
 Trolltech.conf
 Unknown Organization/
 autostart/
+bundle/
 calibre/
 chromium/
 configstore/
@@ -34,6 +35,7 @@ texstudio/
 xfce4/
 
 .zcompdump
+csharp.history
 credentials
 gtkfilechooser.ini
 npmrc
