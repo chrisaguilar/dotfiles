@@ -1,5 +1,8 @@
+execute pathogen#infect()
+
+let g:typescript_indent_disable=1
+
 " Regular Vim Config
-let &runtimepath.=',$HOME/.config/vim/'
 let base16colorspace=256
 colorscheme base16-onedark
 set nocompatible                            " Disable vi compatibility mode
@@ -35,7 +38,7 @@ set fixendofline
 set fileformat=unix
 set noswapfile
 set showmatch
-set viminfo+=n$HOME/.config/vim/viminfo
+set viminfo+=n$HOME/.vim/viminfo
 set hidden
 set mouse=a
 
