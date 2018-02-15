@@ -49,7 +49,7 @@
 
     modules-left = i3 title
     modules-center =
-    modules-right = volume backlight battery cpu memory temperature weather date
+    modules-right = pulseaudio backlight battery cpu memory temperature weather date
 
     tray-position = right
 
@@ -172,6 +172,22 @@
     label =  %gb_used%
     format-underline = ${colors.gold}
 
+[module/pulseaudio]
+    type = internal/pulseaudio
+
+    master-mixer = Master
+
+    format-volume = <ramp-volume> <label-volume>
+    format-volume-underline = ${colors.lime}
+    label-volume = %percentage%%
+
+    format-muted-underline = ${colors.lime}
+    label-muted =  muted
+
+    ramp-volume-0 = 
+    ramp-volume-1 = 
+    ramp-volume-2 = 
+
 [module/temperature]
     type = internal/temperature
     interval = 10
@@ -192,22 +208,6 @@
     format-underline = ${colors.indigo}
     label = %title%
     label-maxlen = 50
-
-[module/volume]
-    type = internal/volume
-
-    master-mixer = Master
-
-    format-volume = <ramp-volume> <label-volume>
-    format-volume-underline = ${colors.lime}
-    label-volume = %percentage%%
-
-    format-muted-underline = ${colors.lime}
-    label-muted =  muted
-
-    ramp-volume-0 = 
-    ramp-volume-1 = 
-    ramp-volume-2 = 
 
 [module/weather]
     type = custom/script
