@@ -1,13 +1,5 @@
-cmus/*
-!cmus/colors.theme
-
-Code/*
-!Code/User/
-Code/User/*
-!Code/User/settings.json
-!Code/User/snippets
-
 Atom/
+Code/
 Gitter/
 Google Play Music Desktop Player/
 Slack/
@@ -18,6 +10,7 @@ autostart/
 bundle/
 calibre/
 chromium/
+cmus/
 configstore/
 dconf/
 easytag/
@@ -32,6 +25,7 @@ ranger/
 skypeforlinux/
 spotify/
 texstudio/
+transmission/
 xfce4/
 
 .zcompdump
