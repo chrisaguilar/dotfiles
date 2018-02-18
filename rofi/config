@@ -75,4 +75,3 @@ rofi.display-window:    All Windows
 rofi.display-windowcd:  Visible Windows
 rofi.fake-background:   screenshot
 rofi.fake-transparency: false
-rofi.pid:               /run/user/1000/rofi.pid
