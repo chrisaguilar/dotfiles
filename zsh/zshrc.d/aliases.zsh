@@ -11,6 +11,7 @@ alias rm='rm -rf'
 
 alias ls='ls --color=auto -AFhl --group-directories-first'
 alias l='ls'
+alias lss="ls | grep '^d' --color=never ; ls | grep '^l' --color=never ; ls | grep '^-' --color=never"
 
 alias tree='tree --dirsfirst'
 
