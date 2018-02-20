@@ -38,7 +38,7 @@ set fixendofline
 set fileformat=unix
 set noswapfile
 set showmatch
-set viminfo+=n$HOME/.vim/viminfo
+set viminfo+=n$HOME/.config/vim/viminfo
 set hidden
 set mouse=a
 
@@ -58,4 +58,3 @@ augroup myvimrchooks
     au!
     autocmd bufwritepost $MYVIMRC source $MYVIMRC
 augroup END
-
