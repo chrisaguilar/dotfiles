@@ -1,3 +1,4 @@
+let &runtimepath.=',$HOME/.config/vim/'
 execute pathogen#infect()
 
 let g:typescript_indent_disable=1
