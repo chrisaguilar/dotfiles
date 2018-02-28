@@ -8,6 +8,10 @@ function cdl() {
     cd "$@" && ls
 }
 
+function dlpl() {
+    youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
+}
+
 function extract() {
     local c e i
 
@@ -49,6 +53,10 @@ function fixperms() {
     find "$1" -type f -exec chmod 644 {} \;
 }
 
+function get() {
+    curl -X GET "$1"
+}
+
 function google() {
     open "https://google.com/search?q=`echo $@ | tr \"[:blank:]\" +`"
 }
@@ -73,6 +81,10 @@ function opt_deps() {
     expac "%n: %o" "$@" | sort
 }
 
+function postJSON() {
+    curl -H "Content-Type: application/json" -X POST -d $2 $1
+}
+
 function reflect() {
     sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -l 20 -p https -c US
 }
@@ -87,8 +99,4 @@ function remove_metadata() {
 
 function wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
-}
-
-function dlpl() {
-    youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
 }
