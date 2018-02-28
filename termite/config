@@ -7,7 +7,7 @@ font = Fira Mono Medium 12
 fullscreen = false
 scroll_on_output = false
 scroll_on_keystroke = true
-scrollback_lines = 100000
+scrollback_lines = -1
 search_wrap = true
 urgent_on_bell = true
 browser = xdg-open
@@ -17,10 +17,14 @@ filter_unmatched_urls = true
 size_hints = false
 
 [colors]
+# Base16 OneDark
+# Author: Lalit Magant (http://github.com/tilal6991)
+
 foreground      = #abb2bf
 foreground_bold = #b6bdca
 cursor          = #b6bdca
 background      = #282c34
+# background      = rgba(40, 44, 52, 0.8)
 
 # 16 color space
 
