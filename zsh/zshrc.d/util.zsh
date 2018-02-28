@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
 
-function activate() {
+activate() {
     VIRTUAL_ENV_DISABLE_PROMPT='1' source ./env/bin/activate
 }
 
-function cdl() {
+cdl() {
     cd "$@" && ls
 }
 
-function dlpl() {
+dlpl() {
     youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
 }
 
-function extract() {
+extract() {
     local c e i
 
     (($#)) || return
@@ -47,21 +47,21 @@ function extract() {
     return "$e"
 }
 
-function fixperms() {
+fixperms() {
     sudo chown -R `whoami`:`id -g` "$1"
     find "$1" -type d -exec chmod 755 {} \;
     find "$1" -type f -exec chmod 644 {} \;
 }
 
-function get() {
+get() {
     curl -X GET "$1"
 }
 
-function google() {
+google() {
     open "https://google.com/search?q=`echo $@ | tr \"[:blank:]\" +`"
 }
 
-function man() {
+man() {
     MANWIDTH=80
     local width=$(tput cols)
     [ $width -gt $MANWIDTH ] && width=$MANWIDTH
@@ -69,34 +69,34 @@ function man() {
     env MANWIDTH=$width man "$@"
 }
 
-function mcd() {
+mcd() {
     mkdir -p $@ && cd $@
 }
 
-function open() {
+open() {
     xdg-open "$@" &>/dev/null &!
 }
 
-function opt_deps() {
+opt_deps() {
     expac "%n: %o" "$@" | sort
 }
 
-function postJSON() {
+postJSON() {
     curl -H "Content-Type: application/json" -X POST -d $2 $1
 }
 
-function reflect() {
+reflect() {
     sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -l 20 -p https -c US
 }
 
-function rge() {
+rge() {
     pacaur -Rus $(pacaur -Qqg $1 | egrep -v "$(echo ${${@:2}[@]}|tr " " "|")")
 }
 
-function remove_metadata() {
+remove_metadata() {
     ffmpeg -i "$1" -map_metadata -1 -c:v copy -c:a copy "$2"
 }
 
-function wdihi() {
+wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
 }
