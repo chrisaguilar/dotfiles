@@ -69,8 +69,8 @@ man() {
     env MANWIDTH=$width man "$@"
 }
 
-mcd() {
-    mkdir -p $@ && cd $@
+mkcd() {
+    mkdir -p "$@" && cd "$@"
 }
 
 open() {

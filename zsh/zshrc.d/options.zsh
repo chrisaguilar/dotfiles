@@ -95,7 +95,7 @@ setopt clobber                  # Default
 # setopt no_dvorak
 setopt flowcontrol              # Default
 # setopt no_ignore_eof
-# setopt interactive_comments
+setopt interactive_comments
 setopt hash_cmds                # Default
 setopt hash_dirs                # Default
 # setopt no_mail_warning
