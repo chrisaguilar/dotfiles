@@ -4,8 +4,8 @@ execute pathogen#infect()
 let g:typescript_indent_disable=1
 
 " Regular Vim Config
-" let base16colorspace=256
-" colorscheme base16-onedark
+let base16colorspace=256
+colorscheme base16-onedark
 set nocompatible                            " Disable vi compatibility mode
 set showmode                                " Show mode at bottom left of screen
 set iskeyword=@,48-57,_,128-167,224-235     " Specifies which characters make up a word
