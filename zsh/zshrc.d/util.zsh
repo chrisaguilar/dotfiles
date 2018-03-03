@@ -73,6 +73,10 @@ mkcd() {
     mkdir -p "$@" && cd "$@"
 }
 
+mysql-run() {
+    mysql --host=localhost --user=root --password=a < "$@"
+}
+
 open() {
     xdg-open "$@" &>/dev/null &!
 }
