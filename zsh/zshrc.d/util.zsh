@@ -1,21 +1,26 @@
 #!/usr/bin/env bash
 
+# Activate Python virtualenv
 activate() {
     VIRTUAL_ENV_DISABLE_PROMPT='1' source ./env/bin/activate
 }
 
+# cd && ls
 cdl() {
     cd "$@" && ls
 }
 
+# Copy to Clipboard
 ctcb() {
     cat "$@" | xclip -sel clip
 }
 
+# Download Playlist
 dlpl() {
     youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
 }
 
+# Extract archive
 extract() {
     local c e i
 
@@ -51,20 +56,24 @@ extract() {
     return "$e"
 }
 
+# Fix Permissions
 fixperms() {
     sudo chown -R `whoami`:`id -g` "$1"
     find "$1" -type d -exec chmod 755 {} \;
     find "$1" -type f -exec chmod 644 {} \;
 }
 
+# GET request
 get() {
     curl -X GET "$1"
 }
 
+# Search google
 google() {
     open "https://google.com/search?q=`echo $@ | tr \"[:blank:]\" +`"
 }
 
+# Modify `man` to be only 80 characters wide
 man() {
     MANWIDTH=80
     local width=$(tput cols)
@@ -73,38 +82,47 @@ man() {
     env MANWIDTH=$width man "$@"
 }
 
+# mkdir && cd
 mkcd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# Run *.sql file in MySQL
 mysql-run() {
     mysql --host=localhost --user=root --password=a < "$@"
 }
 
+# Emulate `open` command from macOS
 open() {
     xdg-open "$@" &>/dev/null &!
 }
 
+# Get optional dependencies
 opt_deps() {
     expac "%n: %o" "$@" | sort
 }
 
+# POST request (JSON-only)
 postJSON() {
     curl -H "Content-Type: application/json" -X POST -d $2 $1
 }
 
+# Update mirrorlist
 reflect() {
     sudo reflector --save /etc/pacman.d/mirrorlist --verbose --sort rate -f 10 -l 20 -p https -c US
 }
 
+# Remove all in group except
 rge() {
-    pacaur -Rus $(pacaur -Qqg $1 | egrep -v "$(echo ${${@:2}[@]}|tr " " "|")")
+    trizen -Rus $(trizen -Qqg $1 | egrep -v "$(echo ${${@:2}[@]}|tr " " "|")")
 }
 
+# Remove metadata from media file
 remove_metadata() {
     ffmpeg -i "$1" -map_metadata -1 -c:v copy -c:a copy "$2"
 }
 
+# What do I have installed?
 wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
 }
