@@ -8,6 +8,10 @@ cdl() {
     cd "$@" && ls
 }
 
+ctcb() {
+    cat "$@" | xclip -sel clip
+}
+
 dlpl() {
     youtube-dl -x -o "%(playlist_index)s-%(title)s.%(ext)s" --audio-format mp3 "$@"
 }
