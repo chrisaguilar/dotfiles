@@ -11,19 +11,12 @@ zstyle ':vcs_info:*' stagedstr '%F{yellow}*%f'
 zstyle ':vcs_info:*' unstagedstr '%F{magenta}*%f'
 
 
-# Python Virtual Environment Information
-function pyvenv_info {
-    [ -n "$VIRTUAL_ENV" ] && venv_info="%B%F{blue}($(basename $VIRTUAL_ENV))%f%b"
-}
-
 precmd() {
     vcs_info
-    pyvenv_info
 
     info="[%n@%m:%B%F{cyan}%3~%f%b]"
     state="%B%F{%(?.green.red)}$%f%b"
 
     PROMPT=$'\n${info}${vcs_info_msg_0_:-" "}${state} '
 
-    RPROMPT=$'${venv_info}'
 }
