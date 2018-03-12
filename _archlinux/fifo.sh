@@ -2,48 +2,13 @@
 
 set -e
 
-Bold=$(tput bold)
-Reset=$(tput sgr0)
-Red=$(tput setaf 1)
-Green=$(tput setaf 2)
-Yellow=$(tput setaf 3)
-BRed=${Bold}${Red}
-BGreen=${Bold}${Green}
-BYellow=${Bold}${Yellow}
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-LOG=/var/log/installation.log
-
-package_install() {
-    read -a pkgs <<< "${1}"
-    for pkg in ${pkgs[@]}; do
-        echo "${BYellow}Installing ${pkg}${Reset}"
-        if [[ "${2}" == "stubborn" ]]; then
-            yes | pacman -S --needed ${pkg} >> "${LOG}" 2>&1
-        else
-            pacman -S --noconfirm --needed ${pkg} >> "${LOG}" 2>&1
-        fi
-    done
-}
-
-package_remove() {
-    read -a pkgs <<< "${1}"
-    for pkg in ${pkgs[@]}; do
-        echo "${BYellow}Uninstalling ${pkg}${Reset}"
-        pacman -Rus --noconfirm ${pkg} >> "${LOG}" 2>&1
-    done
-}
-
-title() {
-    echo "${BGreen}${1}${Reset}"
-}
-
-arch_chroot() {
-    arch-chroot /mnt /bin/bash -c "${1}"
-}
-
+. "${dir}/util.sh"
 
 echo "${BRed}Please make sure you've partitioned and mounted all drives before continuing.${Reset}"
 
+lsblk
 
 read -p "Root Partition (e.g. sda2): " BOOT_MOUNTPOINT
 
@@ -67,7 +32,7 @@ pacman -Sy >> "${LOG}" 2>&1
 
 
 title "Install the Base System"
-pacstrap /mnt base base-devel git stow vim zsh reflector networkmanager
+pacstrap /mnt base base-devel git stow vim zsh reflector networkmanager intel-ucode
 
 
 title "Generate Fstab"
@@ -75,11 +40,13 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 
 title "Create Swap File"
-fallocate -l 8G /mnt/var/swapfile
-chmod 600 /mnt/var/swapfile
-mkswap /mnt/var/swapfile
-swapon /mnt/var/swapfile
-echo -e "/var/swapfile\tnone\tswap\tdefaults\t0\t0" >> /mnt/etc/fstab
+mem_total=$(free -h | grep Mem | awk '{printf "%d", $2}')
+swap_total="$((${mem_total} / 2))"
+fallocate -l "${swap_total}G" /mnt/swapfile
+chmod 600 /mnt/swapfile
+mkswap /mnt/swapfile
+swapon /mnt/swapfile
+echo -e "/swapfile\tnone\tswap\tdefaults\t0\t0" >> /mnt/etc/fstab
 
 
 title "Set the Timezone"
@@ -129,6 +96,7 @@ EOF
 cat << EOF > /mnt/boot/loader/entries/arch.conf
 title    Arch Linux
 linux    /vmlinuz-linux
+initrd   /intel-ucode.img
 initrd   /initramfs-linux.img
 options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3
 EOF
