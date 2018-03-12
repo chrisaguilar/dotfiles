@@ -11,7 +11,7 @@ package_install "alsa-plugins alsa-utils autofs avahi bc cpio dosfstools \
 subtitle "Development"
 package_install "dotnet-runtime dotnet-sdk jre9-openjdk-headless jre9-openjdk \
                 jdk9-openjdk openjdk9-doc openjdk9-src nginx-mainline nodejs \
-                npm python python-pip redis rustup"
+                npm python python-pip python-pipenv redis rustup"
 
 
 subtitle "Books"

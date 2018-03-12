@@ -37,3 +37,16 @@ function _set-list-colors() {
     unfunction _set-list-colors
 }
 sched 0 _set-list-colors  # deferred since LC_COLORS might not be available yet
+
+# pipenv completion
+# eval "$(pipenv --completion)"
+
+#compdef pipenv
+_pipenv() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _PIPENV_COMPLETE=complete-zsh  pipenv)
+}
+if [[ "$(basename ${(%):-%x})" != "_pipenv" ]]; then
+  autoload -U compinit && compinit
+  compdef _pipenv pipenv
+fi
+
