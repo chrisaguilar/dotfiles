@@ -37,7 +37,7 @@ timedatectl set-ntp true
 
 
 subtitle "Increase fs.inotify.max_user_watches"
-echo "fs.notify.max_user_watches=524288" > /etc/sysctl.d/40-max-user-watches.conf
+echo "fs.inotify.max_user_watches=524288" > /etc/sysctl.d/40-max-user-watches.conf
 
 
 subtitle "Disable Watchdog"
