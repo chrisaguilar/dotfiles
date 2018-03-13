@@ -50,5 +50,20 @@ subtitle "Geting the Fastest Mirrors"
 reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
 
 
+subtitle "Adding systemd-boot Update Hook"
+mkdir -p /etc/pacman.d/hooks
+cat << EOF > /etc/pacman.d/hooks/systemd-boot.hook
+[Trigger]
+Type = Package
+Operation = Upgrade
+Target = systemd
+
+[Action]
+Description = Updating systemd-boot...
+When = PostTransaction
+Exec = /usr/bin/bootctl update
+EOF
+
+
 subtitle "Sync with Mirrors"
 pacman -Sy >> "${LOG}" 2>&1
