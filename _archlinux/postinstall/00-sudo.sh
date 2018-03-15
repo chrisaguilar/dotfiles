@@ -1,11 +1,11 @@
 title "sudo Setup"
 
 
-subtitle "Allow Users in wheel Group to Execute All Commands as Superuser"
+subtitle "Granting wheel Group Full Access"
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //' /etc/sudoers
 
 
-subtitle "Set Defaults in /etc/sudoers"
+subtitle "Setting Defaults in /etc/sudoers"
 cat << EOF >> /etc/sudoers
 
 Defaults !requiretty, !tty_tickets, !umask
