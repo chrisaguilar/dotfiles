@@ -1,19 +1,19 @@
 title "Finishing Up"
 
 
-subtitle "Clean Orphans"
+subtitle "Removing Orphans"
 package_remove "$(pacman -Qtdq)"
 
 
-subtitle "Clear pacman Cache"
+subtitle "Clearing pacman Cache"
 usr "yes | trizen -Scc >> /dev/null 2>&1"
 
 
-subtitle "Optimize pacman Database"
+subtitle "Optimizing pacman Database"
 pacman-optimize >> "${LOG}" 2>&1
 
 
-subtitle "Remove Installation Log File"
+subtitle "Removing Installation Log File"
 rm -rf "${LOG}"
 
 
