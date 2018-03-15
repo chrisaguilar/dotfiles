@@ -56,7 +56,13 @@ package_install "mpv"
 
 
 subtitle "AUR Packages"
-usr "yes | trizen -S capitaine-cursors discord google-chrome gpmdp heroku-cli \
-    i3ipc-glib-git ngrok numix-circle-icon-theme-git otf-fira-code peek \
-    polybar-git skypeforlinux-preview-bin slack-desktop visual-studio-code-bin \
-    xfce-theme-greybird zsh-autosuggestions"
+usr "yes | trizen -S capitaine-cursors google-chrome gpmdp i3ipc-glib-git ngrok \
+    numix-circle-icon-theme-git polybar-git skypeforlinux-preview-bin \
+    slack-desktop visual-studio-code-bin xfce-theme-greybird zsh-autosuggestions"
+
+usr "trizen -S otf-fira-code"
+
+# usr "yes | trizen -S capitaine-cursors discord google-chrome gpmdp heroku-cli \
+#     i3ipc-glib-git ngrok numix-circle-icon-theme-git otf-fira-code peek \
+#     polybar-git skypeforlinux-preview-bin slack-desktop visual-studio-code-bin \
+#     xfce-theme-greybird zsh-autosuggestions"
