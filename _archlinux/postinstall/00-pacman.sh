@@ -37,7 +37,7 @@ Include = /etc/pacman.d/mirrorlist
 EOF
 
 
-subtitle "Initialize the Pacman Keyring"
+subtitle "Initializing the Pacman Keyring"
 package_install "haveged"
 haveged -w 1024 >> "${LOG}" 2>&1
 pacman-key --init >> "${LOG}" 2>&1
@@ -46,7 +46,7 @@ pkill haveged >> "${LOG}" 2>&1
 package_remove "haveged"
 
 
-subtitle "Geting the Fastest Mirrors"
+subtitle "Getting the Fastest Mirrors"
 reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
 
 
@@ -65,5 +65,5 @@ Exec = /usr/bin/bootctl update
 EOF
 
 
-subtitle "Sync with Mirrors"
+subtitle "Synchronizing with Mirrors"
 pacman -Sy >> "${LOG}" 2>&1
