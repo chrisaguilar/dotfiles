@@ -18,5 +18,5 @@ usr "chmod +x /home/chris/.config/bin/dots.sh"
 usr "cd /home/chris/.config/bin && ./dots.sh" >> "${LOG}" 2>&1
 
 
-subtitle "Remove Bash Config Files"
+subtitle "Removing Bash Config Files"
 usr "rm -rf /home/chris/.bash*"
