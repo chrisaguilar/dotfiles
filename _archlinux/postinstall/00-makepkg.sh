@@ -15,3 +15,6 @@ sed -i -r -e 's/# ?MAKEFLAGS=.*$/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
 
 subtitle "Setting BUILDDIR"
 sed -i -r -e 's/# ?BUILDDIR/BUILDDIR/' /etc/makepkg.conf
+
+subtitle "Setting COMPRESSXZ"
+sed -i -r -e 's/COMPRESSXZ=.*$/COMPRESSXZ=(xz -c -z - --threads=0)/' /etc/makepkg.conf
