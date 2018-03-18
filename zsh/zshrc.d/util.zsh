@@ -13,7 +13,7 @@ capr() {
 
     mkdir "${1}" && cd "${1}"
 
-    curl -o "${1}.json" "https://api.github.com/users/${1}/repos" > /dev/null 2>&1
+    curl -o "${1}.json" "https://api.github.com/users/${1}/repos?per_page=300" > /dev/null 2>&1
 
     repos=($(cat "${1}.json" | grep ssh_url | awk -F ":" '{print $2":"$3}' | sed 's/[,"]//g'))
 
