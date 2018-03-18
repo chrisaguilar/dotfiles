@@ -5,6 +5,28 @@ activate() {
     VIRTUAL_ENV_DISABLE_PROMPT='1' source ./env/bin/activate
 }
 
+# Clone All Public Repos
+capr() {
+    start=$(pwd)
+    
+    [[ -z "${1}" ]] && echo "You must specify a username!" && return 1
+
+    mkdir "${1}" && cd "${1}"
+
+    curl -o "${1}.json" "https://api.github.com/users/${1}/repos" > /dev/null 2>&1
+
+    repos=($(cat "${1}.json" | grep ssh_url | awk -F ":" '{print $2":"$3}' | sed 's/[,"]//g'))
+
+    for repo in ${repos}; do
+        echo "Cloning ${repo}"
+        git clone "${repo}" &>/dev/null
+    done
+
+    rm -rf "${1}.json"
+
+    cd "${start}"
+}
+
 # cd && ls
 cdl() {
     cd "$@" && ls
