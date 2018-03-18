@@ -144,6 +144,17 @@ remove_metadata() {
     ffmpeg -i "$1" -map_metadata -1 -c:v copy -c:a copy "$2"
 }
 
+# Parses JSON using Node.js
+parseJSON() {
+    node -e "
+        const { inspect } = require('util');
+
+        const json = JSON.parse('$(cat ${1})');
+
+        console.log(inspect(json, { depth: null, colors: true }));
+    "
+}
+
 # What do I have installed?
 wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
