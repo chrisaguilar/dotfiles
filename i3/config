@@ -193,8 +193,8 @@ exec --no-startup-id nm-applet
 # exec --no-startup-id solaar
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/media/wallpaper/012.jpg
-#exec_always --no-startup-id feh --randomize --recursive --bg-scale --no-fehbg $HOME/.wallpaper/*
+# exec --no-startup-id while true; do feh --randomize --recursive --bg-fill --no-fehbg $HOME/media/wallpapers/*; sleep 5s; done
+exec --no-startup-id feh --randomize --recursive --bg-fill --no-fehbg $HOME/media/wallpapers/*
 
 # Status Bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
