@@ -16,3 +16,4 @@ alias lss="ls | grep '^d' --color=never ; ls | grep '^l' --color=never ; ls | gr
 alias tree='tree --dirsfirst'
 
 alias sqlite='sqlite3'
+alias dotnet='TERM=xterm dotnet'
