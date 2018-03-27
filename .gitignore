@@ -1,23 +1,19 @@
+3T/
 Atom/
-Code/
-Code - Insiders/
-Gitter/
-Google Play Music Desktop Player/
-Slack/
-Thunar/
-Trolltech.conf
-Unknown Organization/
-VirtualBox/
 autostart/
 bundle/
 calibre/
 chromium/
 cmus/
+Code - Insiders/
+Code/
 configstore/
 dconf/
 discord/
 easytag/
+Gitter/
 gnupg/
+Google Play Music Desktop Player/
 google-chrome/
 guvcview2/
 htop/
@@ -26,9 +22,15 @@ menus/
 pulse/
 ranger/
 skypeforlinux/
+Slack/
 spotify/
+sqlitebrowser/
 texstudio/
+Thunar/
 transmission/
+Trolltech.conf
+Unknown Organization/
+VirtualBox/
 xfce4/
 
 .zcompdump
@@ -38,7 +40,6 @@ gtkfilechooser.ini
 npmrc
 pavucontrol.ini
 QtProject.conf
-user-dirs*
 viminfo
 zoomus.conf
 zsh_history
