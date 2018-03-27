@@ -17,3 +17,5 @@ alias tree='tree --dirsfirst'
 
 alias sqlite='sqlite3'
 alias dotnet='TERM=xterm dotnet'
+
+alias d='gio trash'
