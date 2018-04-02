@@ -78,9 +78,9 @@ bindsym $mod+Shift+semicolon  move scratchpad
 bindsym $mod+apostrophe       sticky toggle
 
 # Volume Controls
-bindsym XF86AudioRaiseVolume  exec --no-startup-id polybar-msg action volup
-bindsym XF86AudioLowerVolume  exec --no-startup-id polybar-msg action voldown
-bindsym XF86AudioMute         exec --no-startup-id polybar-msg action volmute
+bindsym XF86AudioRaiseVolume  exec --no-startup-id polybar-msg action pa_volup
+bindsym XF86AudioLowerVolume  exec --no-startup-id polybar-msg action pa_voldown
+bindsym XF86AudioMute         exec --no-startup-id polybar-msg action pa_volmute
 bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
