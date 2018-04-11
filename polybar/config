@@ -176,6 +176,7 @@
     type = internal/pulseaudio
 
     master-mixer = Master
+    use-ui-max = false
 
     format-volume = <ramp-volume> <label-volume>
     format-volume-underline = ${colors.lime}
