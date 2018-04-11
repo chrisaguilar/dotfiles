@@ -56,6 +56,7 @@ bindsym $mod+Shift+Tab  workspace prev
 
 # Kill Focused Window
 bindsym $mod+Shift+q kill
+bindsym --release $mod+Shift+Escape exec --no-startup-id xkill
 
 # Launch rofi (a task runner)
 bindsym $mod+d exec --no-startup-id rofi -show 'drun'
