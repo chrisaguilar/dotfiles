@@ -2,6 +2,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 
+export ANDROID_HOME=/opt/android-sdk
 export DOCKERID=chrisaguilar
 export EDITOR=/usr/bin/vim
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
