@@ -1,46 +1,24 @@
-3T/
-Atom/
-autostart/
-bundle/
-calibre/
-chromium/
-cmus/
-Code - Insiders/
+Android Open Source Project/
 Code/
-configstore/
-dconf/
-discord/
-easytag/
-Gitter/
-gnupg/
 Google Play Music Desktop Player/
-google-chrome/
-guvcview2/
-htop/
-libreoffice/
-menus/
-pulse/
-ranger/
-skypeforlinux/
+NuGet/
 Slack/
-spotify/
-sqlitebrowser/
-texstudio/
 Thunar/
-transmission/
-Trolltech.conf
 Unknown Organization/
 VirtualBox/
+autostart/
+calibre/
+chromium/
+npm/
+pulse/
 xfce4/
 
-.zcompdump
-csharp.history
-credentials
-gtkfilechooser.ini
-npmrc
-pavucontrol.ini
 QtProject.conf
-viminfo
+Trolltech.conf
+gtk-2.0/gtkfilechooser.ini
+gtk-3.0/bookmarks
+pavucontrol.ini
+vim/viminfo
 zoomus.conf
-zsh_history
-/gtk-3.0/bookmarks
+zsh/.zcompdump
+zsh/zsh_history
