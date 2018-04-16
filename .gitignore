@@ -9,6 +9,7 @@ VirtualBox/
 autostart/
 calibre/
 chromium/
+configstore/
 npm/
 pulse/
 xfce4/
