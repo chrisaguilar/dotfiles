@@ -2,20 +2,26 @@ Android Open Source Project/
 Code/
 Google Play Music Desktop Player/
 NuGet/
+Postman/
 Slack/
 Thunar/
 Unknown Organization/
 VirtualBox/
 autostart/
 calibre/
+chromium-backup/
+chromium/
 chromium/
 configstore/
+libreoffice/
 npm/
 pulse/
+transmission/
 xfce4/
 
 QtProject.conf
 Trolltech.conf
+chromium
 gtk-2.0/gtkfilechooser.ini
 gtk-3.0/bookmarks
 pavucontrol.ini
