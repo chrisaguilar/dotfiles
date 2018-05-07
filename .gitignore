@@ -11,13 +11,14 @@ autostart/
 calibre/
 chromium-backup/
 chromium/
-chromium/
 configstore/
 libreoffice/
 npm/
 pulse/
+spotify/
 transmission/
 xfce4/
+yay/
 
 QtProject.conf
 Trolltech.conf
