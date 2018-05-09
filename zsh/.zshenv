@@ -7,6 +7,7 @@ export DOCKERID=chrisaguilar
 export EDITOR=/usr/bin/vim
 export GOPATH=$HOME/code/go
 export LANG=en_US.UTF-8
+export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
 export LC_COLLATE=C
 export LESSHISTFILE=$XDG_CACHE_HOME/less/history
 export LESSKEY=$XDG_CACHE_HOME/less/key

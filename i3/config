@@ -181,13 +181,16 @@ mode "resize" {
 }
 
 # Misc
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id compton
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
 exec --no-startup-id setxkbmap -option "caps:escape"
-exec --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
 
 # Applets
 exec --no-startup-id blueman-applet
 exec --no-startup-id nm-applet
+# exec --no-startup-id redshift-gtk
+# exec --no-startup-id solaar
 
 # Wallpaper
 exec_always --no-startup-id feh --bg-fill --no-fehbg $HOME/media/wallpapers/012.jpg
