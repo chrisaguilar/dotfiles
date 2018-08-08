@@ -1,0 +1,77 @@
+! General
+rofi.case-sensitive:    false
+rofi.cycle:             false
+rofi.modi:              window,drun,run,ssh
+rofi.scroll-method:     0
+rofi.show-match:        true
+rofi.threads:           0
+
+! Theming
+rofi.bw:                2
+rofi.eh:                1
+rofi.font:              Fira Mono Medium 12
+rofi.hide-scrollbar:    true
+rofi.line-margin:       0
+rofi.matching:          normal
+rofi.scrollbar-width:   0
+rofi.separator-style:   solid
+rofi.tokenize:          true
+
+! Colors
+! State:                bg       fg       bgalt    hlbg     hlfg
+rofi.color-active:      #212121, #039BE5, #212121, #424242, #039BE5
+rofi.color-normal:      #212121, #9E9E9E, #212121, #424242, #9E9E9E
+rofi.color-urgent:      #212121, #ff1744, #212121, #424242, #ff1744
+
+!                       bg       border   separator
+rofi.color-window:      #212121, #424242, #424242
+
+! Layout
+rofi.auto-select:       false
+rofi.columns:           1
+rofi.fixed-num-lines:   true
+rofi.fullscreen:        false
+rofi.line-padding:      5
+rofi.lines:             15
+rofi.location:          0
+rofi.m:                 -5
+rofi.padding:           10
+rofi.sidebar-mode:      true
+rofi.width:             30
+
+! Pattern Setting
+rofi.ssh-client:    ssh
+rofi.terminal:      /usr/bin/termite
+
+! SSH Settings
+rofi.parse-hosts:       false
+rofi.parse-known-hosts: true
+rofi.ssh-command:       {terminal} -e {ssh-client} {host}
+
+! Run Settings
+rofi.run-command: {cmd}
+rofi.run-list-command:
+rofi.run-shell-command: {terminal} -e {cmd}
+rofi.window-command: xkill -id {window}
+
+! Combi Settings
+rofi.combi-modi: window,run
+
+! History and Sorting
+rofi.disable-history:   false
+rofi.levenshtein-sort:  false
+
+
+! Window Mode
+rofi.window-format: {w} - {c} {t}
+
+! Other
+rofi.click-to-exit:     true
+rofi.display-combi:     Combi
+rofi.display-drun:      Programs
+rofi.display-run:       Run
+rofi.display-ssh:       SSH
+rofi.display-window:    All Windows
+rofi.display-windowcd:  Visible Windows
+rofi.fake-background:   screenshot
+rofi.fake-transparency: false

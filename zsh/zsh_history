@@ -1,0 +1,5918 @@
+rm ~/.config/zsh/zsh_history
+e
+e
+npm start
+e
+cd code/work/exrx/exrx-next/build/src/components/
+l
+cd ..
+l
+cat App.tsx
+cd containers
+l
+cd Panel
+l
+cd ../../
+ls
+cat index.tsx
+cd pages
+l
+cat Favorites.tsx
+c
+cd ../../
+l
+cd ..
+l
+cd build/scripts
+l
+cd src
+l
+cat App.tsx
+c
+cat App.tsx | less
+c
+l
+cd ..
+l
+cd foobarbaz
+l
+cd ..
+l
+cd asdf
+l
+cat simple.tsx
+cat simple.tsx | less
+c
+l
+cat index.tsx
+l components
+cd ..
+l
+..
+..
+find . -name '*simple*'
+cat build/scripts/src/simple.tsx
+cat build/scripts/src/simple.tsx | less
+e
+e
+ls
+e
+cd ../../../
+l
+cd exrx-next
+cat build/scripts/src/simple.tsx | less
+c
+e
+npm start
+c
+e
+yes | yay
+c
+e
+npm start
+npm start
+e
+yes | yay
+e
+npm start
+rm node_modules
+ls
+npm i
+npm outdated
+npm update
+c
+npm start
+npm start
+c
+e
+e
+npm start
+poweroff
+poweroff
+poweroff
+sudo tlp fullcharge
+e
+poweroff
+yes | yay -Scc ; yes | yay -S visual-studio-code-insiders
+e
+ls -al
+e
+npm start
+e
+sudo tlp fullcharge
+e
+poweroff
+poweroff
+poweroff
+sudo tlp fullcharge
+poweroff
+poweroff
+git status
+git pull origin master
+c
+e
+ls
+vim test.js
+node test.js
+vim test.js
+node test.js
+vim test.js
+code test.js
+e
+node test.js
+c
+e
+yes | yay
+yes | yay -Rus atom
+yes | yay
+yes | yay -Scc
+e
+git add .
+git commit -m '6.1'
+c
+e
+git push origin master
+e
+poweroff
+yes | yay
+reboot
+yes | yay
+yay --help
+yay --help | grep git
+yay --git
+yes | yay --devel
+yay --devel
+yes | yay -Syu --devel
+c
+e
+cd code/work/trilogy/class-repo-may-2018
+c
+l
+git status
+ls
+rm test.js
+rm .node_repl_history .python_history
+c
+l
+cat .wakatime.log
+rm .wakatime.log
+c
+l
+cd .cache
+l
+rm ./*
+l
+c
+l
+..
+l
+cd .config
+l
+yes | yay -S visual-studio-code-insiders
+e
+open media/pictures/screenshots/1529158464.png
+e
+cd code/work/trilogy/grading
+ls
+git clone https://github.com/carlosbofill/Word-Guess-Game/
+code Word-Guess-Game;e
+open media/video/recording.mp4
+cd code/work/trilogy/class-repo-may-2018
+git pull
+c
+cd ../../
+ls
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+e
+poweroff
+poweroff
+poweroff
+poweroff
+yes | yay
+e
+yes | yay
+e
+yes | yay
+e
+npm run lint:fix
+c
+e
+git add .
+git commit -m '6.2'
+git push origin master
+git remote show origin
+cd ..
+l
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git --depth=1
+git config --global core.compression 0
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git --depth=1
+c
+e
+yes | yay -S baobab
+sudo baobab
+e
+cd ..
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+mpv --no-video "https://www.youtube.com/watch?v=YSbyJmqH5Gc"
+mpv --no-video "https://www.youtube.com/watch?v=fw3UYy02lSI"
+poweroff
+poweroff
+poweroff
+yes | yay
+yes | yay -Syu --devel
+e
+e
+cd code/work/trilogy/class-repo-nov-2017
+l
+du -sh .
+git pull
+e
+git clone git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+cd code/work/trilogy/class-repo-may-2018
+git gc
+git repack -Ad
+git prune
+c
+du -sh .
+ls
+du -sh .git
+git reflog expire --expire=now --all
+git gc --prune=now
+git gc --aggressive --prune=now
+du -sh 
+ls
+du -sh .git
+c
+git pull
+c
+git reset --hard HEAD
+c
+git pull
+cd
+git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+GIT_TRACE=1 git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+ssh -T git@gt.bootcampcontent.com
+c
+yes | yay
+c
+git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+open media/pictures/screenshots/1529241128.png
+c
+cd code/work/trilogy
+c
+l
+c
+git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+e
+mpv --no-video "https://www.youtube.com/watch?v=fw3UYy02lSI"
+e
+npm run lint:fix
+npm run lint:fix
+npm run lint:fix
+npm start
+npm start
+c
+e
+npm start
+e
+npm start
+e
+npm start
+e
+poweroff
+mpv --no-video "https://www.youtube.com/watch?v=fw3UYy02lSI"
+mpv --no-video "https://www.youtube.com/watch?v=YSbyJmqH5Gc"
+yes | yay -Scc; yes | yay -S visual-studio-code-insiders
+yes | yay -Syu --devel
+e
+poweroff
+poweroff
+poweroff
+npm start
+mpv --no-video "https://www.youtube.com/watch?v=YSbyJmqH5Gc"
+mpv --no-video "https://www.youtube.com/watch?v=WAxY4wfN2C0"
+yes | yay
+reboot
+npm start
+c
+e
+sudo tlp fullcharge
+e
+yes|yay -Scc;yes | yay -S visual-studio-code-insiders
+e
+npm start
+poweroff
+yay -S gnome gnome-extra
+c
+e
+yay -S gnome-shell
+yay -S --asdeps gnome-control-center
+yay -S --asdeps system-config-printer
+yay -Qtdq
+yay -Rus rhash
+yay -S --asdeps gnome-user-share
+c
+vim .config/X11/initrc
+e
+e
+yay -Sgq gnome gnome-extra | sort
+c
+yay -Sg gnome gnome-extra | sort
+yay -Sgi gnome gnome-extra | sort
+c;yay -Sg gnome gnome-extra | sort
+c;yay -Sg gnome gnome-extra | sort | egrep -v "$(yay -Qqg gnome gnome-extra)"
+c
+c;yay -Sg gnome gnome-extra | sort | egrep -v "$(yay -Qqg gnome gnome-extra)"
+c;yay -Sgq gnome gnome-extra | sort | egrep -v "$(yay -Qqg gnome gnome-extra)"
+yay -S --asdeps eog-plugins 
+e
+yay -S --needed eog evince dconf-editor gnome-boxes gnome-{disk-utility,logs,screenshot,system-monitor,tweaks,usage} nautilus{,-sendto} sushi tracker{,-miners} xdg-user-dirs-gtk
+e
+yes | yay -S chrome-gnome-shell
+e
+e
+gnome-boxes
+yay -Rus gnome-boxes
+e
+yes | yay
+e
+vim .config/X11/initrc
+e
+l
+history | grep yay
+history
+cat /var/log/pacman.log
+cat /var/log/pacman.log | grep installed
+yay -Qqg gnome gnome-extra | sort
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell system-config-printer eog-plugins
+l
+reboot
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell system-config-printer eog-plugins
+l
+reboot
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell
+yay -Rus baobab cheese dconf-editor eog evince gnome-control-center gnome-color-manager gnome-disk-utility gnome-logs gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-system-monitor gnome-themes-extra gnome-tweaks gnome-usage gnome-user-share mutter nautilus nautilus-sendto sushi tracker tracker-miners chrome-gnome-shell system-config-printer eog-plugins
+l
+reboot
+npm start
+killall node
+vim
+e
+npm start
+mpv --no-video "https://www.youtube.com/watch?v=WAxY4wfN2C0"
+poweroff
+cd code/work/exrx/exrx-next
+npm start
+cd src/client
+npm start
+e
+ngrok http 3000
+c
+e
+ngrok http 3000 --host-header="localhost:3000"
+ngrok https 3000 --host-header="localhost:3000"
+ngrok http 3000 --host-header="localhost:3000"
+c
+vim .config/termite/config
+ngrok http 3000 --host-header="localhost:3000"
+c
+e
+npm start
+c
+e
+open media/video/recording.mp4
+open media/video/recording.mp4
+e
+npm start
+npm start
+c
+e
+npm start
+c
+e
+cd code/work/exrx/exrx-next/src/client
+ngrok http 3000 --host-header="localhost:3000"
+npm start
+reboot
+sudo vim /usr/share/icons/default/index.theme
+e
+ngrok http 3000 --host-header="localhost:3000"
+c
+e
+cd code/work/exrx/exrx-next/src/client
+npm start
+c
+e
+poweroff
+e
+yes | yay
+yes | yay -Scc
+c
+yes | yay -S visual-studio-code-insiders
+e
+npm i styled-components styled-theming ; npm i -D @types/styled-{components,theming}
+npm outdated
+npm update
+npm i -D typescript-styled-plugin
+npm run lint:fix
+npm run lint:fix
+npm run lint:fix
+e
+npm start
+poweroff
+code-insiders;e
+cd code/work/exrx/exrx-next
+cd src/client/
+npm start
+git clone --depth 1 git@gt.bootcampcontent.com:GT-Coding-Boot-Camp/GTATL201805FSF2-Class-Repository-FSF.git
+c
+e
+yes | yay
+c
+yes | yay -Scc
+e
+cd code/work/trilogy/class-repo-may-2018
+git fetch origin/6.3
+git fetch origin 6.3
+git status
+c
+l
+e
+l
+e
+git status
+git add .
+git commit -m '6.3'
+ls
+cd src/
+ls
+git add util/
+l
+ls
+git status
+git commit
+e
+ls
+cd code
+l
+mkcd react
+c
+l
+create-react-app no-types
+code . ; ee
+e
+create-react-app typed --scripts-version=react-scripts-ts
+e
+cd typed
+npm start
+c
+npm start
+c
+e
+cd no-types
+npm start
+cd ../typed
+npm start
+c
+e
+cd typed
+c
+npm start
+npm start
+cd typed
+c
+npm start
+c
+npm start
+killall node
+npm start
+killall node
+npm start
+c
+reboot
+polybar main
+MONITOR=eDP1 polybar main
+e
+vim 
+e
+cd code/work/trilogy/class-repo-may-2018
+code . ; e
+git status
+git add README.md
+git commit -m 'New Panoptop link for 6.3'
+git status
+c
+e
+yes | yay
+e
+cd code/work/trilogy/class-repo-may-2018
+git push origin master
+e
+poweroff
+poweroff
+yes | yay
+e
+npm start
+c
+e
+yes | yay -S visual-studio-code-insiders
+e
+npm start
+e
+ls
+ls -al
+c
+e
+npm start
+npm start
+npm start
+npm run lint:fix
+npx tslint --help
+npm run lint:fix
+npm outdated
+npm update
+npx tslint -p .
+npx tslint -p tsconfig.json
+npx tslint -p tsconfig.json
+npx tslint --version
+e
+c
+mpv --no-video "https://www.youtube.com/watch?v=fw3UYy02lSI"
+mpv --no-video "https://www.youtube.com/watch?v=HV6rCIiZo7M"
+poweroff
+yes | yay
+yay -S rhythmbox
+yay -S --asdeps gst-plugins-bad libdmapsharing grilo-plugins lirc gvfs-mtp 
+e
+dmesg
+e
+cd media/music
+l
+l
+..
+l
+cd downloads
+l
+..
+l
+cd ..
+l
+ls Downloads
+rm Downloads
+ls Public
+rm Public
+rm Templates
+c
+find . -name '.directory'
+rm media/.directory
+e
+pacman -Qq | wc -l\
+
+e
+ls media/music
+ls media/music | wc -l
+du -sh media/music
+e
+ls media/music | wc -l
+e
+sudo tlp setcharge
+e
+l
+find . -name "*_1*"
+find . -name "*_1*" | sort
+c
+e
+cd media/music
+find . ! -empty -type f -exec md5sum {} + | sort | uniq -w32 -dD\
+
+yay -Ss fdupe
+yay -S fdupes
+fdupes .
+fdupes --help
+fdupes -I
+fdupes -I .
+c
+ls | wc -l
+ls
+fdupes .
+fdupes --help
+fdupes -d .
+mv death\'s\ dynamic\ shroud.wmv\ -\ HEART\ BEATZã‚¦ã‚©ãƒ£¼ã‚¯ãƒ£ƒ¾ãƒ£³_1.mp3 death\'s\ dynamic\ shroud.wmv\ -\ HEART\ BEATZã‚¦ã‚©ãƒ£¼ã‚¯ãƒ£ƒ¾ãƒ£³.mp3
+fdupes -dN .
+c
+ls | wc -l
+e
+yes | yay
+e
+wdihi
+wdihi | less
+c
+e
+yay -Si lib32-mesa
+e
+yes | yay -Rus fdupes visual-studio-code-bin qutebrowser file-roller transmission-gtk guvcview 
+yay -Qtdq
+yay -Rus `yay -Qtdq`
+yay -Qtdq
+yay -Qq | grep qt5
+yay -Rus qt5-base
+yay -R qt5-base
+ce
+c
+yay -Qq | wc -l
+e
+reboot
+mpv --no-video "https://www.youtube.com/watch?v=HV6rCIiZo7M"
+e
+rhythmbox-client --help
+rhythmbox-client --next
+rhythmbox-client --interactive
+e
+npm start
+c
+npm outdated
+npm update ; npm i -D @types/react-beautiful-dnd
+e
+npm start
+killall node
+e
+m
+moo
+cowsay
+c
+e
+htop
+e
+cal
+e
+mpv --no-video "https://www.youtube.com/watch?v=HV6rCIiZo7M"
+poweroff
+yes | yay
+e
+yay -S plasma-desktop
+yay -Rus plasma-desktop
+e
+l
+rm .mozilla
+yay -Rus firefox
+c
+l
+rm .quokka .putty .ssr .thumbnails .uml .vim Downloads .icons .gnome .VSCodeVim
+c
+l
+rm .cache/*
+ls .local/share
+rm .local/share/IsolatedStorage .local/share/Trash .local/share/applications .local/share/desktop-directories .local/share/gnome-boxes .local/share/gnome-settings-daemon .local/share/gnome-shell .local/share/gsettings-data-convert .local/share/gstreamer-1.0 .local/share/gvfs-metadata .local/share/icc .local/share/icons .local/share/mime .local/share/mimeapps.list .local/share/nautilus .local/share/qutebrowser .local/share/ranger .local/share/recently-used.xbel .local/share/rhythmbox .local/share/sounds .local/share/tracker .local/share/webkitgtk .local/share/xfce4 .local/share/xorg 
+l .local/share
+c
+l
+e
+c
+yes | yay
+e
+rm .vscode
+c
+l
+rm .config/Code
+c
+l
+cd .config
+l
+c
+l
+rm qutebrowser
+rm guvcview2
+rm gtk-4.0
+rm goa-1.0
+c
+l
+rm gconf dconf nautilus xfce4* 
+cat user-dirs.dirs
+c
+l
+ls Microsoft
+cat Microsoft/VisualStudio/OpenFolderSettings/VSWorkspaceSettings.json
+c
+l
+rm Thunar
+rm gnome-*
+cat gtk-3.0/settings.ini
+c
+cat gtk-2.0/gtkrc
+c
+l
+cd
+l
+c
+l
+e
+yes | yay -Scc; yes | yay -S visual-studio-code-insiders
+e
+npm start
+c
+git status
+ls src/util
+e
+npm start
+poweroff
+poweroff
+e
+yes | yay
+e
+cd code/work/trilogy/
+l
+code-insiders main.code-workspace
+e
+git add .
+git commit -m '7.1'
+e
+e
+code
+e
+node foobar.js
+node foobar.js
+node foobar.js
+node foobar.js
+c
+cd code/work/trilogy/class-repo-may-2018
+l
+rm foobar.js
+git status
+git push origin master
+vim 
+e
+l
+e
+poweroff
+yes | yay
+e
+yes | yay -S flatpak
+yay -S flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\
+
+flatpak install flathub com.valesoftware.Steam
+flatpak --help
+flatpak remotes
+sudo flatpak remote-delete flathub
+flatpak remotes
+ flatpak --user remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak --user install flathub com.valvesoftware.Steam
+flatpak override com.valvesoftware.Steam --filesystem=$HOME
+flatpak --user override com.valvesoftware.Steam --filesystem=$HOME
+flatpak run com.valvesoftware.Steam
+flatpak --help
+flatpak uninstall com.valvesoftware.Steam
+flatpak remotes
+flatpak remote-delete flathub
+flatpak list
+flatpak uninstall org.freedesktop.Platform{/x86_64/1.6,.{Compat32/x86_64/1.6,VAAPI.Intel/x86_64/1.6,ffmpeg/x86_64/1.6}}
+flatpak remote-delete flathub
+yes | yay -Rus flatpak
+c
+yay -S steam
+e
+ls
+rm foobar.txt
+c
+l
+cd code/work/exrx/exrx-next
+l
+cd src/client
+code-insiders .
+e
+e
+vlc \\
+    --no-video-deco \\
+    --no-embedded-video \\
+    --screen-fps=20 \\
+    --screen-top=32 \\
+    --screen-left=0 \\
+    --screen-width=1920 \\
+    --screen-height=1000 \\
+    screen://
+yay -S vlc
+vlc \\
+    --no-video-deco \\
+    --no-embedded-video \\
+    --screen-fps=20 \\
+    --screen-top=32 \\
+    --screen-left=0 \\
+    --screen-width=1920 \\
+    --screen-height=1000 \\
+    screen://
+~
+~
+vlc \\
+    --no-video-deco \\
+    --no-embedded-video \\
+    --screen-fps=20 \\
+    --screen-top=32 \\
+    --screen-left=0 \\
+    --screen-width=1920 \\
+    --screen-height=1000 \\
+    screen://
+vlc
+e
+vlc
+e
+killall vlc
+killall vlc
+killall vlc
+killall cvlc
+e
+cvlc -vv
+cvlc -vvv
+cvlc -vvv screen:// --sout
+cvlc -vvv screen:// --sout ''
+cvlc -vvv screen:// --sout '#std{access=rtmp,mux=ffmpeg{mux=flv},dst=rtmp://a.rtmp.youtube.com/live2/q840-rk0b-66jh-4pxu'
+opt_deps
+yay -S --needed --asdeps avahi  gst-plugins-base-libs  libdvdcss  libavc1394  libdc1394  libva-vdpau-driver  libva-intel-driver  libbluray  flac  twolame  libgme  vcdimager  libmtp  libsystemd  smbclient  libcdio  ttf-freefont  ttf-dejavu  libssh2  libnfs  mpg123  protobuf  libmicrodns  lua-socket  live-media  libdvdread  libdvdnav  libogg  libshout  libmodplug  libvpx  libvorbis  speex  opus  libtheora  libpng  libjpeg-turbo  librsvg  libx264  x265  zvbi  libass  libkate  libtiger  sdl_image  aalib  libcaca  libpulse  alsa-lib  jack  libsamplerate  libsoxr  chromaprint  lirc  libgoom2  projectm  ncurses  libnotify  gtk3
+c
+cvlc -vvv screen:// --sout '#std{access=rtmp,mux=ffmpeg{mux=flv},dst=rtmp://a.rtmp.youtube.com/live2/q840-rk0b-66jh-4pxu'
+cvlc  -vvv screen:// --sout '#transcode{vcodec=h264,scale=Auto,width=1600,height=900,acodec=mp3,ab=128,channels=2,samplerate=44100}:std{access=rtmp,mux=ffmpeg{mux=flv},dst=rtmp://a.rtmp.youtube.com/live2/q840-rk0b-66jh-4pxu}'\
+
+cvlc screen:// --sout '#transcode{}:std{access=rtmp,mux=ffmpeg{mux=flv},dst=rtmp://a.rtmp.youtube.com/live2/q840-rk0b-66jh-4pxu}'\
+
+cvlc  -vvv screen:// --sout '#transcode{vcodec=h264,acodec=mp3}:std{access=rtmp,mux=ffmpeg{mux=flv},dst=rtmp://a.rtmp.youtube.com/live2/q840-rk0b-66jh-4pxu}'\
+
+yay -S obs-studio
+e
+yay -Rus vlc
+yay -Rus obs-studeio
+yay -Rus obs-studio
+yay -Qtdq
+yay -Rus `yay -Qtdq`
+yay -Rus `yay -Qtdq`
+c
+wdihi
+poweroff
+poweroff
+poweroff
+yes | yay
+yes | yay -Scc ; yes | yay -S visual-studio-code-insiders
+e
+git add .
+git commit -m '7.1.1 - Adds another video link because the one for this class is broken'
+git push origin master
+e
+git add .
+git commit -m '7.2.0 - Solutions for Lesson 7.2'
+e
+e
+l
+rm .python-history
+ls .v
+ls .var
+ls .var/app
+rm .var
+c
+l
+rm .mysql .omnisharp .putty .ssr 
+c
+l
+yay -Rus wine winetricks 
+sudo vim /etc/pacman.conf
+c
+l
+rm .wine
+sudo find /usr -name '*balsamiq*'
+sudo rm /usr/share/applications/balsamiq.desktop
+c
+l
+l
+c
+l
+ls .local
+ls .local/share
+rm .local/share/flatpak 
+e
+git add .
+git commit -m '7.2.1 - Adds Panopto video link'
+c
+e
+cd code/test
+l
+create-react-app sass-test
+code-insiders sass-test;e
+npm run eject
+npm i c
+c
+npm i -D sass-loader node-sass style-loader css-loader
+c
+npm i bootstrap
+npm start
+c
+npm start
+npm start
+c
+e
+npm start
+e
+sudo tlp fullcharge
+e
+e
+cd Class-Content/07-firebase/01-Activities/15-intropresence
+ngrok http localhost:8080
+ngrok http http://localhost:8080
+ngrok http 8080
+e
+open countdown-presence.html
+mv countdown-presence.html index.html ; npx live-server .
+mv countdown-presence.html index.html ; npx live-server .
+npx live-server .
+e
+e
+cd code/work/trilogy/class-repo-may-2018
+c
+l
+git log
+c
+code-insiders .
+yes | yay
+c
+l
+c
+git push origin master
+c
+cd
+c
+poweroff
+yes | yay
+e
+ls
+cd .config/zsh/
+l
+cd zshrc.d
+l
+vim prompt.zsh
+cd 
+cd code/work/trilogy/class-repo-may-2018
+c
+l
+c
+git checkout -b something
+c
+ls
+vim README.md
+git add .
+git commit -m 'Did something'
+git merge master
+git checkout -b anotherone
+vim README.md
+git add README.md
+git commit -m 'Did something different'
+git checkout something
+git merge anotherone
+git checkout master
+git branch -D something anotherone
+c
+e
+tetricscurses
+c
+autoload -U tetriscurses
+tetriscurses
+c
+autoload -U colors
+colors
+bg
+color
+e
+cat /etc/nsswitch.conf
+sudo vim /etc/nsswitch.conf
+yay -Qq | grep mdns
+yay -Qq | grep avahi
+opt_deps | grep avahi
+yay -S --asdeps nss-mdns
+e
+yes | yay
+e
+git config --global
+git config --global --get-all
+c
+git config --global --list
+git help archimport
+reboot
+yes | yay
+yes | yay
+e
+yes | yay -Scc ; yes | yay -S visual-studio-code ; yes | yay -Rus visual-studio-code-insiders
+e
+l
+rm .vscode-insiders
+rm .local/share/vsliveshare
+c
+rm .config/Code\ -\ Insiders
+l .config
+e
+npm start
+c
+git reset --hard HEAD
+git clean -fd
+c
+git checkout -b development
+git push origin development
+poweroff
+sudo tlp fullcharge
+e
+git checkout -b implement-selectors
+c
+npm i reselect
+node
+e
+npx lint:fix
+npm run lint:fix
+e
+poweroff
+poweroff
+poweroff
+cd code/work/trilogy/
+ls
+code main.code-workspace
+e
+ls
+yes | yay
+e
+git status
+git add .
+git commit -m '7.3.0'
+exit
+npm i
+npm outdated
+npm update; npm i -D @types/react-beautiful-dnd@latest
+git add package.json package-lock.json
+git status
+git commit -m 'Updates dependencies'
+git add data.json
+git commit -m 'Normalizes user favorites field in the API'
+git checkout master
+git merge implement-selector
+git merge implement-selectors
+git status
+git checkout implement-selectors
+git status
+ls
+git branch
+e
+cd code/work/trilogy/
+l
+code main.code-workspace
+e
+git status
+git add README.md
+git commit -m '7.3.1 - Adds "Part 2" link for class video'
+e
+ls
+git push origin master
+date
+poweroff
+yes | yay
+yay -S pulseaudio-bluetooth
+e
+e
+reboot
+reboot
+reboot
+mpv "https://www.youtube.com/watch?v=HtiYBMmjau8" --no-video
+e
+htop
+yes | yay
+c
+yay 
+yay -Rus pcmciautils
+c
+yay -Qtdq
+e
+npm start
+git checkout -b implement-ducks
+git add .
+git commit -m 'Moved DND stuff to appropriate "duck" directory'
+c
+l
+e
+cd ..
+ls
+cd ..
+ls
+mv .vscode .editorconfig .prettierrc src/client/
+c
+l
+rm build
+c
+e
+npm outdated
+git checkout development
+npm update
+git status
+git add package.json package-lock.json
+git commit -m 'Updates dependencies'
+git checkout implement-ducks
+git status
+git add .editorconfig .prettierrc .vscode/
+git status
+git reset
+git status
+git checkout development
+git status
+git add .editorconfig .prettierrc .vscode/
+git commit -m 'Moved config files to client folder'
+git status
+git commit --amend
+git status
+git add ../../.editorconfig ../../.prettierrc ../../.vscode
+git status
+git commit --amend
+git status
+ls ../
+ls ../../
+git log
+ls
+ls .vscode
+c
+l
+git checkout implement-ducks
+git status
+c
+e
+ls ../
+ls ../../
+git status
+ls
+git checkout development
+ls ../
+ls ../../
+git log
+git log --oneline
+git reset d41e5b7
+git status
+git add .prettierrc .vscode/ .editorconfig ../../.editorconfig ../../.prettierrc ../../.vscode
+git status
+git commit -m 'REALLY move the config files to client'
+git status
+git checkout implement-ducks
+git merge development
+git status
+git commit -m 'Merge with branch "development"'
+git status
+rm node_modules
+npm i
+npm outdated
+git checkout development
+git add package-lock.json
+git reset
+git reset --hard package-lock.json
+git status
+git checkout package-lock.json
+git status
+git checkout development
+npm outdated
+npm i -D @types/react-beautiful-dnd@latest
+git status
+git add package*
+git status
+git commit -m 'Updates dependencies'
+git checkout implement-ducks
+git merge development
+c
+e
+npm i
+npm start
+e
+mpv "https://www.youtube.com/watch?v=HtiYBMmjau8" --no-video
+c
+e
+mpv "https://www.youtube.com/watch?v=HtiYBMmjau8" --no-video
+c
+e
+git status
+git add .
+git commit -m 'Moves entire store to "ducks" style'
+git status
+git add .
+git commit --amend
+clear
+git status
+git branch
+git checkout development
+git merge implement-ducks
+c
+git branch
+git checkout implement-selectors
+git merge development
+git status
+git branch
+git checkout -b state-restructure
+e
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+c
+node state.js
+node state.js
+node state.js
+node state.js
+c
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+c
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+e
+node state.js
+e
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+c
+e
+node state.js
+node state.js
+node state.js
+c
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+e
+node state.js
+node state.js
+c
+node state.js
+node state.js
+c
+e
+node state.js
+mpv "https://www.youtube.com/watch?v=HtiYBMmjau8" --no-video
+node state.js
+e
+e
+node state.js
+c
+node state.js
+c; node state.js
+c; node state.js
+c; node state.js
+c; node state.js
+node state.js
+node state.js
+node state.js
+c
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+node state.js
+npm start
+npm start
+e
+yes | yay
+c
+e
+poweroff
+yes | yay 
+e
+ls
+yes | yay
+cd code/work/trilogy
+c
+l
+code main.code-workspace
+e
+yes | yay
+e
+e
+cd code/personal/config/tslint-config
+npm outdated
+npm update
+git status
+git add . ; git commit -m 'Updated dependencies'
+npm publish
+npm version minor
+npm adduser
+npm publish
+git push origin master; git push origin --tags
+c
+e
+npm outdated
+git checkout development
+npm update
+git add package*
+git commit -m 'Updated dependencies'
+git checkout state-restructure
+e
+ls
+cd code
+l
+mkcd git-conflict
+vim create.sh
+chmod +x create.sh
+./create.sh
+ls
+cd git-repo
+git status
+vim my_code.sh
+e
+yay -Sgq gnome-extra | grep git
+yay -Sgq gnome-extra 
+yay -Sgq gnome
+yay -Ss git
+yay -S gitg
+e
+ls
+cd code
+l
+ls test
+rm test
+c
+l
+rm git-conflict
+rm react*
+ls work/trilogy
+c
+l
+c
+e
+ls
+cd code/work/trilogy/
+code main.code-workspace
+ee
+e
+git log
+git log --graph
+c
+git add .
+git commit -m '8.1'
+git push origin master
+mpv --no-video "https://www.youtube.com/watch?v=X9L277oGLlo"
+npm start
+yes | yay
+e
+open media/pictures/screenshots/1529629623.png
+open media/pictures/screenshots/1529629349.png
+open media/pictures/screenshots/1529450964.png
+open media/pictures/screenshots/1529450950.png
+ranger
+cd code/work/trilogy/
+code main.code-workspace
+e
+ssh chris@chrismaguilar.com
+ssh chris@chrismaguilar.com
+ssh chris@chrismaguilar.com
+e
+poweroff
+yes | yay
+poweroff
+git status
+git add .
+git commit -m '8.2.0 - Project Management'
+git push origin master
+e
+npm start
+npm start
+e
+yes | yay
+yes | yay -Scc
+yes | yay -S visual-studio-code-insiders
+e
+gio trash --help
+gvfs-trash --help
+gio help trash
+cd .local/share/Trash/files/user
+l
+cat selectors.ts
+ctcb selectors.ts
+e
+npm start
+e
+npm i connected-react-router
+npm outdated
+e
+cd code
+ls
+git clone git@github.com:supasate/connected-react-router.git
+cd connected-react-router
+ls
+npm i
+e
+cd examples/typescript
+l
+npm i
+npm start
+cat package
+cat package.json
+npm run dev
+code-insiders . ; e
+npm start
+npm start
+npm start
+npm start
+c
+e
+e
+npm start
+npm update
+npm show connected-react-router
+c
+npm install git@github.com:supasate/connected-react-router.git
+npm install supasate/connected-react-router
+npm outdated
+npm start
+c
+e
+npm install git+ssh://git@github.com:supasate/connected-react-router.git
+npm start
+~
+e
+npm run build
+npm i
+npm run build
+git status
+git init
+rm -rf ./*
+ls
+git remote add origin git@github.com/supasate/connected-react-router.git
+git pull origin master
+cd ..
+rm connected-react-router
+git clone git@github.com/supasate/connected-react-router.git
+git clone git@github.com:supasate/connected-react-router.git
+cd connected-react-router
+ls 
+npm i
+npm run build
+e
+npm start
+npm rm connected-react-router
+npm i connected-react-router
+npm start
+npm rm connected-react-router
+npm start
+npm start
+c
+e
+e
+npm run lint:fix
+e
+npm start
+c
+npm start
+c
+e
+npm start
+killall node
+yes | yay
+e
+mpv --no-video "https://www.youtube.com/watch?v=X9L277oGLlo"
+mpv --no-video "https://www.youtube.com/watch?v=djJAk1pswcY"
+mpv --no-video "https://www.youtube.com/watch?v=dEaz20C4q4w"
+c
+e
+npm start
+npm start
+e
+poweroff
+yes | yay
+e
+npm start
+npm run build
+rm build
+npm start
+c
+e
+mpv --no-video "https://www.youtube.com/watch?v=dEaz20C4q4w"
+poweroff
+npm start
+c
+e
+yes | yay -Scc
+yes | yay
+yes | yay -S visual-studio-code-insiders
+sudo tlp setcharge
+e
+ctcb .ssh/id_rsa.pub
+ssh -T git@gitlab.com
+exit
+cd code
+ls
+cd work/exrx
+ls
+mkdir israel
+cd israel
+c
+git clone git@gitlab.com:asteriscus/KALIBO-MUNICIPAL-LIBRARY.git
+git clone git@gitlab.com:caldz10/final-Quidditch.git
+git clone git@gitlab.com:tuescorp/space-liars.git
+git clone git@gitlab.com:tuescorporation/Easesports.git
+code . ; exit
+git checkout development
+git add package.json package-lock.json
+git status
+git commit -m 'Updates dependencies'
+git checkout development
+git add src/typings/api.d.ts
+git commit -m 'Updates API typings to be complete based on current ExRx tables'
+git checkout state-restructure
+git merge development
+c
+e
+cd code/work/trilogy/lesson-plans
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+e
+mpv --no-video "https://www.youtube.com/watch?v=dEaz20C4q4w"
+c
+mpv --no-video "https://www.youtube.com/watch?v=dEaz20C4q4w"
+mpv --no-video "https://www.youtube.com/watch?v=dEaz20C4q4w"
+e
+yay -Ss videodownload
+yay -Ss video-download
+c
+e
+e
+l
+e
+mpv "https://s27.7nkbed.stream/hls/qvsbcn4on3blgwsztrokaoodkx5zsvzpbvtqkahvkuf6aifhyckffq6rxtna/index-v1-a1.m3u8"
+youtube-dl "https://s27.7nkbed.stream/hls/qvsbcn4on3blgwsztrokaoodkx5zsvzpbvtqkahvkuf6aifhyckffq6rxtna/index-v1-a1.m3u8"
+ls
+mpv index-v1-a1-index-v1-a1.mp4
+mv index-v1-a1-index-v1-a1.mp4 a-quiet-place.mp4
+mv a-quiet-place.mp4 media/video
+c
+e
+npm start
+git checkout development
+git add src/typings/api.d.ts
+git commit -m 'IDs should be string | number'
+git checkout state-restructure
+c
+npm start
+git merge development
+npm start
+rm node_modules
+npm i
+npm outdated
+npm start
+code-insiders code/work/trilogy/main.code-workspace
+e
+poweroff
+yes | yay
+poweroff
+yes | yay
+yes | yay --devel
+yay --devel
+yay -Syu --devel
+yay -Syu --devel 
+yay -Syu --git
+yay -S polybar-git
+yay -Qqem
+yay -S i3ipc-glib-git numix-circle-icon-theme-git 
+yes | yay -S i3ipc-glib-git numix-circle-icon-theme-git 
+e
+reboot
+code-insiders code/work/trilogy/main.code-workspace
+e
+yes | yay -S visual-studio-code-insiders
+e
+git status
+git reset --hard HEAD
+git pull origin master
+clear
+ls
+cd ../
+ls
+cd class-repo-may-2018
+code-insiders . ; exit
+yes | yay -Scc
+e
+yes | yay -S visual-studio-code-insiders
+e
+cd .config/Code\ -\ Insiders
+l
+ls Workspaces
+ls Local\ Storage
+ls User/
+cp User/projects.json ~/.config/Code/User
+e
+ls .config/Code/User
+e
+git status
+git add README.md
+git commit -m '8.3.0 - Project Week'
+git push origin master
+e
+npm start
+c
+e
+mv AppComponent.tsx HomeComponent.tsx
+mv AppInterfaces.ts HomeInterfaces.ts
+mv AppContainer.ts HomeContainer.ts
+e
+npm run lint:fi
+npm run lint:fix
+e
+npm start
+c
+e
+npm run lint:fix
+e
+git status
+git stash save "Please god work"
+git status
+git stash pop
+git status
+git stash save "ples"
+git checkout development
+git status
+npm outdated
+npm update ; npm i react-beautiful-dnd@latest
+git status
+git add package*
+git status
+git commit -m 'Updated dependencies'
+git checkout -b eject
+npm run eject
+mv docs .ignore
+ls
+mv .ignore ../
+npm run eject
+npm outdated
+npm update
+c
+npx ncu
+npx npm-check-updates
+npx npm-check-updates -u
+rm node_modules
+npm i
+c
+npm start
+c
+e
+npm start
+c
+npm i -D webpack@3
+npm i webpack-dev-server
+npm i -D webpack-dev-server
+npm show webpack-dev-server
+npm i webpack-dev-server@webpack-3
+npm i -D webpack-dev-server@webpack-3
+npm show webpack-hot-middleware
+npm show --help
+npm info webpack-dev-middleware
+npm view webpack-dev-middleware
+exit
+rm node_modules
+npm i
+npm outdated
+npm start
+c
+e
+mpv --no-video "https://www.youtube.com/watch?v=2ccaHpy5Ewo"
+mpv --no-video "https://www.youtube.com/watch?v=2ccaHpy5Ewo"
+mpv --no-video "https://www.youtube.com/watch?v=2ccaHpy5Ewo"
+e
+git reset --hard HEAD
+git clean -df
+clear
+npm run eject
+rm node_modules
+npm i
+git status
+clear
+npm run eject
+git status
+git add package-lock.json
+git commit --allow-epty
+git commit --allow-empty
+git commit
+git log
+git reset --hard 7dfe28ee
+git status
+clear
+git log
+npm run eject
+git status
+git add .
+git commit -m 'Ejected'
+clear
+git status
+clear
+npm outdated
+e
+code . ; e
+npm i -g vue-cli
+cd code
+ls
+vue --help
+rm connected-react-router
+vue list
+vue init webpack vue-test
+cd vue-test
+ls
+npm run dev
+e
+npm run build
+npm rm -g vue-cli
+npm i -g @vue/cli
+cd ..
+rm vue-test
+vue create vue-test
+cd vue-test
+npm run serve
+c
+e
+npm run test:e2e
+npm run test:unit
+npx vue-cli-service --help
+npx vue-cli-service inspect
+npx vue-cli-service inspect >> config.js
+e
+e
+npm init -y
+npm i -D @chrisaguilar/tslint-config tslint typescript webpack webpack-dev-server
+npm i react react-dom ; npm i -D @types/{react{,-dom}}
+npm i -D @types/react{,-dom}
+e
+npm i -D tslint-loader ts-loader tsconfig-paths-webpack-plugin
+c
+npm i -D babel-loader babel-core babel-preset-env babel-preset-react
+e
+npm i style-loader css-loader postcss-loader sass-loader node-sass 
+npm i -D style-loader css-loader postcss-loader sass-loader node-sass 
+e
+npm i -D file-loader url-loader cache-loader extract-text-webpack-plugin html-webpack-plugin thread-loader ; npm rm tslint-loader 
+npm show extract-text-webpack-plugin
+npm i -D extract-text-webpakc-plugin@next
+npm i -D extract-text-webpack-plugin@next
+rm node_modules
+npm i
+npm audit
+e
+npx tsc --init ; npx tslint --init
+e
+npm i -D fork-ts-checker-webpack-plugin
+npm i -D react-hot-loader
+e
+node
+c
+rm .node_repl_history
+l
+c
+vim delcietest.js
+node
+e
+touch main.js
+code-insiders main.js
+npm init -y
+npm i axios
+node main.js
+node main.js
+c
+e
+node main.js
+c
+node main.js
+c
+node main.js
+node main.js
+curl "https://api.vimeo.com/videos?query=titty&sort=plays&access_token=275bb5cff8e3ae3639a860dd4c0976cf" >> foobar
+cat foobar
+du -sh foobar
+rm foobar
+ls
+e
+curl "https://api.vimeo.com/videos?per_page=100&query=hello&sort=plays&access_token=275bb5cff8e3ae3639a860dd4c0976cf" >> foobar
+du -sh foobar
+rm foobar
+e
+node main.js
+e
+node main.js
+e
+node main.js
+node main.js
+ls
+rm main.js
+rm package*
+rm node_modules
+e
+node dev.js
+npm start
+npm i -D webpack-cli
+npm start
+c
+e
+npm i react-hot-loader
+npm i lodash
+e
+npm start
+npm i -D babel-preset-react
+npm i -D babel-preset-react
+npm start
+e
+node paths.js
+node paths.js
+npm view tsconfig-paths-webpack-plugin
+npm start
+npm start
+e
+npm start
+e
+npm start
+c
+e
+yes | yay
+e
+cat /var/log/pacman.log
+e
+npm i -D postcss-cssnext 
+npm start
+e
+npm start
+c
+npm start
+npm start
+e
+npm start
+npm start
+npm start
+npm start
+c
+e
+npm start
+c
+e
+npm start
+npm start
+npm start
+c
+e
+npm start
+npm start
+npm start
+c
+e
+npm start
+c
+npm start
+e
+npm start
+npm start
+npm start
+npm rm babel-{core,loader,preset-{env,react}}
+npm i -D @babel/{core,loader,preset-{env,react}}
+npm view babel-loader
+npm i -D @babel/{core,preset-{env,react}} babel-loader@next
+npm start
+npm start
+c
+e
+npm start
+c
+e
+touch {cache,thread,babel,ts,style,css,postcss,sass}.js
+echo "module.exports = { loader: '', options: {} };" >> ./*.js
+rm ./*.js
+touch {cache,thread,babel,ts,style,css,postcss,sass}.js
+code-insiders ./*.js
+reboot
+poweroff
+yes | yay
+poweroff
+mkcd code/yelp-test
+clear
+npm init -y
+clear
+npm i axios
+clear
+vim main.js
+node main.js
+vim main.js
+vim main.js
+node main.js
+code-insiders . ; e
+node main.js
+node main.js
+yes | yay
+e
+reboot
+yay -S gnome
+yay -S gnome-desktop
+yay -S gnome-shell
+yay -S gnome-shell
+vim .config/X11/initrc
+e
+opt_deps | grep gnome
+yay -S --asdeps gnome-control-center
+clear
+yay -Qtdq
+c
+yay -S gnome
+yay -S gnome gnome-extra
+yay -Ssg gnome
+yay -Sg gnome
+yay -Rus visual-studio-code-insiders
+c
+ls
+rm .vscode-insiders
+rm .config/Code\ -\ Insiders
+e
+yay -Rus gitg
+yay -S chrome-gnome-shell
+killall chrome
+killall steam
+ssh chris@chrismaguilar.com
+ssh israel@chrismaguilar.com
+clear
+sudo systemctl enable gdm
+e
+sudo systemctl disable gdm
+vim .config/X11/initrc
+e
+yay -Rus gnome
+yay -Rus chrome-gnome-shell
+yay -Rus gnome
+yay -Qqg gnome gnome-extra
+yay -Rus cheese evince file-roller gdm gnome-control-center gnome-color-manager gnome-screenshot gnome-session gnome-settings-daemon gnome-shell gnome-themes-extra gnome-system-monitor grilo-plugins gvfs{,-{afc,goa,google,gphoto2,mtp,nfs,smb}} mutter nautilus sushi tracker tracker-miners dconf-editor gnome-tweaks nautilus-sendto
+reboot
+ls
+cd .local/share
+c
+l
+rm applications gitg gnom* gstreamer-1.0 gvfs-metadata icc nautilus ranger rhythmbox sounds tracker vlc vulkan xorg gsettings-data-convert recently-used.xbel
+c
+l
+cd
+c
+l
+rm .cache/*
+rm .vue-templates
+c
+l
+rm Downloads
+c
+l
+rm .mysql
+npm ls -g
+npm ls -g --depth 0
+npm rm -g @vue/cli create-react-app
+c
+ls
+cd .config
+c
+l
+rm gtk-4.0
+c
+l
+rm dconf gconf gnome-session/ goa-1.0 obs-studio/ vue
+c
+l
+e
+l .config
+e
+git branch
+git checkout state-restructure
+e
+git branch
+git stash --help
+git stash list
+git stash pop
+e
+git status
+ls ..
+ls ../.ignore
+code ../.ignore
+npm start
+rm node_modules
+npm i
+npm start
+clear
+e
+npm start
+c
+e
+yes | yay
+e
+yes | yay
+e
+clear
+c
+c
+c
+e
+wall -n
+echo "FOO" >> wall -n
+echo "FOO" > wall -n
+echo "FOO" | wall -n
+echo "FOO" | wall --help
+echo "FOO" | sudo wall -n
+sudo wall -n
+wall 
+tty
+wall <<< 'Remember to brush your teeth!'
+wall <<< 'Remember to brush your teeth!'
+wall -n <<< 'Remember to brush your teeth!'
+sudo wall -n <<< 'Remember to brush your teeth!'
+exec i3
+e
+npm start
+npm outdated
+git checkout development
+npm update; npm i react-beautiful-dnd@latest
+npm start
+c
+e
+npm start
+c
+e
+npm start
+c
+e
+git pull origin master
+e
+yay -S php
+e
+php -S localhost:8080
+c
+e
+php -S localhost:8080 week3_PsychicGame_Solution
+cd code/
+ls
+rm vue-test
+rm yelp-test
+cd work/trilogy/help
+git clone git@github.com:dcdi22/Project1.git
+code Project1 ;e
+git branch
+git branch -a
+git checkout delcieBranch1
+git reset --hard HEAD
+git checkout delcieBranch1
+clear
+git reset --hard HEAD
+git log
+git pull origin delcieBranch1
+e
+cd code/work/trilogy/help
+cd Project1
+l
+code . ; e
+git reset --hard HEAD
+npm start
+c
+e
+git checkout master
+git add package*
+git commit -m 'Updated packages'
+git checkout master
+npm start
+git checkout development
+npm start
+git checkout state-restructure
+clear
+git status
+npm start
+npm start
+npm start
+npm start
+npm start
+npm start
+e
+yes | yay
+poweroff
+poweroff
+yes | yay
+e
+yes | yay
+e
+npm init -y
+npm i axios
+node main.js
+node main.js
+clear
+node main.js
+e
+cd code/work/trilogy/help/Project1
+clear
+git reset --hard HEAD
+clear
+code . ; e
+git pull origin delcieBranch1
+ls
+npx live-server .
+c
+e
+npx live-server .
+poweroff
+yes | yay
+reboot
+npm start
+npm start
+c
+e
+e
+npm start
+c
+npm run lint:fix
+c
+npm start
+npm start
+e
+npm start
+e
+npm outdated
+e
+e
+npm start
+c
+e
+git clone 
+git clone  git@bitbucket.org:chrisaguilar/exrx-next.git
+cd exrx-next
+cd src/client/
+npm i
+npm start
+git checkout development
+npm i
+npm start
+cd ..
+cd
+rm exrx-next
+e
+git remote show origin
+e
+npm start
+e
+npm start
+e
+git clone  git@bitbucket.org:chrisaguilar/exrx-next.git
+cd exrx-next/src/client
+npm i 
+npm start
+npm start
+e
+npm start
+npm start
+npm start
+e
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+e
+reboot
+reboot
+reboot
+open media/pictures/screenshots/1531096413.png
+e
+yes | yay
+e
+npm start
+killall node
+e
+npm start
+e
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+c
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+e
+npm start
+git status
+git add .
+git commit
+git checkout development
+git branch
+git checkout implement-ducks
+git status
+git checkout development
+git merge state-restructure
+git commit -m 'Fixes merge conflicts'
+git status
+git log --oneline
+clear
+git status
+git branch
+git branch -D implement-ducks implement-selectors state-restructure
+git checkout master
+git status
+git push origin master
+git checkout development
+git push origin development
+git remote remove origin
+git remote add origin git@gitlab.com:chrisaguilar/exrx-next.git
+git pull origin development
+git checkout master
+git pull origin master
+git branch
+git checkout eject
+clear
+exit
+git add .
+git commit -m 'Format the package.json'
+cd ..
+cd ..
+ls
+vim .gitignore
+git status
+git rm package-lock.json
+cd src/client
+git rm package-lock.json
+git status
+git add -A
+git commit -m 'Remove package-lock.json from repository'
+git branch
+e
+npm start
+c
+e
+npm start
+npm start
+npm outdated
+npm update
+npm outdated
+npm i -D css-loader@latest
+npm i -D cssnano
+npm start
+c
+npm start
+npm start
+c
+node config/webpack/dev.js
+c
+npm start
+rm node_modules
+npm i
+c
+npm start
+e
+ls ~/code
+e
+npm start
+e
+npm start
+c
+npm i
+npm start
+npm start
+npm start
+npm i axios
+c
+npm i axios
+npm start
+c
+npm start
+c
+npm start
+c
+npm start
+c
+e
+npm i redux-thunk redux-logger redux uuid react-beautiful-dnd react-router-dom ; npm i -D @types/lodash @types/uuid 
+npm i -D @types/react-beautiful-dnd
+npm i -D @types/redux-logger
+npm i -D @types/react-redux
+npm i -D @types/react-router-dom
+e
+npm start
+npm start
+c
+e
+npm i -D html-webpack-template
+npm start
+npm start
+npm start
+c
+e
+yes | yay
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+npm i json-server
+npm i -D tslint-loader
+npm start
+npm i -D concurrently
+npm start
+c
+e
+npm start
+npm start
+npm start
+npm start
+npm start
+npm start
+c
+e
+npm start
+npm run clinet
+npm run cliennt
+npm run client
+c
+e
+npm run client
+e
+e
+npm run client
+npm run client
+npm run client
+c
+npm run client
+c
+npm run client
+c
+e
+npm run client
+c
+e
+npm run client
+c
+e
+npm run build
+c
+npm run build
+c
+e
+npm i -D file-loader
+e
+e
+npm i -D url-loader
+npm start
+e
+git status
+rm config
+rm scripts
+e
+npm i
+rm node_modules
+npm i
+git status
+git add .
+git status
+git commit -m 'Customized webpack config'
+clear
+git branch
+git checkout development
+git merge eject
+git status
+git rm package-lock.json
+git status
+git add package.json
+git commit -m 'Fixes merge conflicts'
+git status
+clear
+npm rm @types/jest
+git add .
+git commit -m 'Removes unnecessary type definitions'
+git push origin development
+clear
+exit
+git status
+git log --oneline
+git reset --hard 03d4e06
+git reset --hard 8c3fe50
+e
+npm start
+npm start
+c
+e
+npm start
+e
+npm i
+npm start
+killall node
+e
+rm node_modules
+npm i
+npm start
+npm start
+npm run build
+c
+npm run build
+e
+npm i -D ejs-loader
+npm run build
+npm rm ejs-loader
+git status
+git add src/components/root/RootContainer.ts
+git commit -m 'Enable React HMR'
+git add .
+git commit -m 'Fix output name issues and exclude ejs files from file-loader'
+git push origin development
+git status
+npm start
+npm start
+c
+e
+git status
+git push origin development
+git push origin master
+e
+ls
+cd ..
+rm exrx-webpack-config
+e
+ls ..
+ls ../../
+vim ../../.gitignore
+git add -A
+git commit -m 'Ignore dist files'
+git push origin development
+git add .
+git commit -m 'Remove unnecessary public folder'
+git push origin development
+e
+yes | yay
+poweroff
+yes | yay
+e
+ls
+cd .././
+ls
+..
+l
+rm package-lock.json
+e
+cd code/work/exrx
+cd exrx-next
+git status
+git fetch origin development
+git diff origin/development
+git checkout -b temp
+git checkout development
+npm i ; npm start
+cd src/client/
+npm i ; npm start
+clear
+git merge origin/development
+npm start
+clear
+git status
+code . ; e
+git log --oneline
+git diff HEAD db4ddb9
+git add .
+git commit
+git push origin development
+git branch
+git branch -d eject temp
+clear
+git checkout -b docs
+e
+npm outdated
+c
+e
+npm run lint
+e
+git status
+git add .
+git status
+git commit -m 'Adds documentation for actions-union and create-action utilities'
+e
+git add .
+git commit -m 'docs: Document the API utility'
+git status
+cd ../../
+ls
+git checkout development
+git status
+git diff
+clear
+git checkout docs
+git add tslint.json
+git commit -m 'chore: Add TSLint rules to enforce JSDoc'
+git status
+git diff
+git stash push
+git checkout development
+git status
+cd ../../
+ls
+git mv src/client .
+git status
+l
+ls src
+mv src/.ignore .
+ls src
+rm src
+ls client
+ls
+git mv client/* .
+ls
+mv client/* .
+ls client
+mv client/.* .
+ls client
+git add .
+git status
+ls
+ls client
+rm client
+git commit
+git push origin development
+git remote set-url origin git@gitlab.com:ExRx/exrx-next.git
+git push origin development
+git remote show origin
+git branch
+git checkout -b chore/git-hooks
+npm i -D husky @commitlint/cli
+code . ; e
+cd code/work/exrx/exrx-next
+code . ; e
+npm i -D husky@next
+git add package.json
+git commit -m 'chore: Install husky@next and @commitlint/cli'
+git status
+git add .
+git commit
+git commit -m "asdofj"
+git add husky.config.json
+git commit -m "asdhf"
+git status
+git log --oneline
+git reset --hard d41ca3e
+clear
+git status
+git add husky.config.json
+git commit -m 'sadifjo'
+git reset --hard d41ca3e
+clear
+git status
+git add .
+git status
+git commit 'sadfjio'
+git commit -m 'sadfjio'
+git status
+git add .huskyrc
+git status
+git revert
+git reset
+clear
+git status
+git reset --hard d41ca3e
+clear
+rm .commitlintrc
+rm .huskyrc
+mv husky.config.json .huskyrc
+mv  .commitlintrc.json .commitlintrc
+git status
+git add .
+git commit -m 'Rename config files for Husky and commitlint'
+git add .
+git commit -m 'aodsijfadsf'
+rm node_modules
+npm i
+git commit -m 'aodsijfadsf'
+c
+git add .huskyrc
+git commit -m 'aodsijfadsf'
+git commit -m 'fix: Correctly configure Husky'
+clear
+git status
+git checkout development
+git merge chore/git-hooks
+clear
+git push origin development
+e
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+e
+git branch
+git branch -d chore/git-hooks
+git checkout docs
+git merge development
+clear
+git status
+git checkout -b fix/git-hooks
+clear
+git mv .commitlintrc .commitlintrc.json
+git commit 'asdf'
+git commit -m 'asdf'
+git commit -m 'chore: asdf'
+git commit -m 'fix: give commitlint config a proper filename'
+git commit -m 'fix: Give commitlint config a proper filename'
+c
+git add .
+git commit -m 'fix: add more possible "types" to commit messages'
+git commit -m 'fix: Add more possible "types" to commit messages'
+c
+git checkout docs
+git merge fix/git-hooks
+clear
+git branch
+git branch -d fix/git-hooks
+git branch
+clear
+e
+git add .
+git status
+git commit -m 'docs: Add docs for store index file'
+c
+e
+cd src/data
+git add .
+git commit -m 'docs: Add docs for logger middleware'
+c
+cd ../components
+ls
+cd ..
+cd data
+cd modules
+c
+git stash pop
+cat ../../../package
+cat ../../../package.json
+git checkout development
+git status
+git add ../../../package.json
+git commit -m 'fix: Split lint script into two scripts'
+git push origin development
+git checkout docs
+clear
+e
+mpv --no-video "https://www.youtube.com/watch?v=Cjh4OyDdE5A"
+c
+e
+yes | yay
+e
+git status
+git add src/data/modules/dnd.ts
+git commit -m 'docs: Add docs for dnd module'
+git push origin docs
+e
+reboot
+yes | yay
+e
+cd code/work/trilogy/help/Project1
+git reset --hard HEAD
+git checkout master
+git pull origin master
+cd code/work/trilogy/help/Project1
+c
+git branch -A
+git branch -a
+git checkout kevBranch
+git pull origin kevBranch
+clear
+code . ; e
+cd ..
+cp -R Project1 Project1.2
+cd Project1.2
+clear
+git reset --hard HEAD
+code .
+git reset --hard HEAD
+git log --oneline
+git reset --hard 2ec6cae3b5a8e79b87df08ba22b3601da76878e4
+open index.html
+sudo systemctl suspend
+poweroff
+yes | yay
+reboot
+e
+vim
+while true; do c; echo "Master Password: exrxpass12"; done
+c
+open media/pictures/screenshots/1531332230.png
+cp media/pictures/screenshots/1531332230.png .
+mv 1531332230.png master-password.png
+c
+scp master-password.png israel@chrismaguilar.com:~/master-password.png
+ssh israel@chrismaguilar.com
+ssh chris@chrismaguilar.com
+e
+scp israel@chrismaguilar.com:~/master-password.png ./master.png
+ls
+open master.png
+rm master*
+e
+cd code/work/trilogy/help
+cd Project1
+git reset --hard HEAD
+git branch
+git checkout delcieBranch1
+git pull origin master
+git log --oneline
+git reset --hard 8bddedc
+git pull origin delcieBranch1
+code . ; e
+clear && bash "/home/chris/.vscode/extensions/ms-vsliveshare.vsliveshare-0.3.395/out/deps/linux-prereqs.sh" && exit 0
+e
+which google-chrome-stable
+e
+e
+yes | yay
+e
+npm run lint
+code package.json
+npm run lint
+e
+npm i -D tslint-language-service
+e
+git status
+cat .vscode/settings.json
+c
+e
+git add dnd.ts
+git commit -m 'docs: Minor fixes to `dnd` documentation'
+git add draggables.ts
+git commit -m 'docs: Adds docs for `draggables`'
+c
+e
+git status
+git add actions-union.ts
+git commit -m 'docs: Minor fixes for `actions-union` docs'
+c
+e
+npm run lint
+npm run lint:fix
+git status
+git add config/*
+git add src/data/*
+git status
+git commit -m 'style: Run tslint --fix against code`
+git commit -m 'style: Run tslint --fix against code`'
+git commit --amend
+git log --oneline
+c
+e
+cd code/work/trilogy/help
+ls
+rm Project1.2
+rm unit-4-game
+cd Project1
+c
+git reset --hard HEAD
+git pull origin delcieBranch1
+git checkout master
+git pull
+c
+c
+l
+code . ; e
+git checkout -b chris-modifications
+npm init -y
+npm i react redux react-redux axios; npm i -D webpack typescript tslint @chrisaguilar/tslint-config @babel/{
+npm i axios react react-dom redux redux-logger redux-thunk ; npm i -D @babel/{core,preset-env,preset-react} @chrisaguilar/tslint-config @types/{node,react,react-dom,react-redux,redux-logger} babel-loader@beta cache-loader css-loader cssnano extract-text-webpack-plugin file-loader fork-ts-checker-webpack-plugin html-webpack-plugin html-webpack-template node-sass postcss-cssnext postcss-loader react-hot-loader sass-loader style-loader thread-loader ts-loader tsconfig-paths-webpack-plugin tslint tslint-language-service tslint-loader typescript url-loader webpack webpack-cli webpack-dev-server
+npm show babel-loader
+npm i axios react react-dom redux redux-logger redux-thunk ; npm i -D @babel/{core,preset-env,preset-react} @chrisaguilar/tslint-config @types/{node,react,react-dom,react-redux,redux-logger} babel-loader@next cache-loader css-loader cssnano extract-text-webpack-plugin file-loader fork-ts-checker-webpack-plugin html-webpack-plugin html-webpack-template node-sass postcss-cssnext postcss-loader react-hot-loader sass-loader style-loader thread-loader ts-loader tsconfig-paths-webpack-plugin tslint tslint-language-service tslint-loader typescript url-loader webpack webpack-cli webpack-dev-server
+npm start
+npm i react-redux
+npm start
+c
+npm start
+npm i styled-components ; npm i -D @types/styled-components
+c
+e
+e
+npm start
+c
+npm i firebase
+npm i react-router react-router-dom; npm i -D @types/react-router{,-dom}
+npm start
+npm i connected-react-router
+npm show connected-react-router
+c
+npm start
+c
+e
+npm start
+c
+e
+npm start
+c
+e
+npm start
+c
+npm start
+npm i @babel/polyfill
+npm i @babel/polyfill
+npm start
+c
+git status
+npm i qs
+npm i -D @types/qs
+npm start
+e
+e
+npm start
+c
+e
+npm start
+c
+npm start
+npm run lint:fix
+npm run lint:fix
+npm run lint:fix
+npm start
+e
+ls
+rm wall
+rm exrx-next
+lsblk
+sudo mount /dev/sda2 /mnt
+ls /mnt
+sudo ls /mnt
+sudo ls /mnt/Users
+sudo ls /mnt/Users/Chris/Desktop
+sudo cp -R ./code/work/trilogy/help/Project1 /mnt/Users/Chris/Desktop
+sudo umount -R /mnt
+cd code/work/trilogy/help
+cd Project1
+ls
+rm node_modules
+ls
+c
+e
+reboot
+cd code/work/trilogy/help/Project1
+cd ..
+tar -cvf Project1.tar Project1
+ls
+yes | yay -S firefox
+e
+cd code/work/trilogy/help/Project1
+npm start
+e
+htop
+c
+killall node
+htop
+yay -Syu --devel
+yes | yay -Syu --devel
+e
+npm i
+npm start
+e
+yes | yay
+c
+yay -Qqem
+yes | yay -S i3ipc-glib-git numix-circle-icon-theme-git polybar-git 
+e
+git status
+git add .
+git commit -m 'docs: Add docs for `exercises`'
+c
+e
+git add exercises.ts
+git commit --amend
+git log --oneline
+c
+e
+yes | yay -S atom
+yay -S gvfs
+e
+yay -Ss google-chrome
+yes | yay -S google-chrome-dev
+e
+git status
+git add user.ts
+git commit -m 'docs: Add docs for `user`'
+e
+e
+git status
+git add droppables.ts
+git commit -m 'docs: Add docs for `droppables`'
+npm run lint:fix
+git status
+git push origin docs
+git log --oneline
+clear
+e
+git diff
+git add .
+git commit -m ''
+git commit -m 'Add tslint-language-service'
+git commit -m 'chore: Add tslint-language-service'
+git push origin docs
+git checkout development
+git fetch origin development
+git merge origin/development
+git merge docs
+git push origin development
+git checkout docs
+clear
+git merge development
+git push origin docs
+c
+e
+poweroff
+poweroff
+poweroff
+yes | yay
+e
+poweroff
+ssh israel@chrismaguilar.com
+scp israel@chrismaguilar.com:~/bank.txt bank.txt
+ls
+mv bank.txt media/
+cd media
+l
+ls .etc
+mv bank.txt .etc
+e
+ls
+cd media/.etc
+l
+scp bank.encr israel@chrismaguilar.com:~/bank.encr
+e
+yes | yay
+e
+git checkout -b fixes/webpack
+npm start
+clear
+git status
+git add .
+git commit
+git commit
+git checkout development
+git merge fixes/webpack
+git push origin development
+git branch
+git checkout docs
+git merge development
+exit
+poweroff
+yes | yay
+e
+sudo tlp fullcharge
+e
+git status
+git add .
+git commit -m '10.1.0 - New to Node'
+exit
+poweroff
+vim test.js
+node test.js a b c
+exit
+git status
+git add .
+git commit -m '10.1.1'
+git push origin master
+exit
+poweroff
+cat /etc/nsswitch.conf
+e
+yes | yay
+c; yes | yay
+c; yes | yay
+reboot
+reboot
+git checkout -b chore/dependencies
+npm update
+npm outdated
+git status
+git add package.json
+git commit -m 'chore (dependencies): Update dependencies'
+git commit -m 'chore(dependencies): Update dependencies'
+git push origin chore/dependencies
+git checkout development
+git merge chore/dependencies
+git push origin development
+git branch
+git checkout docs
+git merge development
+git checkout fixes/webpack
+git merge development
+git branch
+git checkout docs
+git push origin development
+git push origin docs
+git push origin fixes/webpack
+git branch
+c
+e
+npm run lint:fix
+git status
+c
+e
+e
+git add .
+git commit -m 'docs: Add docs for routes'
+e
+git add .
+git commit -m 'docs: Add docs for navigation'
+c
+e
+git add .
+git commit -m 'docs: Add docs for root'
+c
+e
+git add .
+git commit -m 'docs: Add docs for design page'
+e
+git status
+git add .
+git commit -m 'docs: Fix minor issues with formatting'
+e
+npm start
+c
+e
+git add .
+git commit -m 'docs: Document props in DesignContainer > mapStateToProps'
+git commit -m 'docs: Document props in DesignContainer#mapStateToProps'
+git commit -m 'docs: Document DesignContainer#mapStateToProps'
+c
+e
+git add .
+git commit -m 'docs: Add docs for favorites page'
+e
+git add .
+git commit -m 'docs: Add docs for home page'
+e
+npm run lint:fix
+git status
+rm .vscode/launch.json
+e
+npm run lint
+e
+e
+git checkout -b fixes/style
+npm run lint
+npm run lint
+npm run lint:fix
+git status
+git add config/
+git commit -m 'style: Fix tslint errors'
+git push origin fixes/style
+git status
+git branch
+git checkout development
+git add .vscode
+git commit -m 'chore: Add word to workspace dictionary'
+git status
+git branch
+git checkout docs
+git checkout development
+c
+git branch
+git merge chore/dependencies
+git merge fixes/style
+git merge fixes/webpack
+git push origin development
+c
+git branch
+git checkout chore/dependencies
+git merge development
+git checkout docs
+git merge development
+c
+git branch
+git checkout fixes/style
+git merge development
+git checkout fixes/webpack
+git merge development
+clear
+git branch
+git push origin
+git push origin --all
+git checkout docs
+c
+git log
+clear
+git log --graph
+yay -S gitg
+e
+git add .
+git commit -m 'docs: Add docs for API class'
+git branch
+git checkout fixes/style
+git add ../data/modules/user.ts
+git commit -m 'style: Disable tslint for User initial state'
+git commit --amend
+git push origin fixes/style
+git checkout docs
+git merge fixes/style
+c
+git status
+e
+e
+git add .
+git commit -m 'docs: Add docs for typings'
+git status
+e
+npm run lint:fix
+git status
+e
+npm start
+c
+e
+git branch
+git checkout -b fixes
+git branch -a
+git fetch origin
+git branch
+git checkout fixes
+git checkout -b fixes
+git branch fixes
+git checkout -b fixes/name-undefined
+e
+git log --oneline
+c
+e
+npm start
+c
+git status
+git checkout development
+git branch
+git branch -D fixes/name-undefined
+git checkout -b fixes/redux
+git diff
+git commit
+c
+git checkout development
+git branch -D fixes/redux
+git checkout -b fixes/15
+git add .
+git commit
+git checkout development
+git merge fixes/15
+c
+git status
+git branch -a
+git checkout chore/dependencies
+git merge development
+git checkout fixes/style
+git merge development
+git checkout fixes/webpack
+git merge development
+git checkout docs
+git merge development
+clear
+git branch
+git push origin --all
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+c
+e
+watch free -h -n 1
+watch -n 1 free -h
+yes | yay
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+c
+e
+poweroff
+yes | yay
+e
+yes | yay
+yay -S --devel
+yay -Syu --devel
+e
+git checkout development
+git checkout -b chore/14
+clear
+npm i -D postcss-preset-env
+npm rm postcss-cssnext 
+npm start
+c
+git status
+git add .
+git commit -m 'chore: Migrate to postcss-preset-env from postcss-cssnext'
+git commit -m 'chore: Migrate to postcss-preset-env from cssnext'
+git push origin chore/14
+c
+git branch
+git checkout -b docs
+git checkout docs
+c
+git branch
+git branch -D chore/14 fixes/15
+c
+git branch
+git branch -D fixes/webpack fixes/style chore/dependencies
+c
+git status
+git branch
+git push origin docs
+git branch
+git checkout development
+git branch -D docs
+c
+git log --oneline --graph
+git log --oneline --graph --blame
+git log --oneline --graph --annotate
+git log --oneline --graph --author
+git log --oneline --graph --author Christopher
+git log --oneline --graph --author Israel
+c
+git log --help
+e
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+c
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+c
+e
+poweroff
+poweroff
+poweroff
+git checkout -b chore/20
+e
+git checkout development
+git pull origin development
+git branch -D chore/20
+git checkout -b chore/20
+e
+git status
+git add .
+git commit -m 'chore: Remove extraneous configuration files'
+git push origin chore/20
+git checkout development
+git pull origin development
+git status
+c
+l
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+c
+e
+git pull origin development
+git checkout -b bug/17
+c
+e
+npm start
+c
+e
+git status
+git add .
+git commit -m 'fix: Prevent exercises from leaving favorites'
+git push origin bug/17
+git checkout development
+git branch -D bug/17
+git pull origin development
+c
+e
+git branch
+git checkout -b docs/7
+git branch -D chore/20
+c
+git log --oneline --graph
+e
+git log --oneline --graph
+c
+npm start
+c
+e
+reboot
+yes | yay
+yay -S numix-circle-icon-theme-git numix-icon-theme-git
+yes | yay -Scc
+yes | yay
+yes | yay -S numix-circle-icon-theme numix-icon-theme
+yay -S numix-circle-icon-theme numix-icon-theme
+c
+e
+poweroff
+poweroff
+poweroff
+cd code
+ls
+rm temp
+cd personal
+ls
+mkcd electron
+c
+mkcd hello-world
+c
+npm init -y
+npm i -D electron@beta
+e
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+e
+yes | yay -S openbox
+yes | yay -S obconf lxappearance-obconf 
+vim .config/X11/initrc
+e
+yes | yay
+e
+e
+yay -S menumaker
+mmaker -vf OpenBox3
+yes | yay -S obmenu
+ls .config/openbox
+yes | yay -S obmenu-generator
+vim .config/openbox/rc.xml
+e
+e
+vim .config/openbox/menu.xml
+vim .config/X11/initrc
+e
+e
+vim .config/X11/initrc
+c
+killall openbox
+e
+yay -Rus openbox lxappearance-obconf menumaker obmenu obmenu-generator
+yay -R openbox lxappearance-obconf menumaker obmenu obmenu-generator
+yay -Rus openbox lxappearance-obconf menumaker obmenu obmenu-generator obconf
+e
+vim .config/i3/config
+vim .config/X11/initrc
+c
+vim .config/openbox/menu.xml
+c
+killall openbox
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+e
+ls
+c; cat /var/log/pacman.log | less
+c
+l
+rm test.js
+rm .atom
+rm .gnome
+rm .gnupg
+rm Downloads
+rm c
+c
+l
+rm .mozilla
+c
+l
+ls .config
+cd .config
+c
+l
+c
+l
+rm Atom google-chrome-unstable
+rm nautilus
+rm obmenu-generator
+rm openbox
+c
+e
+yay -Rus atom firefox google-chrome-dev skypeforlinux-stable-bin gimp libreoffice-fresh php ngrok seahorse gitg 
+c
+e
+wdihi
+wdihi | less
+c; wdihi | less
+c
+cat .config/zsh/zshrc.d/util.zsh
+expac -HM '%011m\t$-20n'
+cat .config/zsh/zshrc.d/util.zsh
+expac -HM '%011m\t$-20n' | sort -rn
+expac -HM '%011m\t%-20n' | sort -rn
+expac -HM '%011m\t%-20n' | sort -rn | less
+e
+l
+cd .config
+l
+ls Cypress
+rm Cypress
+c
+l
+rm autostart cef_user_data configstore/ dconf gconf ibus libreoffice libvirt menus 
+c
+l
+cat mimeapps.list
+cat redshift.conf
+cat user-dirs.dirs
+c
+l
+cd 
+c
+l
+rm .local/share
+ls .local/share
+rm .local/share
+yes | yay -Rus steam
+c
+sudo vim /etc/pacman.conf
+yes | yay
+ls
+rm .steam
+rm .steam*
+c
+l
+ls .config
+c
+l
+rm .pki
+npm ls -g --depth 0
+rm .npm-global
+rm .npm
+c
+d
+dd
+df -h
+du -sh .
+ls
+rm .cache
+c
+l
+rm .local
+c
+l
+rm .esd_auth .node_repl_history .pulse-cookie 
+cat .wakatime.log
+rm .wakatime.
+rm .wakatime.log
+c
+l
+cat .wakatime.cfg
+sqlite .wakatime.db
+c
+l
+rm .vscode
+ls .config
+rm .config/configstore
+c
+l
+ls .cache
+reboot
+l
+e
+sudo tlp fullcharge
+e
+git branch -a
+git checkout proposal/10
+git status
+npm i
+c
+git branch -a
+git pull origin proposal/10
+c
+git branch
+npm start
+c
+e
+yes | yay
+reboot
+yes | yay
+e
+yay -Ss toptracker
+e
+git branch
+git checkout docs/7
+git reset --hard HEAD
+git checkout docs/7
+c
+e
+cd code/personal/config/tslint-config
+npm outdated
+npm update
+code . ; e
+sudo tlp fullcharge
+e
+npm run lint
+c
+git checkout proposal/10
+e
+cd code/personal/config/tslint-config
+code . ; e
+npm outdated
+npm show tslint
+npm show tslint-microsoft-contrib
+npm show tslint-react
+npm show typescript
+git add src/jsRules.js
+git commit -m 'fix: Disable irrelevant rules for JS'
+git add src/tslint.js
+git commit -m 'fix: Remove deprecated rule'
+git add .
+git commit -m 'chore: Update dependencies'
+npm version minor
+npm publish
+npm login
+npm publish
+git push origin --all
+git push origin --tags
+e
+git reset --hard HEAD
+git branch
+git checkout docs/7
+git checkout -b chore/dependencies
+npm outdated
+npm update
+e
+npm outdated
+git add .
+git commit -m 'chore: Update dependencies'
+git branch
+git checkout docs/7
+git merge chore/dependencies
+git branch
+git checkout proposal/10
+git pull origin proposal/10
+git status
+git add .
+git log --oneline
+git commit
+git add .
+git commit
+git push origin master
+poweroff
+git add .
+git status
+git commit -m "10.2.0 - 'Nother Level of Node"
+e
+node main.js
+cd code/temp
+c
+node main.js
+e
+touch test.txt
+chmod -w test.txt
+ls -al
+rm test.txt
+c
+cd code
+mkcd temp
+c
+ls -al
+touch test.txt
+chmod -w test.txt
+ls
+c
+rm test.txt
+c
+ls
+touch test.txt
+chmod -w test.txt
+l
+e
+vim main.js
+mv main.js code/temp
+c
+vim code/temp/main.js
+c
+l
+open media/pictures/screenshots/1531868134.png
+open media/pictures/screenshots/1531868134.png
+cd media
+l
+rm screenshots
+c
+l
+rm steam.desktop
+cd pictures
+l
+rm Screenshot\ from\ 2018-0*
+c
+l
+rm Teresa.png Yvonne.png
+cd 
+l
+tree --depth 2 media
+tree -L 2 media
+c
+cd media
+l
+tree documents
+cd documents
+l
+rm Aguilar_Christopher_resume_042018.pdf exrx.bmpr recommendations.md
+c
+l
+ls iso
+rm iso
+..
+l
+ls downloads
+rm downloads/*
+c
+l
+ls video
+e
+poweroff
+git add .
+git commit -m "10.2.1 - 'Nother Level of Node"
+cd code/temp
+l
+npm install request
+l
+tree
+c
+l
+rm node_modules
+rm package-lock.json
+c
+e
+cd code/work/trilogy/class-repo-may-2018
+c
+git push origin master
+e
+yes | yay
+poweroff
+yes | yay
+e
+htop
+c
+e
+reboot
+sudo vim /etc/ssh/sshd_config
+e
+yes | yay
+ssh family@family
+sudo systemctl list-unit-files
+sudo systemctl list-unit-files | grep ssh
+c
+e
+git pull
+e
+node
+e
+node main.js
+node main.js
+e
+node main.js
+e
+node main.js
+e
+git pull origin proposal/10
+e
+git status
+git add package.json
+git commit
+git push origin proposal/10
+e
+npm i
+e
+ls
+ls media/music
+du -sh media/music
+cd media
+ls
+ls video
+rm video/*
+c
+l
+ls pictures
+rm pictures/screenshots/*
+c
+l
+ls documents
+ls downloads
+ls .etc
+rm .etc/*
+c
+l
+ls downloads
+ls music
+rm music/*
+ls music
+rm music/.*
+l
+tree .
+du -sh .
+cd ..
+ls
+du -sh .
+du -sh code
+rm .gnome/
+c
+l
+ls Downloads
+rm Downloads
+ls VirtualBox\ VMs
+du -sh .
+rm .sqlite_history
+rm .node_repl_history
+rm .wakatime.log
+c
+l
+npm ls -g --depth 1
+ls .cache
+c
+ls .config
+c
+l
+ls .local/share
+yay -Rus rhythmbox
+yay -Qtdq
+yay -Rus `yay -Qtdq\
+`
+c
+l
+ls .pki
+rm .pki
+c
+l
+l .config
+cd .config
+c
+l
+rm configstore dconf gconf 
+c
+e
+git checkout -b development
+git checkout development
+git pull origin development
+git branch
+git branch -D proposal/10
+c
+git checkout -b docs/7
+git checkout docs/7
+git merge development
+e
+cd media/downloads
+ls
+unzip -d ExRx-Docs ExRx.net\ Web\ App-20180718T215921Z-001.zip
+c
+l
+ls ExRx-Docs
+mv ExRx-Docs/ExRx.net\ Web\ App .
+ls
+rm ExRx-Docs
+rm ExRx.net\ Web\ App-20180718T215921Z-001.zip
+code ExRx.net\ Web\ App/
+e
+vim
+e
+reboot
+yay -Ss jetbrains
+yes | yay -S jetbrains-toolbox
+yay -S jetbrains-toolbox
+c
+e
+xkill
+yay -S xorg-xkill
+xkill
+e
+e
+git status
+e
+git add PaletteList*
+git commit -m 'docs: Add docs for PaletteList'
+git add .
+git commit -m 'docs: Add docs for Palette'
+cd ../../../
+cd ..
+ls
+c
+git status
+git push origin docs/7
+git pull origin docs/7
+git remote prune origin
+git push origin docs/7
+git add .
+git commit -m 'docs: Make it rain'
+git log --oneline
+git reset --hard 0a33af8
+git add .
+git commit -m 'docs: Make it rain'
+git reset --hard 0a33af8
+git checkout development
+git pull origin development
+c
+git branch
+git branch -D docs/7
+npm outdated
+git remote prune origin
+git remote show origin
+git branch
+git checkout chore/dependencies
+npm update
+git merge development
+git status
+git add package.json
+git commit -m 'chore: Update dependencies'
+git merge development
+git push origin chore/dependencies
+git checkout development
+git pull origin development
+c
+l
+c
+git branch
+git checkout -b ci/19
+c
+git add package.json tslint.json
+git commit -m 'ci: Add TSLint pre-commit hook'
+git commit -m 'ci: Add TSLint pre-commit hook' --no-verify
+npm i -D prettier
+git status
+git add package.json
+git commit -m 'docs: Add prettier to pre-commit hooks'
+npm i -D lint-staged
+c
+npm i
+git status
+git add .vscode/
+git reset package.json
+git status
+git commit -m 'chore: Add words to dictionary'
+npm i -D lint-staged
+git add .vscode
+git commit -m 'chore: Add words to dictionary'
+git status
+git add .
+git commit
+c
+e
+git add .
+git commit -m 'docs: Add docs for Exercise'
+e
+git add .
+git commit -m 'docs: Add documentation for ListItemComponent'
+e
+npm run lint:fix
+npm run lint:fix
+e
+git add .
+git commit -m 'Fix?'
+c
+e
+git add .
+git commit -m 'ci: Remove TSLint from pre-commit hook'
+git add .
+git commit -m 'ci: Remove TSLint from pre-commit hook'
+git status
+git log --oneline
+git reset --hard HEAD
+git push origin ci/19
+git remote prune origin
+c
+e
+git add .
+git commit -m 'chore: Test this'
+git reset --hard HEAD
+git branch
+git checkout development
+git pull origin development
+git pull origin development
+git branch -D ci/19
+c
+git branch -a
+e
+yes | yay
+e
+git branch
+git checkout -b docs/18
+e
+npm i -D markdownlint-cli
+rm node_modules
+npm i
+c
+npm outdated
+e
+git add .
+git reset
+git status
+git add docs/
+git commit -m 'fix: This should fail'
+git reset
+git status
+git add .vscode/
+git commit -m 'chore: Add word to dictionary'
+git status
+git add package.json .lintstagedrc.json
+git commit -m 'ci: Add markdownlint'
+c
+git status
+e
+git log --oneline
+git add .markdownlintrc.json
+git commit --amend
+git add .markdownlintrc.json
+git commit --amend
+git status
+e
+git add .
+git commit -m 'fix: This should fail'
+git commit -m 'fix: This should fail'
+git reset
+git status
+git add .lintstagedrc.json
+git commit -m 'ci: Run pre-commit hooks in order'
+c
+e
+open media/pictures/screenshots
+open media/pictures/screenshots/1531974734.png
+c
+maim --help
+vim .config/bin/screenshot
+e
+git status
+git add .
+git commit -m "docs: Contributing"
+git reset
+git add .
+git commit -m "docs: Contributing"
+git reset
+e
+git status
+git add .markdownlint
+git add .markdownlint*
+git status
+git reset
+git reset hhard .markdownlintrc.json
+git reset --hard .markdownlintrc.json
+git reset checkout -- .markdownlintrc.json
+git reset checkout HEAD -- .markdownlintrc.json
+git status
+git checkout -- .markdownlintrc.json
+git status
+git mv .markdownlintrc.json .markdownlint.json
+git commit -m 'fix: Fix markdownlint config file name'
+git add .markdownlint.json
+git commit -m 'style: Change ul-indent markdownlint rule'
+e
+git status
+e
+maim --help
+maim --help | less
+open media/pictures/screenshots/1531974855.png
+e
+git add .markdownlint.json
+git commit -m 'style: Change markdownlint config to please prettier'
+git commit -m 'style: Change markdownlint config appease prettier'
+e
+e
+git checkout -b docs/18 
+git checkout docs/18 
+e
+git add src/index.ts
+git status
+git checkout bug/18
+git checkout docs/18
+e
+ls | wc -l
+e
+du -sh .
+git remote prune origin
+git push origin bug/30
+c
+e
+git push origin bug/30
+git remote prune origin
+git push origin bug/30
+e
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+e
+git checkout docs/18
+c
+git status
+git add docs/
+git commit -m 'docs: Add contributing guide'
+git push origin docs/18
+ls
+c
+git checkout master
+c
+git checkout development
+git pull origin development
+git checkout -b bug/30
+c
+l
+git checkout -b bug/30
+c
+l
+git checkout bug/30
+c
+l
+vim index.ts
+ls
+mv index.ts src
+c
+l
+c
+git status
+git add src/index.ts
+git reset
+c
+cat src/index.ts
+git add src/index.ts
+git commit -m 'this will fail'
+cat src/index.ts
+git commit -m 'this will fail'
+git commit -m 'fix: Fix bug 30'
+c
+cat src/index.ts
+git add src/index.ts
+git commit -m 'this will fail'
+git reset
+c
+cat src/index.ts
+git add .
+git commit -m 'this will fail
+c
+git reset
+c
+cat src/index.ts
+git add src/index.ts
+git commit -m 'this will fail'
+echo "// tslint:disable\n$(cat src/index.ts)" > src/index.ts
+git add src/index.ts
+git commit -m 'this will fail'
+git commit -m 'fix: Fix bug 30'
+git checkout development
+c
+l
+g
+c
+git branch
+git branch -D bug/30
+git remote prune origin
+poweroff
+poweroff
+poweroff
+poweroff
+git status
+git add .
+git commit -m '10.3.0 - The Power of Packages'
+e
+poweroff
+node
+c
+e
+node
+ee
+e
+yes | yay
+e
+git add .
+git commit -m '10.3.1 - The Power of Packages'
+e
+sudo systemctl suspend
+powerof
+poweroff
+poweroff
+git push origin master
+e
+cd code/work/trilogy/class-repo-
+cd code/work/trilogy/class-repo-may-2018
+git push origin master
+e
+poweroff
+yes | yay
+reboot
+yes | yay
+killall redshift
+redshift-gtk
+yay -Qq | grep geoclue
+yes | yay -S geoclue2
+sudo systemctl list-unit-files | grep geo
+sudo systemctl enable geoclue.service
+sudo systemctl start geoclue
+sudo redshift
+cat .config/redshift.conf
+yes | yay -S dconf-editor
+yay -S redshift
+geoclue2
+geod 
+cat /etc/geoclue/geoclue.conf
+sudo vim /etc/geoclue/geoclue.conf
+c
+e
+yay -Rus dconf-editor
+yes | yay
+e
+reboot
+reboot
+sudo tlp setcharge
+sudo systemctl enable tlp
+sudo systemctl start tlp
+e
+git status
+c
+e
+git pull origin master
+c
+e
+git log --oneline
+git add .
+git commit -m '11.1.1 - Add video link'
+c
+e
+git pull origin master
+e
+git add .
+git commit -m '11.1.2 - Add video guide'
+git push origin master
+exit
+node test.js spotify-this-song
+exit
+rm test.js
+git branch
+git checkout proposal/10
+git pull origin proposal/10
+npm start
+exit
+mpv --no-video "https://www.youtube.com/watch?v=79IdVZV47cM"
+mpv --no-video "https://www.youtube.com/watch?v=VbeGFe9jAao"
+mpv --no-video "https://www.youtube.com/watch?v=jgMfYgsRvQ8"
+c
+mpv --no-video "https://www.youtube.com/watch?v=jgMfYgsRvQ8"
+e
+python
+cat .python_history
+rm .python_history
+c
+l
+rm .node_repl_history
+e
+wget -r -p //www.makeuseof.com
+wget -r -p https://www.makeuseof.com
+ls
+code www.makeuseof.com;e
+ls
+rm reddit.com
+code www.reddit.com;e
+cd ..
+rm www.makeuseof.com
+c
+wget -rp https://reddit.com
+ls
+wget -rp https://www.reddit.com
+c
+e
+npx lite-server .
+clear
+cd ..
+du -sh www.reddit.com
+rm www.reddit.com
+e
+ls
+e
+reboot
+yes | yay
+e
+git checkout docs/18
+e
+rm TenReps\ WorkoutRxApp.pdf
+e
+ls
+cd media/downloads
+l
+open TenReps\ WorkoutRxApp\ \(1\).pdf
+yes | yay -S zathura
+yes | yay -S --asdeps zathura-{pdf-mupdf,djvu}
+c
+l
+open TenReps\ WorkoutRxApp\ \(1\).pdf
+e
+open media/downloads/TenReps\ WorkoutRxApp\ \(1\).pdf
+man zathura 
+e
+yay -Ss markdown
+yay -S remarkable
+e
+mpv --no-video "https://www.youtube.com/watch?v=jgMfYgsRvQ8"
+yes | yay
+poweroff
+yes | yay
+poweroff
+yes | yay
+poweroff
+yes | yay
+e
+yay -Ss google-chrome
+yay -S google-chrome-beta
+e
+yes | yay -S google-chrome-dev
+e
+yay -Rus google-chrome-beta
+c
+ls
+ls .cache
+rm .cache/google-chrome-beta
+rm .config/google-chrome-beta
+e
+git add .
+git status
+git diff
+c
+git commit -m 'fix: Rename contributing.md to README.md'
+c
+git status
+cd ../../
+ls
+c
+git add README.md
+git commit -m 'docs: Add ToC to main README'
+git status
+git add .prettierrc.json
+git commit -m 'style: Add rule overrides for *.md files'
+git add .vscode/settings.json
+git commit -m 'fix: Add words to dictionary'
+git status
+npm outdated
+git branch
+git checkout chore/dependencies
+npm update
+npm show babel-loader
+git status
+git add package.json
+git commit -m 'chore: Update dependencies'
+git checkout docs/18
+git merge chore/dependencies
+git status
+git add package.json
+git log --oneline
+git commit -m 'chore: Resolve merge conflict'
+npm i
+git commit -m 'chore: Resolve merge conflict'
+git status
+git checkout chore/dependencies
+git merge development
+git add package.json
+git commit -m 'chore: Resolve merge conflict'
+clear
+git status
+git log --oneline
+c
+git branch
+git checkout docs/18
+git checkout chore/dependencies
+git checkout docs/18
+e
+npm outdated
+npm show @babel/core
+e
+du -sh node_modules
+rm node_modules
+npm i
+npm audit
+npm audit fix
+git status
+vim .cache/rofi3.druncache
+e
+opt_deps | grep code
+yay -Qi visual-studio-code-bin
+e
+ls .config
+c
+e
+reboot
+cd code/work/exrx/exrx-next
+c
+l
+git status
+git add docs/exrx/
+git commit -m 'docs: Add some of the specification'
+git add docs/getting-started/
+git commit -m 'docs: Add shell for "Getting Started"'
+git push origin docs/18
+reboot
+lsblk
+sudo fdisk /dev/sda
+lsblk
+ls /boot
+ls /boot/EFI
+ls /boot/EFI/BOOT
+ls /boot/EFI/ubuntu
+cd /boot
+tree
+ls -al
+ls loader/
+ls loader/entries
+cd EFI
+sudo bootctl update
+ls
+rm Microsoft
+sudo rm -rf Microsoft
+sudo rm -rf ubuntu
+clear
+ls
+ls systemd
+ls BOOT
+sudo rm -rf BOOT
+reboot
+bce
+e
+yay -Ss bcedit
+yay -Ss efibootmgr
+yes | yay -S efiedit
+yes | yay -S efiedit
+efiedit
+efiedit --help
+efiedit --usage
+yay -Rus efiedit
+yes | yay -S efibootmgr
+efibootmgr
+efibootmgr --help
+efibootmgr -B 0014
+efibootmgr -B -b 0014
+sudo efibootmgr -B -b 0014
+sudo efibootmgr -B -b 0015
+reboot
+reboot
+efibootmgr --help
+efibootmgr
+sudo efibootmgr -b 0013 -l "Arch Linux"
+efibootmgr
+c
+sudo efibootmgr -v
+c
+e
+blkid
+reboot
+blkid
+reboot
+blkid
+reboot
+yes | yay
+yes | yay
+c
+c
+yes | yay
+reflect
+yes | yay
+e
+yes | yay
+yes | yay
+poweroff
+yes | yay
+e
+cd code
+find . -name 'node_modules' -exec rm -rf {} \;
+c
+l
+cd work/exrx/exrx-next
+npm i
+git checkout proposal/10
+git pull origin proposal/10
+npm i
+c
+code . ; e
+poweroff
+yes | yay
+cd code/work/trilogy
+ls
+cd lesson-plans
+git pull origin master
+cd ../class-repo-may-2018
+clear
+ls
+code . ; e
+git status
+git add .
+git commit -m '11.2.0 - Construct it Yourself: Inputs and Constructors'
+exit
+poweroff
+cd code/work/trilogy/class-repo-may-2018
+ls
+vim README.md
+clear
+git status
+git add README.md
+git commit -m '11.2.1 - Add Panopto link for 11.2'
+exit
+yes | yay
+poweroff
+vim test.js
+code test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+node test.js
+poweroff
+poweroff
+yes | yay
+yes | yay
+yes | yay
+node test.js
+c
+node test.js
+e
+node test2.js
+e
+node test.js
+node test.js
+node test.js
+node test2.js
+e
+c
+ls
+clear
+cd code/work/trilogy
+ls
+echo "Hello"
+yes | yay
+e
+vim .config/zsh/zshrc.d/prompt.zsh
+c
+l
+ls -al
+cd code
+cd work
+cd trilogy
+c
+l
+vim ~/.config/zsh/zshrc.d/prompt.zsh
+e
+git push origin master
+npm show inquirer
+cd code/temp
+ls
+rm -rf ./*
+npm i inquirer@3
+npm init -y
+c
+l
+npm i inquirer@3
+c
+npm outdated
+cd
+ls
+vim test.js
+ls
+vim test2.js
+node test2.js
+c
+vim test2.js
+node test2.js
+poweroff
+git reset --hard head
+git reset --hard HEAD
+exit
+git status
+git add .
+git commit -m '11.3.0 - Callbacks & Constructors in the Wild'
+git push origin master
+exit
+echo eaedacabgf | tr a-g 0-468
+e
+man tr
+c
+e
+echo eaedacabgf | tr a-g 0-468
+e
+git log --oneline
+git log --oneline | grep constructor
+git log --oneline | grep unit 11
+git log --oneline | grep "unit 11"
+git checkout 0a243297d
+git log
+git checkout -b class-repo-may-2018 39359847713ed19ddc0e4d63b00e28fcbec75915
+cd code
+ls
+cd work
+ls
+clear
+mkcd self
+mkcd portfolio
+code . ; e
+mkcd code/temp
+ls
+git init
+git status
+git add .
+git commit -m 'test'
+clear
+git status
+echo 'node_modules/' >> .gitignore
+git status
+git add .gitignore
+git commit -m 'test'
+git status
+git update-index --assume-unchanged --skip-worktree
+git status
+l
+git update-index --assume-unchanged --skip-worktree node_modules
+git rm -r --cached .
+git add .
+git status
+git commit -m 'Removed node_modules'
+git ls-files
+ls
+rm node_modules
+git status
+history
+rm .git
+rm .gitignore
+npm i
+c
+l
+git init
+git add .
+git commit -m 'test'
+echo 'node_modules/' >> .gitignore
+clear
+git status
+e
+yes | yay
+e
+ls
+code gatsby-site;e
+npm i -g gatsby-cli
+npm show gatsby-cli
+npm i -g gatsby@next
+npm i -g gatsby-cli@next
+cd code
+ls
+cd temp
+rm -rf ./*
+l
+rm .git*
+c
+l
+c
+gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default#v2\
+
+gatsby new gatsby-site "https://github.com/gatsbyjs/gatsby-starter-default#v2"\
+
+e
+gatsby develop
+gatsby build
+gatsby serve
+gatsby --help
+cd ..
+rm gatsby-site
+npm init -y
+e
+e
+git pull origin proposal/10
+e
+ls
+yay -Rus remarkable
+c
+l
+cd code/temp
+l
+npm init -y ; npm i express ; touch index.js; code . ; e
+node index.js
+node index.js
+e
+git checkout -b proposal/10/chris
+git checkout -b proposal/10-chris
+e
+npm start
+c
+e
+yes | yay
+yay -Rus google-chrome-dev
+ls
+ls .cache
+rm .cache/google-chrome-unstable
+rm .config/google-chrome-unstable
+rm test*
+c
+l
+rm .WebStorm2018.1
+rm .java
+rm .gnome
+rm .remarkable
+ls VirtualBox\ VMs
+rm VirtualBox\ VMs
+c
+l
+e
+vim .cache/rofi3.druncache
+e
+reboot
+reboot
+yes | yay
+poweroff
+git add .
+git commit -m '11.3.1 - Add Panopto video link'
+git push origin master
+exit
+yes | yay
+e
+exit
+git checkout master
+git reset --hard HEAD
+git pull origin master
+exit
+git status
+git add .
+git commit -m '11.3.2 - Fix incorrect activities'
+git push origin master
+c
+e
+git log --oneline
+git log --oneline
+e
+git add .
+git commit -m '11.3.3 - Add second video link'
+git push origin master
+e
+yes | yay
+e
+python
+e
+node
+e
+poweroff
+yes | yay
+reboot
+git pull origin master
+c
+e
+yes | yay
+e
+yes | yay
+exit
+e
+yes | yay
+e
+e
+reboot
+e
+git add .
+git status
+c
+git status
+git add .
+git commit -m '12.1.0 - Messing With MySQL'
+e
+cd code/work/trilogy/class-repo-may-2018
+ls
+git push origin master
+code ../lesson-plans;e
+yes | yay
+e
+yes | yay
+reboot
+cd media/do
+cd media/downloads
+ls
+tar -xvf portfolio.tar portfolio
+mv portfolio ~/code/
+code ~/code/portfolio;e
+npm i
+rm package-lock.json
+npm outdated
+npm i
+npm start
+killall node
+yes | yay
+e
+npm start
+code . ; e
+npm start
+c
+e
+cp ~/media/pictures/wallpapers/012.jpg ./src/images
+e
+ls
+cd code
+git clone git@github.com:bradtraversy/modern_portfolio.git
+cd modern_portfolio
+npm i
+l
+cat package
+cat package.json
+npm run sass
+e
+npx lite-server dist
+yay -Ss ngrok
+yay -Ss ifconfi
+yay -Ss ifconfig
+ip
+ip link
+ip addr
+ip addr | grep inet
+c
+ip addr | grep inet
+e
+ssh -R 80:localhost:8080 serveo.net
+e
+npm start
+npm start
+npm start
+poweroff
+yay -Ss sequel
+yes | yay
+e
+c
+e
+yes | yay
+e
+git add .
+git commit -m '12.2.0 - Node Gets a SQL'
+c
+e
+exit
+npm start
+poweroff
+yes | yay
+e
+npm start
+exit
+poweroff
+npm start
+cd code/work/trilogy/class-repo-may-2018
+ls
+git push origin master
+poweroff
+gio --help
+gio trash --help
+cd .local/share/Trash
+ls
+cd files
+l
+code . ; e
+rm ./*
+l
+rm ./.*
+e
+npm start
+killall node
+e
+cd code/work/trilogy/class-repo-
+cd code/work/trilogy/class-repo-may-2018
+code . ; e
+git add .
+git commit -m '12.2.1 - Add video link'
+git push origin master
+npm start
+npm start
+npm run build
+e
+npx lite-server 
+e
+npm start
+npm start
+c
+e
+yes | yay
+e
+npm start
+e
+npm start
+poweroff
+npm start
+poewroff
+poweroff
+cd code/work/trilogy/lesson-plans
+ls
+git reset --hard HEAD
+git pull origin master
+code . ; e
+yes | yay
+e
+ls
+rm .python_history .node_repl_history
+c
+l
+cd .cache
+l
+rm remarkable
+cd
+l
+cd .config
+l
+c
+l
+tree devcert
+rm devcert
+cd
+c
+l
+cd .local/share
+l
+gio trash --help
+gio trash --empty
+c
+l
+tree desktop-directories
+rm desktop-directories
+c
+yay -Rus jetbrains-toolbox
+c
+l
+rm JetBrains
+tree applications
+rm applications
+c
+l
+rm icons
+tree webkitgtk
+rm webkitgtk
+rm gsettings-data-convert
+c
+l
+tree IsolatedStorage
+cd
+c
+l
+l .cache
+l .config
+c
+l
+cd media
+l
+tree .etc
+tree documents
+cd do
+l
+cd documents
+l
+cd ..
+ls downloads
+rm downloads/*
+c
+l
+tree pictures
+rm pictures/screenshots/*
+c
+l
+tree video
+cd 
+cd code
+c
+l
+rm modern_portfolio
+find . -name 'node_modules' -exec rm -rf {} \;
+cd work
+l
+cd trilogy
+l
+rm class-repo-nov-2017
+c
+l
+rm checkpoint-bank
+rm grading
+rm help
+c
+l
+rm main.code-workspace
+c
+l
+cd ..
+l
+cd self
+l
+rm portfolio
+mv ../../portfolio/ .
+l
+cd ../../
+l
+ls temp
+rm temp
+ls personal
+c
+e
+node fizzbuzz.js
+c
+node fizzbuzz.js
+e
+e
+node fizzbuzz.js
+node fizzbuzz.js
+c
+e
+node fizzbuzz.js
+node fizzbuzz.js
+e
+node fizzbuzz.js
+e
+node fizzbuzz.js
+node fizzbuzz.js
+node fizzbuzz.js
+c
+node fizzbuzz.js
+e
+node fizzbuzz.js
+node fizzbuzz.js
+node fizzbuzz.js
+e
+node fizzbuzz.js
+e
+node fizzbuzz.js
+node fizzbuzz.js
+e
+node fizzbuzz.js
+c
+node fizzbuzz.js
+e
+node fizzbuzz.js
+e
+yes | yay -Scc
+yes | yay
+e
+vim fizzbuzz.js
+e
+node fizzbuzz.js
+c
+node fizzbuzz.js
+c
+node fizzbuzz.js
+c
+node fizzbuzz.js
+c
+node fizzbuzz.js
+c
+e
+node fizzbuzz.js
+e
+poweroff
+e
+ssh -R 80:localhost:8080 serveo.net
+e
+ssh -R 80:localhost:8080 serveo.net
+e
+npm i
+npm outdated
+npm update
+npm start
+c
+e
+code .;e
+cd code/work/self
+l
+cd portfolio
+npm start
+npm i -D babel-plugin-styled-components
+npm outdated
+e
+npm start
+npm run build
+c; npm run build
+poweroff
+poweroff
+poweroff
+yes | yay
+e
+npm start
+poweroff
+poweroff
+poweroff
+cd code/work/self/portfolio
+npm start
+c
+e
+git add .
+git commit -m '12.3.0 - My-Massive-SQL'
+e
+git add .
+git commit -m '12.3.1 - Add video link'
+cd ~/
+l
+cd Downloads
+l
+unzip -d ~/code/playground Homework-Times.zip
+open in
+e
+open index.html
+e
+e
+cd code/work/self/portfolio
+npm start
+e
+bash
+ls
+vim .bashrc
+bash
+rm foobar
+rm .bashrc
+c
+l
+rm fizzbuzz.js
+e
+e
+yay -S firefox
+e
+cd code/work/trilogy
+ls
+cd class-repo-may-2018
+git push origin master
+e
+poweroff
+vim .config/i3/config
+e
+yay -Rus firefox
+e
+npm start
+poweroff
+git add .
+git commit -m '13.1.0 - Intro to Node Servers'
+c
+e
+git add .
+git commit -m '13.1.1 - Fixes link for 12.3'
+e
+git log --oneline
+git reset --hard 3563f59
+clear
+git add .
+git status
+git commit -m '12.3.2 - Fix video link'
+git push origin master
+git add .
+git add .
+git commit -m '13.1.0 - Intro to Node Servers'
+e
+e
+node server.js
+c
+e
+yes | yay
+e
+e
+e
+node server.js
+c
+e
+cd code/work/exrx/exrx-next
+c
+l
+git checkout proposal/10
+git pull origin master
+git log --oneline
+c
+git log --oneline
+code .;e
+cd "/home/chris/code/work/exrx/exrx-next"
+npm install
+c
+npm outdated
+c
+e
+cd "/home/chris/code/work/exrx/exrx-next"
+git branch proposal/10-original 1ed2dfd6fbe533a020875a6da0126c84858c42a3
+git checkout proposal/10-original
+c
+git log --oneline
+npm i ; npm start
+c
+git checkout proposal/10
+git pull
+c
+git branch
+git push origin proposal/10-original
+git checkout development
+git pull origin development
+c
+git branch
+git branch -D proposal/10-original
+git branch -D proposal/10-chris
+git checkout chore/dependencies
+npm outdated
+npm update
+npm outdated
+git reset --hard HEAD
+git merge development
+c
+npm update
+npm outdated
+rm package-lock.json
+rm node_modules
+npm i
+npm outdated
+npm i typescript@latest
+git status
+git add package.json
+git commit -m 'chore: Update dependencies'
+git push origin chore/dependencies
+ls
+cd code/playground
+l
+rm ./*
+rm ./*
+c
+l
+mkdir foo
+touch foo/bar.js
+touch baz.js
+echo "console.log(__dirname);" >> foo/bar.js
+echo "require('./foo/bar.js');" >> baz.js
+node baz.js
+c
+l
+rm ./*
+e
+touch server.js
+touch index.html
+touch main.css
+e
+cd code/work/trilogy/class-repo-may-2018
+git status
+git push origin master
+e
+git status
+git add .
+git log --oneline 
+git commit -m '13.1.1 - Add video guide links'
+git push origin master
+slack
+killall slack
+e
+yay -S --asdeps file-roller 
+yay -Qtdq
+yay -S --asdeps p7zip unrar 
+yay -Rus `yay -Qtdq`
+yay -Rus redshift
+yay -Rus `yay -Qtdq`
+yay -Rus `yay -Qtdq`
+yay -Qq | grep geoip
+sudo rm /etc/geoclue
+sudo rm -rf /etc/geoclue
+c
+e
+yes | yay
+yay -S xfce4{,-goodies}
+c
+yay -S xfce4{,-goodies}
+vim .config/X11/initrc
+e
+e
+ls
+vim .config/i3/config
+e
+e
+e
+e
+e
+ls
+cat .local/share/xorg/Xorg.0.log
+vim .config/i3/config
+e
+e
+ls
+cat .cache/xorg.log
+exit
+reboot
+sudo reboot
+yay -Rus dunst
+e
+e
+e
+e
+sudo exit
+exiit
+exit
+slack
+l .config/Slack/logs/
+ls -ltr .config/Slack/logs
+cat .config/Slack/logs/webapp-T7S7N5WC8.log
+code
+e
+e
+vim .config/polybar/config
+vim .config/polybar/config.xfce
+cat .config/polybar/launch.sh
+polybar --help
+vim .config/polybar/config.xfce
+polybar --reload main --config .config/polybar/config.xfce
+polybar --reload main --config=.config/polybar/config.xfce
+c
+vim .config/polybar/config.xfce
+code .config/polybar
+e
+yay -S gpick
+e
+e
+e
+polybar --reload main --config=.config/polybar/config.xfce
+e
+yay -Sqg xfce4-goodies
+yay -Ss xfce4-places
+yay -S xfce4-places-plugin
+e
+vim .config/polybar/config.xfce
+e
+polybar --reload main --config=.config/polybar/config.xfce
+c
+e
+yay -S postman-bin
+yes | yay -S postman-bin
+e
+yay -S lightdm lightdm-gtk-greeter{,-settings}
+sudo systemctl enable lightdm
+yay -Si accountsservice
+yay -S accountsservice
+reboot
+ls
+e
+cd media
+l
+cd pictures
+l
+ls wallpapers
+cd ..
+l
+cd ..
+l
+cd ..
+l
+chmod +r chris
+l
+e
+cd ..
+l
+chmod +x chris
+l
+e
+polybar --config=/home/chris/.config/polybar/config.xfce --reload main
+polybar --config=/home/chris/.config/polybar/config.xfce --reload main
+polybar main --config=/home/chris/.config/polybar/config.xfce --reload
+polybar main --config=/home/chris/.config/polybar/config.xfce
+polybar --config=/home/chris/.config/polybar/config.xfce
+killall polybar
+vim .config/i3/config
+sudo systemctl disable lightdm
+yay -Rus xfce4{,-goodies} lightdm{,-gtk-greeter{,-settings}}
+yay -Rus xfce4{,-goodies} lightdm{,-gtk-greeter{,-settings}} xfce4-places-plugin
+sudo rm -rf /etc/lightdm
+reboot
+vim .config/X11/initrc
+e
+e
+yay -S dunst
+e
+vim .config/zsh/zshrc.d/nvm.zsh
+e
+yes | yay -S nvm
+yay -S nvm
+e
+nvm install node
+nvm use node
+npm config delete prefix
+nvm run node --version
+node --version
+ls
+rm .npm .npm-global
+c
+ls .config
+ls .config/npm
+c
+l
+ncu
+which node
+nvm use node
+c
+vim .config/zsh/zshrc.d/nvm.zsh
+e
+nvm install default
+nvm ls-remote
+l
+nvm_find_nvmrc
+c
+ls
+ls .nvm
+cd code
+nvm default node
+nvm alias default node
+e
+which node 
+e
+cd code/work/exrx/exrx-next
+l
+c
+l
+echo 'lts/*' >> .nvmrc
+c
+l
+cd ..
+cd exrx-next
+node --version
+c
+e
+l
+e
+node --version
+npm --version
+npm i -g npm-check-updates
+c
+e
+npm outdated
+npm update
+npm i -g npm-check-updates
+ncu
+e
+ls
+git add package.json
+git commit -m 'Update dependencies'
+git commit -m 'chore: Update dependencies'
+c
+l
+git push origin chore/dependencies
+c
+l
+cd config
+l
+cd ..
+c
+l
+c
+git remote show origin
+git remote prune
+git remote prune origin
+c
+l
+c
+git add .
+git log --oneline
+git commit -m '13.1.2 - Add video link'
+git push origin master
+yay -S ruby-sass
+sass --interactive
+e
+npm start
+c
+npm start
+c
+npm start
+c
+e
+yes | yay
+reboot
+yes | yay
+reboot
+yes | yay
+reboot
+yes | yay -S firefox
+e
+cp ~/.local/share/Trash/files/SmallHeading.ts ./src/components/common
+e
+sass --interactive
+ls
+rm src/images/portrait_small.jpg
+rm src/images/portrait.jpg
+cp ~/media/pictures/me.jpeg src/images/portrait.jpg
+c
+ssh -R 80:localhost:8080 serveo.net
+c
+e
+npm start
+c
+npm run build
+npm i -D image-webpack-loader
+e
+code . ; e
+rm ^root
+c
+e
+ssh chris@chrismaguilar.com
+cd code/work/self
+cd
+ls
+cd code/personal
+l
+cd chrismaguilar.com
+ls
+git pull origin master
+npm i
+c
+npm outdated
+npm update
+c
+l
+npm i sqlite
+c
+npm outdated
+npm update
+ncu
+npm i dotenv@latest
+ncu --updateAll
+ncu --upgradeAll
+c
+e
+npm run build
+npm run build
+npm run build
+npm run build
+npm i -D favicons-webpack-plugin
+npm run build
+npm run build
+npm run build
+c
+e
+rm dist; npm run build
+rm dist; npm run build
+rm dist
+npm start
+c
+git status
+git add .
+git commit -m 'Removed old site'
+poweroff
+npm i
+npm outdated
+npm update
+c
+l
+npm audit
+c
+l
+npm run build
+npm run publish
+npm run publish
+rm dist
+npm run publish
+ssh chris@chrismaguilar.com rm -rf ~/chrismaguilar.com/apps/root/dist
+ssh chris@chrismaguilar.com
+git status
+git add .
+git commit -m 'feat: Update entire site'
+git push origin master
+ssh chris@chrismaguilar.com
+ssh chris@chrismaguilar.com
+exit
+c
+git status
+git add .
+git commit -m 'fix: Remove dist before build'
+git push origin master
+c
+e
+e
+ssh chris@chrismaguilar.com
+e
+cd code/personal/chrismaguilar.com
+ls
+cd apps/root/
+l
+git push origin master
+npm run publish
+e
+yes | yay -S gimp
+e
+yay -Rus firefox
+e
+gpmdp
+e
+npm run build
+npm run build
+npm run build
+npm run build
+npm i -D resolve-url-loader
+npm run build
+npm run build
+npm run resolve-url-loader
+npm rm resolve-url-loader
+npm i -D compression-webpack-plugin
+npm run build
+c
+e
+ls
+c
+cd ..
+npm run build
+cd ../.../
+../
+../
+ls
+node server.js
+e
+npm i -D workbox-webpack-plugin
+npm run build
+npm run build
+e
+cd ../../
+c
+node server.js
+node server.js
+node server.js
+node server.js
+node server.js
+node server.js
+node server.js
+c
+e
+node server.js
+e
+npm run build
+npm i -D copy-webpack-plugin
+npm run build
+npm run build
+npm run build
+e
+npm run build
+npm run build
+npm run build
+npm run build
+e
+ssh -R 80:localhost:8080 serveo.net
+c
+e
+cat .config/zsh/.zshenv
+ls /opt/
+e
+e
+groups
+sudo groupadd sdkusers
+sudo gpasswd -a chris sdkusers
+ls /opt
+sudo mkdir -p /opt/android-sdk
+sudo chown -R :sdkusers /opt/android-sdk
+sudo chmod -R g+w /opt/android-sdk/
+newgrp sdkusers
+e
+yay -S android-studio
+e
+ls /opt
+e
+cd ../../
+node server.js
+e
+cd code/personal/chrismaguilar.com/apps/root
+code . ; e
+sudo tlp setcharge
+e
+npm run build; cd ../../; node server.js
+cd apps/root
+npm run publish
+git status
+du -sh dist
+c
+git add .
+git commit -m 'feat: Make the site a PWA'
+git status
+git push origin master
+ssh chris@chrismaguilar.com
+e
+npm run build
+npm run build
+c
+npm run build
+npm i --save @fortawesome/fontawesome-free
+npm run build
+npm i @fortawesome/{fontawesome-svg-core,free-solid-svg-icons,react-fontawesome}@prerelease
+npm i @fortawesome/free-{brands,regular}-svg-icons@prerelease
+e
+npm rm @fortawesome/fontawesome-free
+e
+npm run build
+npm run build
+c
+npm run build
+npm run build
+npm rm @fortawesome/{fontawesome-svg-core,free-brands-svg-icons,free-regular-svg-icons,free-solid-svg-icons,react-fontawesome}
+npm run build
+npm run build
+npm run build
+npm run build
+npm run publish
+e
+gimp portrait.jpg
+c
+e
+npm start
+git add .
+git commit -m 'fix: Make social links accessible'
+git push origin master
+npm run publish
+ls ~/.local/share/Trash/files
+ls ~/.local/share/Trash/files/vendor
+mkdir src/style/vendor; mv ~/.local/share/Trash/files/vendor/noto-sans ./src/style/vendor
+npm run build
+npm run build
+cd ../../
+node server.js
+npm run build
+c
+npm run build
+npm run publish
+git status
+git add .
+git commit -m 'chore: Optimize images and stylesheets'
+git push origin master
+poweroff
+poweroff
+poweroff
+yes | yay -S jetbrains-toolbox
+yay -S jetbrains-toolbox
+e
+yes | yay
+e
+cd code/work
+ls
+cd exrx
+ls
+rm israel
+rm app
+rm exrx.code-workspace
+cd ../
+ls
+cd trilogy
+ls
+cd lesson-plans
+git reset --hard HEAD
+git pull origin master
+c
+l
+cd ../
+ls
+cd ../
+c
+l
+ls self
+rm self
+cd ..
+l
+ls playground
+rm playground*
+cd personal
+cd
+e
+cd 
+cd code/
+find . -name 'node_modules' -exec rm -rf {} \;
+c
+l
+find . -type d
+c
+l
+cd personal
+ls
+ls go
+rm go
+ls electron
+rm electron
+ls config
+c
+l
+rm learn/
+rm learn-legacy
+rm static-example
+ls workspaces
+rm workspaces/
+rm static-example.zip
+ls
+cat interesting
+rm interesting
+c
+l
+ls projects
+rm projects
+c
+l
+cd config
+ls
+cd tslint-config
+npm i; npm outdated
+npm update
+npm i tslint-microsoft-contrib@latest
+npm i typescript@latest
+c
+npm i typescript@2.9.2
+npm outdated
+git add .
+git commit -m 'chore: Update dependencies'
+git push origin master
+npm version patch
+npm publish
+git push origin --tags; git push origin master
+c
+l
+cd ..
+ls
+ls finished
+rm finished
+rm node-webpack-config
+rm tslint-config
+cd dotfiles
+git status
+cd ..
+ls
+rm dotfiles
+cd stylelint-config
+npm i
+npm outdated
+npm update
+git add .
+git commit -m 'chore: Update dependencies'
+npm version patch
+npm publish
+git push origin master; git push origin --tags
+c
+l
+cd ..
+ls
+rm stylelint-config
+cd ..
+ls
+rm config
+ls
+cd ..
+ls
+mv personal/chrismaguilar.com .
+rm personal
+mv work/exrx/exrx-next .
+mv work/trilogy/* .
+ls
+rm work
+rm install
+c
+e
+poweroff
+cd code/chrismaguilar.com
+ls
+git push origin master
+ssh chris@chrismaguilar.com
+ls
+cd apps/root/
+npm run publish
+npm i
+npm run publish
+git status
+git add package-lock.json
+git commit -m 'chore: Update package-lock.json'
+git push origin master
+ssh chris@chrismaguilar.com
+exit
+poweroff
+sudo tlp status
+sudo tlp stat
+e
+yes | yay
+e
+ls -al
+cd ..
+npm run build
+rm dist
+npm run build
+npm run build
+npm run build
+open media/pictures/screenshots/1533654962.png
+e
+yes | yay
+e
+cd apps/root
+npm run build
+npm run publish
+c
+git add .
+git status
+git commit -m 'chore: Add PWAs to my skills'
+git push origin master
+git add .
+git commit -m 'fix: Ignore runtime request'
+git push origin master
+ssh chris@chrismaguilar.com
+exit
+git log --oneline
+e
+git add .
+git commit -m '13.1.3 - Add solution for activity 13.7'
+git push origin master
+e
+yay -Rus nvm
+yay -Rus nvm-git
+rm .config/zsh/zshrc.d/nvm.zsh
+ls
+rm .nvm
+rm .npm
+c
+e
+ls
+rm .xsession-errors*
+rm .dmrc
+rm .ICEauthority .Xauthority
+c
+l
+rm .bash_history .emulator_console_auth_token .esd_auth .wget-hsts
+ls Downloads
+rm Downloads
+c
+l
+ls AndroidStudioProjects
+mv AndroidStudioProjects code
+ls .vscode
+rm .thumbnails
+rm .node-gyp
+rm .mozilla
+yay -Rus firefox
+c
+l
+rm .cache/*
+yes | yay -Scc
+c
+gio trash empty
+gio trash --empty
+ls .local/share
+e
+rm .nvmrc
+e
+npm outdated
+npm i
+npm outdated
+npm update
+npm i -D style-loader@latest
+git add .
+git commit -m 'chore: Update dependencies
+git commit -m 'chore: Update dependencies'
+c
+git push origin chore/dependencies
+git config -l | grep remote.*url | tail -n +2
+git config -l
+git config -l | grep "remote.*url" | tail -n +2
+git config -l | egrep "remote.*url" | tail -n +2
+git config -l | egrep remote.*url | tail -n +2
+git config -l | egrep /remote.*url/ | tail -n +2
+c
+l
+git branch -a
+git checkout -b docs/18
+git checkout docs/18
+e
+git add .
+git commit -m 'Add (very) simple Getting Started guide'
+npm i
+git commit -m 'Add (very) simple Getting Started guide'
+git commit -m 'docs: Add (very) simple Getting Started guide'
+git checkout development
+git pull origin development
+git checkout docs/18
+git merge development
+git add .
+git commit -m "Merge branch 'development' into docs/18"
+git push origin docs/18
+git remote prune origin
+git checkout development
+git branch
+git branch -D docs/18
+git branch -a
+git pull origin development
+c
+e
+yay -S sqlite3
+e
+cd apps/root
+npm run build
+cd ../../
+node server.js
+npm i
+node server.js
+cd apps/root
+npm run publish
+yes | yay
+e
+yes | yay
+e
+poweroff
+poweroff
+poweroff
+git add .
+git commit -m '13.2.0 - Express Yourself'
+git push origin master
+exit
+yes | yay
+e
+man pacman
+xkill
+yay --gendb
+yay
+c
+yay -Sc
+yay -Pc
+yay -Pac
+yay -Pac | less
+c
+e
+man pacman
+c
+e
+npm config get prefix
+e
+yay -Pacs
+yay -Pw
+yay -Ps
+c
+wdihi
+ yay -Qi lttng-ust
+yay -Rus lttng-ust
+c
+wdihi | less
+e
+yes | yay
+yes | yay -Syyuu
+yay -Ssaq
+yay -Saq
+yay -Sa
+yay -Ssa
+man yay
+c
+e
+npm config set prefix "$HOME/.npm-global"
+npm i -g nodemon
+cat .config/zsh/.zshenv
+echo 'export PATH="$HOME/.npm-global/bin:$PATH"' >> .bashrc
+cat .bashrc
+e
+npm i
+node server5.js
+node server5.js
+yes | yay
+poweroff
+yes | yay
+e
+yes | yay
+e
+gpmdp
+e
+cd .config/polybar/
+ls
+cd ..
+code . ; e
+du -sh .
+exit
