@@ -5,7 +5,7 @@
     editor      = vim
     autocrlf    = input
 #   safecrlf    = false
-	compression = 0
+    compression = 9
     filemode    = false
 
 [merge]
