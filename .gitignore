@@ -18,3 +18,8 @@ pulse/
 Slack/
 VirtualBox/
 vlc/
+
+.zcompdump
+viminfo
+zsh_history
+temp.sql
