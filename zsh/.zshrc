@@ -1,5 +1,5 @@
 if [[ $TERM == xterm-termite ]]; then
-    . /etc/profile.d/vte.sh
+    . /etc/profile.d/vte-2.91.sh
     __vte_osc7
 fi
 
@@ -7,7 +7,7 @@ fi
 for file in $ZDOTDIR/zshrc.d/*.zsh; do . $file; done
 
 # Syntax Highlighting
-. /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Autosuggestions
 # . /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
