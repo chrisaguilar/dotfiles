@@ -4,14 +4,17 @@ calibre/
 Code/
 configstore/
 dconf/
+evolution/
 filezilla/
 gconf/
 GIMP/
 Google Play Music Desktop Player/
 google-chrome/
+ibus/
 menus/
 Microsoft/
 mpv/
+nautilus/
 npm/
 Postman/
 pulse/
@@ -21,6 +24,8 @@ VirtualBox/
 vlc/
 
 .zcompdump
+gnome-initial-setup-done
+temp.sql
+user-dirs.locale
 viminfo
 zsh_history
-temp.sql
