@@ -51,7 +51,44 @@
     modules-center =
     modules-right = pulseaudio backlight battery cpu memory temperature weather date
 
-    tray-position = right
+    tray-position = 
+
+    wm-name = i3
+    enable-ipc = true
+    scroll-up = i3wm-wsnext
+    scroll-down = i3wm-wsprev
+
+[bar/secondary]
+    monitor = ${env:MONITOR:}
+
+    bottom = true
+    width = 100%
+    height = 25
+    offset-x = 0%
+    offset-y = 0%
+    background = ${colors.black}
+    foreground = ${colors.white}
+
+    underline-size = 2
+
+    padding = 1
+    module-margin = 1
+
+    font-0 = "FiraMono:size=10;1"
+    font-1 = "Font Awesome 5 Free:style=Regular:size=10;1"
+    font-2 = "Font Awesome 5 Free:style=Solid:size=10;1"
+    font-3 = "Font Awesome 5 Brands:style=Regular:size=10;1"
+    font-4 = "Noto Sans Mono CJK JP:size=10;1"
+    font-5 = "Noto Sans Mono CJK KR:size=10;1"
+    font-6 = "Noto Sans Mono CJK SC:size=10;1"
+    font-7 = "Noto Sans Mono CJK TC:size=10;1"
+    font-8 = "DejaVu Sans Mono:size=10;1"
+
+    modules-left = i3 title
+    modules-center =
+    modules-right = date
+
+    # tray-position = right
 
     wm-name = i3
     enable-ipc = true
@@ -150,7 +187,6 @@
 
     label-focused = %name%
     label-focused-foreground = ${colors.white}
-    ; label-focused-background = ${colors.gray}
     label-focused-underline = ${colors.forest}
     label-focused-padding = 1
 
@@ -158,7 +194,7 @@
     label-unfocused-padding = 1
 
     label-visible = %name%
-    label-visible-underline = ${colors.forest}
+    label-visible-underline = ${colors.gray}
     label-visible-padding = 1
 
     label-urgent = %name%
