@@ -2,6 +2,7 @@ Android Open Source Project/
 autostart/
 calibre/
 Code/
+Code - OSS/
 configstore/
 dconf/
 filezilla/
@@ -9,6 +10,7 @@ gconf/
 GIMP/
 Google Play Music Desktop Player/
 google-chrome/
+libreoffice/
 menus/
 Microsoft/
 mpv/
@@ -18,6 +20,7 @@ NuGet/
 Postman/
 pulse/
 Slack/
+spotify/
 sqlops/
 transmission/
 VirtualBox/
