@@ -182,9 +182,7 @@ mode "resize" {
 }
 
 # Misc
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id compton
-exec --no-startup-id gnome-keyring-daemon --start --components=secrets,ssh,pkcs11
 exec --no-startup-id setxkbmap -option "caps:escape"
 
 # Applets
