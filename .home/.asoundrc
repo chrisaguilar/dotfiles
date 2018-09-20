@@ -1,4 +1,4 @@
 pcm.!default {
-type plug
-slave.pcm hw
+    type plug
+    slave.pcm hw
 }
