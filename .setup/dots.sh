@@ -12,6 +12,8 @@ cd "${DIR}/../.home"
 
 stow -v -R -t "$HOME" .
 
+ln -s "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
+
 cd "${DIR}/.."
 
 stow -v -R -t "$HOME/.config" .
