@@ -12,6 +12,10 @@ cd "${DIR}/../.home"
 
 stow -v -R -t "$HOME" .
 
-cd ..
+cd "${DIR}/.."
+
+stow -v -R -t "$HOME/.config" .
+
+cd "${DIR}/../.kde"
 
 stow -v -R -t "$HOME/.config" .

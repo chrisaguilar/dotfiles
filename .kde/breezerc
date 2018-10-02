@@ -1,0 +1,7 @@
+[Common]
+ShadowStrength=89
+
+[Windeco]
+DrawBackgroundGradient=false
+DrawSizeGrip=false
+DrawTitleBarSeparator=false

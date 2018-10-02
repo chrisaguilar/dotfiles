@@ -9,7 +9,6 @@ export ELECTRON_TRASH=gio
 export GOPATH=$HOME/code/go
 export LANG=en_US.UTF-8
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc
-export ICEAUTHORITY="$XDG_CACHE_HOME/ICEauthority"
 export LC_COLLATE=C
 export LESSHISTFILE=$XDG_CACHE_HOME/less/history
 export LESSKEY=$XDG_CACHE_HOME/less/key
@@ -28,4 +27,4 @@ export VDPAU_DRIVER="va_gl"
 export VIMDOTDIR=$XDG_CONFIG_HOME/vim
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export VISUAL=/usr/bin/vim
-export XAUTHORITY="$XDG_CACHE_HOME/Xauthority"
+export WB_FORCE_SYSTEM_COLORS=1

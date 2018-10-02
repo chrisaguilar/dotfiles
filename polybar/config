@@ -1,25 +1,7 @@
 [colors]
-    aqua = #03A9F4
     black = #000000
-    blue = #2196F3
-    bluegray = #607D8B
-    brown = #795548
-    forest = #009688
-    gold = #FFC107
-    gray = #9E9E9E
-    green = #4CAF50
-    indigo = #3F51B5
-    lime = #8BC34A
-    mustard = #CDDC39
-    orange = #FF9800
-    pink = #E91E63
-    purple = #673AB7
-    red = #FF5722
-    salmon = #f44336
-    teal = #00BCD4
-    violet = #9C27B0
-    white = #ACACAC
-    yellow = #FFEB3B
+    red = #e06c75
+    white = #abb2bf
 
 [bar/main]
     monitor = ${env:MONITOR:}
@@ -32,20 +14,20 @@
     background = ${colors.black}
     foreground = ${colors.white}
 
-    underline-size = 2
+    underline-size = 1
 
     padding = 1
     module-margin = 1
 
-    font-0 = "FiraMono:size=10;1"
-    font-1 = "Font Awesome 5 Free:style=Regular:size=10;1"
-    font-2 = "Font Awesome 5 Free:style=Solid:size=10;1"
-    font-3 = "Font Awesome 5 Brands:style=Regular:size=10;1"
-    font-4 = "Noto Sans Mono CJK JP:size=10;1"
-    font-5 = "Noto Sans Mono CJK KR:size=10;1"
-    font-6 = "Noto Sans Mono CJK SC:size=10;1"
-    font-7 = "Noto Sans Mono CJK TC:size=10;1"
-    font-8 = "DejaVu Sans Mono:size=10;1"
+    font-0 = "FiraMono:size=10;2"
+    font-1 = "Font Awesome 5 Free:style=Regular:size=10;2"
+    font-2 = "Font Awesome 5 Free:style=Solid:size=10;2"
+    font-3 = "Font Awesome 5 Brands:style=Regular:size=10;2"
+    font-4 = "Noto Sans Mono CJK JP:size=10;2"
+    font-5 = "Noto Sans Mono CJK KR:size=10;2"
+    font-6 = "Noto Sans Mono CJK SC:size=10;2"
+    font-7 = "Noto Sans Mono CJK TC:size=10;2"
+    font-8 = "DejaVu Sans Mono:size=10;2"
 
     modules-left = i3 title
     modules-center =
@@ -68,8 +50,6 @@
     offset-y = 0%
     background = ${colors.black}
     foreground = ${colors.white}
-
-    underline-size = 2
 
     padding = 1
     module-margin = 1
@@ -105,10 +85,7 @@
 [module/backlight]
     type = internal/xbacklight
     enable-scroll = true
-
     format = <label>
-    format-underline = ${colors.aqua}
-
     label =  %percentage%%
 
 [module/battery]
@@ -117,15 +94,12 @@
     time-format = %H:%M
 
     format-charging = <animation-charging> <label-charging>
-    format-charging-underline = ${colors.teal}
     label-charging = %percentage%% - %time%
 
     format-discharging = <ramp-capacity> <label-discharging>
-    format-discharging-underline = ${colors.teal}
     label-discharging = %percentage%% - %time%
 
     format-full = <label-full>
-    format-full-underline = ${colors.teal}
     label-full = %percentage%% - Fully Charged!
 
     ramp-capacity-0 = 
@@ -148,7 +122,6 @@
     interval = 2
     format = <label>
     label =  %percentage:3%%
-    format-underline = ${colors.bluegray}
 
     ramp-load-0 = ▁
     ramp-load-1 = ▂
@@ -164,7 +137,6 @@
     interval = 1
     date = %a %b %d, %Y
     time = %r
-    format-underline = ${colors.brown}
     label = %date% - %time%
 
 [module/i3]
@@ -187,14 +159,14 @@
 
     label-focused = %name%
     label-focused-foreground = ${colors.white}
-    label-focused-underline = ${colors.forest}
+    label-focused-underline = ${colors.white}
     label-focused-padding = 1
 
     label-unfocused = %name%
     label-unfocused-padding = 1
 
     label-visible = %name%
-    label-visible-underline = ${colors.gray}
+    wwbbl-visible-underline = ${colors.white}
     label-visible-padding = 1
 
     label-urgent = %name%
@@ -207,7 +179,6 @@
     interval = 3
     exec = free -h --si | sed -n '2 p' | awk '{ print $3 }'
     format-prefix=" "
-    format-underline = ${colors.gold}
 
 [module/pulseaudio]
     type = internal/pulseaudio
@@ -216,10 +187,8 @@
     use-ui-max = false
 
     format-volume = <ramp-volume> <label-volume>
-    format-volume-underline = ${colors.lime}
     label-volume = %percentage%%
 
-    format-muted-underline = ${colors.lime}
     label-muted =  muted
 
     ramp-volume-0 = 
@@ -233,7 +202,6 @@
     warn-temperature = 80
 
     format = <label>
-    format-underline = ${colors.green}
     label =  %temperature-c%
 
     format-warn = <label-warn>
@@ -243,7 +211,6 @@
 
 [module/title]
     type = internal/xwindow
-    format-underline = ${colors.indigo}
     label = %title%
     label-maxlen = 50
 
@@ -253,6 +220,5 @@
     interval = 900
 
     format =  <label>
-    format-underline = ${colors.mustard}
 
 ; vim:ft=dosini

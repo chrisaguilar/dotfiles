@@ -15,7 +15,7 @@ def main():
         weather = json.loads(urlopen(api_url).read())['currently']
         temperature = int(weather['temperature'])
         summary = weather['summary'].lower()
-        print(f'{temperature}°F, {summary}')
+        print(f'{temperature}°F')
 
     except:
         time.sleep(1)
