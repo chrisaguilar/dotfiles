@@ -46,8 +46,8 @@ desktopchangeosdEnabled=false
 dimscreenEnabled=true
 highlightwindowEnabled=true
 kwin4_effect_fadedesktopEnabled=false
-magiclampEnabled=true
-minimizeanimationEnabled=false
+magiclampEnabled[$d]
+minimizeanimationEnabled[$d]
 screenedgeEnabled=false
 slideEnabled=true
 
@@ -64,7 +64,7 @@ DesktopLayout=org.kde.breeze.desktop
 DesktopListLayout=org.kde.breeze.desktop
 DesktopMode=0
 HighlightWindows=true
-LayoutName=org.kde.breeze.desktop
+LayoutName=thumbnails
 MinimizedMode=0
 MultiScreenMode=0
 ShowDesktopMode=0
