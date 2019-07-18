@@ -98,12 +98,12 @@ title    Arch Linux
 linux    /vmlinuz-linux
 initrd   /intel-ucode.img
 initrd   /initramfs-linux.img
-options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3
+options  root=PARTUUID=$root_partuuid rw quiet loglevel=3 udev.log-priority=3 i915.enable_guc=2 i915.fastboot=1 i915.enable_fbc=1
 EOF
 
 
 title "Set the Root Password"
-arch_chroot "passwd"
+arch_chroot "echo \"root:a\" | chpasswd"
 
 
 title "Finish"
