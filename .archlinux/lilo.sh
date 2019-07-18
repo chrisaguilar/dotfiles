@@ -146,58 +146,28 @@ usr "rm -rf /home/chris/aur_setup"
 
 title "Installing Packages"
 usr "yay -S --noconfirm --needed \
-    $(# Graphics Setup
-    ) mesa xf86-video-intel vulkan-intel vulkan-icd-loader libva-intel-driver \
+    mesa xf86-video-intel vulkan-intel vulkan-icd-loader libva-intel-driver \
     libvdpau-va-gl libva-vdpau-driver \
-
-    $(# KDE Setup
-    ) ark bluedevil breeze breeze-gtk dolphin dolphin-plugins ffmpegthumbs \
-    gwenview kactivitymanagerd kde-cli-tools kde-gtk-config kdeconnect \
-    kdecoration kdegraphics-mobipocket kdegraphics-thumbnailers \
-    kdeplasma-addons keditbookmarks kgamma5 kmenuedit kscreen kscreenlocker \
-    ksshaskpass ksysguard kwallet-pam kwalletmanager kwayland-integration kwin \
-    latte-dock okular oxygen plasma-browser-integration plasma-desktop \
-    plasma-integration plasma-nm plasma-pa plasma-workspace polkit-kde-agent \
-    powerdevil sddm-kcm spectacle systemsettings user-manager \
-    xdg-desktop-portal-kde libappindicator-gtk{2,3} \
-
-    $(# Fonts
-    ) cairo fontconfig freetype2 noto-fonts noto-fonts-cjk noto-fonts-emoji \
+    gnome-{shell,control-center,backgrounds,keyring,menus,screenshot,system-monitor,tweaks} \
+    nautilus{,-sendto} tracker{,-miners} xdg-user-dirs-gtk eog gdm sushi dconf-editor \
+    cairo fontconfig freetype2 noto-fonts noto-fonts-cjk noto-fonts-emoji \
     noto-fonts-extra otf-fira-code otf-fira-mono otf-font-awesome \
     ttf-liberation \
-
-    $(# Network
-    ) dhclient dnsmasq nm-connection-editor openresolv \
-
-    $(# Essentials
-    ) alsa-plugins alsa-utils autofs avahi bc cpio dosfstools exfat-utils \
+    dhclient dnsmasq nm-connection-editor openresolv \
+    alsa-plugins alsa-utils autofs avahi bc cpio dosfstools exfat-utils \
     f2fs-tools fuse fuse-exfat gvfs libreoffice-fresh lzop mlocate mtpfs \
     nss-mdns ntfs-3g openssh p7zip pkgstats pulseaudio pulseaudio-alsa rsync \
     tree unrar unzip zip \
-
-    $(# Development
-    ) nodejs yarn npm jre{,8,10,11}-openjdk-headless jre{,8,10,11}-openjdk \
+    nodejs yarn npm jre{,8,10,11}-openjdk-headless jre{,8,10,11}-openjdk \
     jdk{,8,10,11}-openjdk openjdk{,8,10,11}-doc openjdk{,8,10,11}-src \
     sencha-cmd-6 jetbrains-toolbox \
-
-    $(# System
-    ) htop linux-tools termite tlp tlp-rdw acpi_call smartmontools \
-
-    $(# Graphics
-    ) guvcview simplescreenrecorder \
-
-    $(# Internet
-    ) icaclient transmission-qt wget youtube-dl \
-
-    $(# Audio
-    ) gst-libav gst-plugins-bad gst-plugins-base gst-plugins-base-libs \
+    htop linux-tools termite tlp tlp-rdw acpi_call smartmontools \
+    guvcview simplescreenrecorder \
+    icaclient transmission-gtk wget youtube-dl \
+    gst-libav gst-plugins-bad gst-plugins-base gst-plugins-base-libs \
     gst-plugins-good gst-plugins-ugly \
-
-    $(# Video
-    ) mpv vlc \
-
-    $(# AUR Packages
-    ) capitaine-cursors google-chrome gpmdp slack-desktop spotify \
+    mpv vlc \
+    capitaine-cursors google-chrome gpmdp slack-desktop spotify \
     visual-studio-code-bin zsh-autosuggestions \
     "
 
@@ -310,6 +280,18 @@ subtitle "ICAClient Setup"
 usr "mkdir -p /home/chris/.ICAClient/cache"
 usr "cp /opt/Citrix/ICAClient/config/{All_Regions,Trusted_Region,Unknown_Region,canonicalization,regions}.ini /home/chris/.ICAClient/"
 
+cat << "EOF" > /usr/share/applications/wfica.desktop
+[Desktop Entry]
+Name=Citrix ICA client
+Comment="Launch Citrix applications from .ica files"
+Categories=Network;
+Exec=/opt/Citrix/ICAClient/wfica
+Terminal=false
+Type=Application
+NoDisplay=true
+MimeType=application/x-ica;
+EOF
+
 subtitle "Silencing fsck Messages"
 sed -i -r -e 's/HOOKS=.*$/HOOKS="base udev autodetect modconf block filesystems keyboard"/' /etc/mkinitcpio.conf
 mkinitcpio -p linux
@@ -355,8 +337,14 @@ subtitle "Modifying /etc/dhcpcd.conf"
 echo "noarp" >> /etc/dhcpcd.conf
 sed -i '/option ntp_servers/s/^#//' /etc/dhcpcd.conf
 
+subtitle "Setting Default Cursor Theme"
+cat << "EOF" > /usr/share/icons/default/index.theme
+[Icon Theme]
+Inherits=capitaine-cursors
+EOF
+
 subtitle "Enabling System Services"
-enable_services "pkgstats.timer fstrim.timer avahi-daemon.service sddm.service sshd.service"
+enable_services "pkgstats.timer fstrim.timer avahi-daemon.service gdm.service sshd.service"
 
 title "Finishing Up"
 
