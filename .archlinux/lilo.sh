@@ -11,6 +11,7 @@ mkdir "${__dirname}/.backup"
 # Pacman Setup
 copy_config_file "etc/pacman.conf"
 copy_config_file "etc/makepkg.conf"
+copy_config_file "etc/sudoers"
 pacman -S --noconfirm haveged
 haveged -w 1024
 pacman-key --init
