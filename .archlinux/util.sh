@@ -11,51 +11,19 @@ BGreen=${Bold}${Green}
 BRed=${Bold}${Red}
 BYellow=${Bold}${Yellow}
 
-LOG=/var/log/installation.log
-
-add_to_group() {
-    [ $(getent group ${1}) ] || groupadd ${1} >> "${LOG}" 2>&1
-    gpasswd -a chris ${1} >> "${LOG}" 2>&1
-}
-
 arch_chroot() {
     arch-chroot /mnt /bin/bash -c "${1}"
 }
 
-enable_services() {
-    read -a services <<< "${1}"
-    for service in ${services[@]}; do
-        echo "${BYellow}Enabling ${service}${Reset}"
-        systemctl enable --now ${service} >> "${LOG}" 2>&1
-    done
-}
+copy_config_file() {
+    mkdir -p "/$(dirname ${1})"
 
-package_install() {
-    read -a pkgs <<< "${1}"
-    for pkg in ${pkgs[@]}; do
-        # echo "${BYellow}Installing ${pkg}${Reset}"
-        if [[ "${2}" == "stubborn" ]]; then
-            yes | pacman -S --needed ${pkg} >> "${LOG}" 2>&1
-        else
-            pacman -S --noconfirm --needed ${pkg} >> "${LOG}" 2>&1
-        fi
-    done
-}
+    if [[ -f "/${1}" ]]; then
+        mkdir -p "${__dirname}/.backup/$(dirname ${1})"
+        cat "/${1}" >> "${__dirname}/.backup/${1}"
+    fi
 
-package_remove() {
-    read -a pkgs <<< "${1}"
-    for pkg in ${pkgs[@]}; do
-        # echo "${BYellow}Uninstalling ${pkg}${Reset}"
-        pacman -Rus --noconfirm ${pkg} >> "${LOG}" 2>&1
-    done
-}
-
-subtitle() {
-    echo -e "\t${BBlue}${1}${Reset}"
-}
-
-title() {
-    echo "${BGreen}${1}${Reset}"
+    cat "${1}" > "/${1}"
 }
 
 usr() {

@@ -1,13 +1,15 @@
+/pulse/
 Android Open Source Project/
 autostart/
 calibre/
-Code/
 Code - OSS/
+Code/
 configstore/
 dconf/
 filezilla/
 gconf/
 GIMP/
+gnome-control-center/
 Google Play Music Desktop Player/
 google-chrome/
 libreoffice/
@@ -18,7 +20,6 @@ nautilus/
 npm/
 NuGet/
 Postman/
-pulse/
 Slack/
 spotify/
 sqlops/
@@ -27,6 +28,7 @@ VirtualBox/
 vlc/
 
 .zcompdump
+monitors.xml
 viminfo
 zsh_history
 temp.sql
