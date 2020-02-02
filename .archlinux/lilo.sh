@@ -47,7 +47,7 @@ ln -sf /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d/
 ln -sf /etc/fonts/conf.avail/66-noto-{color-emoji,mono,sans,serif}.conf /etc/fonts/conf.d/
 
 # Copy Config Files
-for f in `find ${__dirname}/{etc,usr} -type f`; do
+for f in `find {etc,usr} -type f`; do
     copy_config_file $f
 done
 
