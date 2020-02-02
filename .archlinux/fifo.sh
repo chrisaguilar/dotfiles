@@ -59,7 +59,7 @@ arch_chroot "systemctl enable NetworkManager"
 root_partuuid=$(basename `find /dev/disk/by-partuuid/ -type l -ilname "*${BOOT_MOUNTPOINT}*"`)
 arch_chroot "bootctl install"
 cat "${__dirname}/boot/loader/loader.conf" > /mnt/boot/loader/loader.conf
-cat "${__dirname}/boot/loader/entries/arch.conf" > /mnt/loader/entries/arch.conf
+cat "${__dirname}/boot/loader/entries/arch.conf" > /mnt/boot/loader/entries/arch.conf
 sed -i "s/root_partuuid/${root_partuuid}/g" /mnt/boot/loader/entries/arch.conf
 
 # Set Root Password
