@@ -11,12 +11,12 @@ mkdir "${__dirname}/.backup"
 # Pacman Setup
 copy_config_file "etc/pacman.conf"
 copy_config_file "etc/makepkg.conf"
-package_install "haveged"
+pacman -S --noconfirm haveged
 haveged -w 1024
 pacman-key --init
 pacman-key --populate archlinux
 pkill haveged
-package_remove "haveged"
+pacman -Rus --noconfirm haveged
 reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
 pacman -Sy
 
