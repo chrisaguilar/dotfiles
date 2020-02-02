@@ -13,6 +13,9 @@ gnome-control-center/
 gnome-session/
 Google Play Music Desktop Player/
 google-chrome/
+gtk-2.0/
+gtk-3.0/
+gtk-4.0/
 ibus/
 libreoffice/
 menus/
@@ -35,3 +38,4 @@ monitors.xml
 viminfo
 zsh_history
 temp.sql
+!/gtk-3.0/gtk.css
