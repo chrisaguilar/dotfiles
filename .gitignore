@@ -10,8 +10,10 @@ filezilla/
 gconf/
 GIMP/
 gnome-control-center/
+gnome-session/
 Google Play Music Desktop Player/
 google-chrome/
+ibus/
 libreoffice/
 menus/
 Microsoft/
@@ -26,6 +28,7 @@ sqlops/
 transmission/
 VirtualBox/
 vlc/
+yay/
 
 .zcompdump
 monitors.xml
