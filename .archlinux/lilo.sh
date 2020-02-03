@@ -34,12 +34,8 @@ usr "cd /home/chris/yay && yes | makepkg -sci"
 usr "rm -rf /home/chris/yay"
 
 # Packages
-usr "yay -S --noconfirm --needed acpi_call bash-completion bluez-utils capitaine-cursors dconf-editor gnome gnome-tweaks google-chrome gpmdp htop icaclient intel-undervolt libva-intel-driver libva-vdpau-driver libvdpau-va-gl lrzip mesa mlocate moreutils nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra npm openssh otf-fira-code otf-fira-mono p7zip pkgstats python rsync seahorse slack-desktop smartmontools spotify termite tlp tlp-rdw transmission-gtk tree ttf-liberation unace unrar  unzip visual-studio-code-bin vulkan-icd-loader vulkan-intel wget xf86-video-intel zip zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting"
-usr "yay -Rus --noconfirm $(yay -Qtdq) baobab epiphany gedit gnome-{books,boxes,calculator,calendar,characters,clocks,contacts,dictionary,documents,font-viewer,getting-started-docs,logs,maps,music,photos,remote-desktop,shell-extensions,software,terminal,todo,user-docs,user-share,weather} gvfs-{afc,goa,google,gphoto2,mtp,nfs,smb} mousetweaks orca rygel simple-scan totem vino yelp"
-
-# Prevent GDM from Loading Second Pulseaudio
-mkdir -p /var/lib/gdm/.config/systemd/user
-ln -s /dev/null /var/lib/gdm/.config/systemd/user/pulseaudio.socket
+usr "yay -S --noconfirm --needed acpi_call ark bash-completion bluez-utils capitaine-cursors dolphin dolphin-plugins dotnet-sdk dotnet-runtime ffmpegthumbs google-chrome gpmdp gwenview htop icaclient intel-undervolt jetbrains-toolbox jre{,11,10,8,7}-openjdk-headless jre{,11,10,8,7}-openjdk kdegraphics-mobipocket kdegraphics-thumbnailers kdialog keditbookmarks konsole kwalletmanager libappindicator-gtk{2,3} libva-intel-driver libva-vdpau-driver libvdpau-va-gl lrzip lzop mesa mlocate moreutils nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra npm okular openjdk{,11,10,8,7}-doc openjdk{,11,10,8,7}-src openssh otf-fira-code otf-fira-mono p7zip pkgstats plasma python rsync slack-desktop smartmontools spectacle spotify tlp tlp-rdw tree ttf-liberation unace unarchiver unrar unzip visual-studio-code-bin vulkan-icd-loader vulkan-intel wget xf86-video-intel zip zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting"
+usr "yay -Rus --noconfirm $(yay -Qtdq) drkonqi khotkeys kinfocenter knetattach ksshaskpass kwrited milou plasma-thunderbolt plasma-vault"
 
 # Link Font Configurations
 ln -sf /etc/fonts/conf.avail/10-{hinting-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
@@ -68,7 +64,7 @@ timedatectl set-ntp true
 services=(
     "bluetooth.service"
     "fstrim.timer"
-    "gdm.service"
+    "sddm.service"
     "intel-undervolt.service"
     "pkgstats.timer"
     "sshd.service"
