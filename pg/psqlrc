@@ -1,0 +1,15 @@
+\set QUIET 1
+\pset null '[NULL]'
+
+-- Set Prompts
+\set PROMPT1 '%[\033[1m%]%[\033[33m%]%n%[\033[37m%]@%[\033[34m%]%/%[\033[0m%]%R%# '
+\set PROMPT2 '%R> '
+
+\timing
+\x auto
+\set VERBOSITY verbose
+\set HISTCONTROL ignoredups
+\set COMP_KEYWORD_CASE upper
+\unset QUIET
+
+-- \i ~/.psqlrc.local

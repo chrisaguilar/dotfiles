@@ -34,8 +34,55 @@ usr "cd /home/chris/yay && yes | makepkg -sci"
 usr "rm -rf /home/chris/yay"
 
 # Packages
-usr "yay -S --noconfirm --needed acpi_call alsa-plugins ark bash-completion bbswitch bluez-utils bumblebee capitaine-cursors dolphin dolphin-plugins dotnet-sdk dotnet-runtime ffmpegthumbs google-chrome gpmdp gwenview htop icaclient intel-undervolt jetbrains-toolbox jre{,11,10,8,7}-openjdk-headless jre{,11,10,8,7}-openjdk kdegraphics-mobipocket kdegraphics-thumbnailers kdialog keditbookmarks konsole kwalletmanager libappindicator-gtk{2,3} libva-intel-driver libva-vdpau-driver libvdpau-va-gl lrzip lzop mesa mlocate moreutils nodejs noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra npm nvidia nvidia-settings okular openjdk{,11,10,8,7}-doc openjdk{,11,10,8,7}-src openssh otf-fira-code otf-fira-mono p7zip pkgstats plasma pulseaudio-alsa pulseaudio-bluetooth python rsync slack-desktop smartmontools spectacle spotify tlp tlp-rdw tree ttf-liberation unace unarchiver unrar unzip visual-studio-code-bin vulkan-icd-loader vulkan-intel wget xf86-video-intel zip zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting"
-usr "yay -Rus --noconfirm $(yay -Qtdq) drkonqi khotkeys kinfocenter knetattach ksshaskpass kwrited milou plasma-thunderbolt plasma-vault"
+REQUIRED_PACKAGES=(
+    # AUR Packages
+    "capitaine-cursors google-chrome gpmdp icaclient intel-undervolt jetbrains-toolbox powershell-bin slack-desktop spotify visual-studio-code-bin"
+    # Development
+    ## C#
+    "dotnet-sdk dotnet-runtime"
+    ## Databases
+    "sqlite{,-doc,browser}"
+    ## Java
+    "java{,11,8}-openjfx{,-{doc,src}} jdk-{,11,10,8,7}-openjdk jre{,11,10,8,7}-openjdk-headless jre{,11,10,8,7}-openjdk openjdk{,11,10,8,7}-doc openjdk{,11,10,8,7}-src"
+    ## NodeJS
+    "nodejs npm yarn"
+    # Fonts
+    "noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra otf-fira-code otf-fira-mono"
+    # GNOME Desktop
+    "chrome-gnome-shell dconf-editor eog evince file-roller gdm gnome-backgrounds gnome-keyring gnome-menus gnome-screenshot gnome-software gnome-system-monitor gnome-tweaks nautilus xdg-user-dirs-gtk"
+    # Graphics
+    "bumblebee libva-intel-driver libva-vdpau-driver libvdpau-va-gl vulkan-icd-loader vulkan-intel xf86-video-intel"
+    # Power Management
+    "tlp tlp-rdw"
+    # Utilities
+    "bluez-utils htop mlocate moreutils openssh pkgstats rsync termite tree wget"
+    # ZSH
+    "zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting"
+)
+
+OPTIONAL_PACKAGES=(
+    # bash
+    "bash-completion"
+    # bumblebee
+    "bbswitch nvidia"
+    # eog
+    "eog-plugins"
+    # file-roller
+    "p7zip unrar unace lrzip"
+    # gnome-shell
+    "gnome-control-center"
+    # gnome-software
+    "flatpak fwupd ostree"
+    # google-chrome
+    "ttf-liberation"
+    # nvidia
+    "nvidia-settings"
+    # tlp
+    "acpi_call smartmontools"
+)
+
+usr "yay -S --noconfirm --needed ${REQUIRED_PACKAGES[@]}"
+usr "yay -S --noconfirm --needed --asdeps ${OPTIONAL_PACKAGES[@]}"
 
 # Link Font Configurations
 ln -sf /etc/fonts/conf.avail/10-{hinting-slight,sub-pixel-rgb}.conf /etc/fonts/conf.d/
@@ -47,7 +94,12 @@ for f in `find {etc,usr} -type f`; do
     copy_config_file $f
 done
 
+# for f in `find home -type f`; do
+#     usr "ln -sf '$(pwd)/$f' $HOME"
+# done
+
 # Citrix Workspace App Setup
+## [Virtual Channels\Keyboard] -> KeyboardLayout=US
 usr "mkdir -p /home/chris/.ICAClient/cache"
 usr "cp /opt/Citrix/ICAClient/config/{All_Regions,Trusted_Region,Unknown_Region,canonicalization,regions}.ini /home/chris/.ICAClient/"
 
@@ -65,10 +117,12 @@ services=(
     "bluetooth.service"
     "bumblebeed.service"
     "fstrim.timer"
-    "sddm.service"
+    "gdm.service"
     "intel-undervolt.service"
+    "mpris-proxy.service"
     "pkgstats.timer"
     "sshd.service"
+    "tlp.service"
 )
 for service in ${services[@]}; do
     systemctl enable $service
