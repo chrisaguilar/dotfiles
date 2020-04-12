@@ -8,7 +8,7 @@ activate() {
 # Clone All Public Repos
 capr() {
     start=$(pwd)
-    
+
     [[ -z "${1}" ]] && echo "You must specify a username!" && return 1
 
     mkdir "${1}" && cd "${1}"
@@ -158,4 +158,19 @@ parseJSON() {
 # What do I have installed?
 wdihi() {
     expac -HM '%011m\t%-20n' $(comm -23 <(pacman -Qqe | sort) <(pacman -Qqg base base-devel $@ | sort)) | sort -rn
+}
+
+
+# Docker ######################################################################
+removecontainers() {
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
+}
+
+armageddon() {
+    removecontainers
+    docker network prune -f
+    docker rmi -f $(docker images --filter dangling=true -qa)
+    docker volume rm $(docker volume ls --filter dangling=true -q)
+    docker rmi -f $(docker images -qa)
 }
