@@ -6,7 +6,7 @@ __dirname="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . "${__dirname}/util.sh"
 
-mkdir "${__dirname}/.backup"
+mkdir -p "${__dirname}/.backup"
 
 # Pacman Setup
 copy_config_file "etc/pacman.conf"
@@ -34,52 +34,27 @@ usr "cd /home/chris/yay && yes | makepkg -sci"
 usr "rm -rf /home/chris/yay"
 
 # Packages
-REQUIRED_PACKAGES=(
-    # AUR Packages
-    "capitaine-cursors google-chrome gpmdp icaclient intel-undervolt jetbrains-toolbox powershell-bin slack-desktop spotify visual-studio-code-bin"
-    # Development
-    ## C#
-    "dotnet-sdk dotnet-runtime"
-    ## Databases
-    "sqlite{,-doc,browser}"
-    ## Java
-    "java{,11,8}-openjfx{,-{doc,src}} jdk-{,11,10,8,7}-openjdk jre{,11,10,8,7}-openjdk-headless jre{,11,10,8,7}-openjdk openjdk{,11,10,8,7}-doc openjdk{,11,10,8,7}-src"
-    ## NodeJS
-    "nodejs npm yarn"
-    # Fonts
-    "noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra otf-fira-code otf-fira-mono"
-    # GNOME Desktop
-    "chrome-gnome-shell dconf-editor eog evince file-roller gdm gnome-backgrounds gnome-keyring gnome-menus gnome-screenshot gnome-software gnome-system-monitor gnome-tweaks nautilus xdg-user-dirs-gtk"
-    # Graphics
-    "bumblebee libva-intel-driver libva-vdpau-driver libvdpau-va-gl vulkan-icd-loader vulkan-intel xf86-video-intel"
-    # Power Management
-    "tlp tlp-rdw"
-    # Utilities
-    "bluez-utils htop mlocate moreutils openssh pkgstats rsync termite tree wget"
-    # ZSH
-    "zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting"
-)
+REQUIRED_PACKAGES="\
+    capitaine-cursors google-chrome icaclient intel-undervolt jetbrains-toolbox slack-desktop visual-studio-code-bin \
+    nodejs npm \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra otf-fira-code otf-fira-mono \
+    chrome-gnome-shell dconf-editor eog evince file-roller gdm gnome-backgrounds gnome-keyring gnome-menus gnome-screenshot gnome-system-monitor gnome-tweaks nautilus xdg-user-dirs-gtk \
+    bumblebee libva-intel-driver libva-vdpau-driver libvdpau-va-gl vulkan-icd-loader vulkan-intel xf86-video-intel \
+    tlp tlp-rdw \
+    bluez-utils htop mlocate moreutils openssh pkgstats rsync termite tree wget \
+    zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting \
+"
 
-OPTIONAL_PACKAGES=(
-    # bash
-    "bash-completion"
-    # bumblebee
-    "bbswitch nvidia"
-    # eog
-    "eog-plugins"
-    # file-roller
-    "p7zip unrar unace lrzip"
-    # gnome-shell
-    "gnome-control-center"
-    # gnome-software
-    "flatpak fwupd ostree"
-    # google-chrome
-    "ttf-liberation"
-    # nvidia
-    "nvidia-settings"
-    # tlp
-    "acpi_call smartmontools"
-)
+OPTIONAL_PACKAGES="\
+    bash-completion \
+    bbswitch nvidia \
+    eog-plugins \
+    p7zip unrar unace lrzip \
+    gnome-control-center \
+    ttf-liberation \
+    nvidia-settings \
+    acpi_call smartmontools \
+"
 
 usr "yay -S --noconfirm --needed ${REQUIRED_PACKAGES[@]}"
 usr "yay -S --noconfirm --needed --asdeps ${OPTIONAL_PACKAGES[@]}"
@@ -99,7 +74,6 @@ done
 # done
 
 # Citrix Workspace App Setup
-## [Virtual Channels\Keyboard] -> KeyboardLayout=US
 usr "mkdir -p /home/chris/.ICAClient/cache"
 usr "cp /opt/Citrix/ICAClient/config/{All_Regions,Trusted_Region,Unknown_Region,canonicalization,regions}.ini /home/chris/.ICAClient/"
 
@@ -119,7 +93,6 @@ services=(
     "fstrim.timer"
     "gdm.service"
     "intel-undervolt.service"
-    "mpris-proxy.service"
     "pkgstats.timer"
     "sshd.service"
     "tlp.service"
