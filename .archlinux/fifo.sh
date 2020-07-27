@@ -23,15 +23,15 @@ timedatectl set-ntp true
 pacman -S --noconfirm reflector
 reflector --save /etc/pacman.d/mirrorlist --sort rate -f 10 -a 6 -p https -c US
 pacman -Sy
-pacstrap /mnt base base-devel git intel-ucode linux linux-firmware linux-tools man-db man-pages networkmanager reflector texinfo vim zsh
+pacstrap /mnt base base-devel git intel-ucode linux linux-firmware linux-tools man-db man-pages networkmanager reflector vim zsh
 
 # Fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Swapfile
 mem_total=$(free -h | grep Mem | awk '{printf "%d", $2}')
-swap_total="$((${mem_total} / 2))"
-fallocate -l "${swap_total}G" /mnt/swapfile
+swap_total="$((${mem_total} / 2 * 1024))"
+dd if=/dev/zero of=/mnt/swapfile bs=1M count=${swap_total} status=progress
 chmod 600 /mnt/swapfile
 mkswap /mnt/swapfile
 swapon /mnt/swapfile
