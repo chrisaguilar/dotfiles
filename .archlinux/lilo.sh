@@ -38,7 +38,6 @@ REQUIRED_PACKAGES="\
     capitaine-cursors google-chrome icaclient intel-undervolt jetbrains-toolbox slack-desktop visual-studio-code-bin \
     nodejs npm \
     noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra otf-fira-code otf-fira-mono \
-    chrome-gnome-shell dconf-editor eog evince file-roller gdm gnome-backgrounds gnome-keyring gnome-menus gnome-screenshot gnome-system-monitor gnome-tweaks nautilus xdg-user-dirs-gtk \
     bumblebee libva-intel-driver libva-vdpau-driver libvdpau-va-gl vulkan-icd-loader vulkan-intel xf86-video-intel \
     tlp tlp-rdw \
     bluez-utils htop mlocate moreutils openssh pkgstats rsync termite tree wget \
@@ -48,9 +47,6 @@ REQUIRED_PACKAGES="\
 OPTIONAL_PACKAGES="\
     bash-completion \
     bbswitch nvidia \
-    eog-plugins \
-    p7zip unrar unace lrzip \
-    gnome-control-center \
     ttf-liberation \
     nvidia-settings \
     acpi_call smartmontools \
@@ -91,7 +87,6 @@ services=(
     "bluetooth.service"
     "bumblebeed.service"
     "fstrim.timer"
-    "gdm.service"
     "intel-undervolt.service"
     "pkgstats.timer"
     "sshd.service"
