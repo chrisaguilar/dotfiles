@@ -7,5 +7,3 @@ chmod 700 "${ZSH_CACHE}"
 
 ttyctl -f
 
-# LS_COLORS
-eval $( dircolors -b "${ZDOTDIR}/zshrc.d/LS_COLORS" )

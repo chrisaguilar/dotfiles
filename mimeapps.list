@@ -61,3 +61,4 @@ image/svg+xml-compressed=eog.desktop
 image/vnd.wap.wbmp=eog.desktop
 image/x-icns=eog.desktop
 text/calendar=org.gnome.Evolution.desktop
+application/x-wine-extension-ini=wfica.desktop
