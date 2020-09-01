@@ -24,6 +24,7 @@ mpv/
 nautilus/
 npm/
 NuGet/
+oh-my-zsh/
 Postman/
 Slack/
 spotify/
@@ -33,8 +34,10 @@ VirtualBox/
 vlc/
 yay/
 
-.zcompdump
-monitors.xml
+.zcompdump*
+gnome-initial-setup-done
+temp.sql
+user-dirs.locale
 viminfo
 zsh_history
 temp.sql
