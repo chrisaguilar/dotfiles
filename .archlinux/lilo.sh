@@ -37,11 +37,10 @@ usr "rm -rf /home/chris/yay"
 REQUIRED_PACKAGES="\
     capitaine-cursors google-chrome icaclient intel-undervolt jetbrains-toolbox slack-desktop visual-studio-code-bin \
     nodejs npm \
-    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra otf-fira-code otf-fira-mono \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-fira-code ttf-fira-mono \
     bumblebee libva-intel-driver libva-vdpau-driver libvdpau-va-gl vulkan-icd-loader vulkan-intel xf86-video-intel \
     tlp tlp-rdw \
-    bluez-utils htop mlocate moreutils openssh pkgstats rsync termite tree wget \
-    zsh-autosuggestions zsh-completions zsh-doc zsh-syntax-highlighting \
+    htop kitty openssh \
 "
 
 OPTIONAL_PACKAGES="\
@@ -65,16 +64,9 @@ for f in `find {etc,usr} -type f`; do
     copy_config_file $f
 done
 
-# for f in `find home -type f`; do
-#     usr "ln -sf '$(pwd)/$f' $HOME"
-# done
-
 # Citrix Workspace App Setup
 usr "mkdir -p /home/chris/.ICAClient/cache"
 usr "cp /opt/Citrix/ICAClient/config/{All_Regions,Trusted_Region,Unknown_Region,canonicalization,regions}.ini /home/chris/.ICAClient/"
-
-# Update mlocate DB
-updatedb
 
 # Detect Sensors
 sensors-detect --auto
@@ -84,14 +76,12 @@ timedatectl set-ntp true
 
 # Enable Services
 services=(
-    "bluetooth.service"
     "bumblebeed.service"
     "fstrim.timer"
     "intel-undervolt.service"
-    "pkgstats.timer"
-    "sshd.service"
     "tlp.service"
 )
+
 for service in ${services[@]}; do
     systemctl enable $service
 done
