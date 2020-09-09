@@ -35,6 +35,7 @@ export PSQLRC=$XDG_CONFIG_HOME/pg/psqlrc
 export PYLINTHOME=$XDG_CACHE_HOME/pylint.d
 export RANGER_LOAD_DEFAULT_RC=false
 export VDPAU_DRIVER="va_gl"
+export VIMINIT="source $HOME/.config/vim/vimrc"
 export VISUAL=/usr/bin/vim
 export XAUTHORITY="$XDG_CACHE_HOME/Xauthority"
 export WB_FORCE_SYSTEM_COLORS=1

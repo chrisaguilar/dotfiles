@@ -1,0 +1,4 @@
+set viminfo+=n~/.config/vim/viminfo
+
+" Turn off ALL bells
+set belloff=all
